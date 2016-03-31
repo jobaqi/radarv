@@ -8,5 +8,9 @@
 /*
  * Index route
  */
-Flight::route('/', ['HomeController', 'index']);
+Flight::route('/pvi', ['HomeController', 'pvi']);
 
+/*
+ * Analysis route
+ */
+Flight::route('/analysis', ['HomeController', 'analysis']);

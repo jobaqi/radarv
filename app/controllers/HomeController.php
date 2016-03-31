@@ -17,7 +17,14 @@ class HomeController extends Controller{
     /**
      * Show index page
      */
-    public function index(){
-        return self::renderWithLayout("index", ['title' => 'RadarV-index']);
+    public function pvi(){
+        return self::renderWithLayout("pvi", ['title' => 'RadarV-index']);
+    }
+    
+    /**
+     * Show analysis page
+     */
+    public function analysis(){
+        return self::renderWithLayout('analysis', ['title' => 'RadarV-analysis']);
     }
 }
