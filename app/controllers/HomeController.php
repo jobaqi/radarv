@@ -12,13 +12,19 @@
  *
  * @author Jordy
  */
+
 class HomeController extends Controller{
     
+    
+    public static function index(){
+        return self::renderWithLayout('index', ['title' => 'RadarV-Index']);
+    }
+        
     /**
-     * Show index page
+     * Show pvi page
      */
     public static function pvi(){
-        return self::renderWithLayout("pvi", ['title' => 'RadarV-index']);
+        return self::renderWithLayout("pvi", ['title' => 'RadarV-PVI']);
     }
     
     /**

@@ -8,6 +8,11 @@
 /*
  * Index route
  */
+Flight::route('/', ['HomeController', 'index']);
+
+/*
+ * PVI route
+ */
 Flight::route('/pvi', ['HomeController', 'pvi']);
 
 /*
