@@ -15,7 +15,10 @@
 
 class HomeController extends Controller{
     
-    
+    /**
+     * 
+     * @return 
+     */
     public static function index(){
         return self::renderWithLayout('index', ['title' => 'RadarV-Index']);
     }

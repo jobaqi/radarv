@@ -24,12 +24,12 @@ class Path {
     public static function url($url){
         if(self::getPort() === "80"){
             if(self::getRootDirName() === self::getFirstRequestUri()){
-                return "http://".self::getBaseUrl().self::getFirstRequestUri()."/".$url;
+                return "http://".self::getBaseUrl()."/".self::getFirstRequestUri().$url;
             }
             return "http://".self::getBaseUrl().$url;
         }
         if(self::getRootDirName() === self::getFirstRequestUri()){
-            return "http://".self::getBaseUrl().":".self::getPort().self::getFirstRequestUri()."/".$url;
+            return "http://".self::getBaseUrl().":".self::getPort()."/".self::getFirstRequestUri().$url;
         }
         return "http://".self::getBaseUrl().":".self::getPort().$url;
     }
