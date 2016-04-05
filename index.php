@@ -25,6 +25,11 @@ Flight::set('flight.views.path', "app/views");
 app\models\Model::setCredentials("root", "r6vegas2");
 
 /*
+ * Include helpers
+ */
+require 'app/helpers/functions.php';
+
+/*
  * Start the framework
  */
 Flight::start();

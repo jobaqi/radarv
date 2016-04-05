@@ -16,10 +16,24 @@ namespace app\helpers;
 
 class Path {
     
+    /**
+     * 
+     * @param String $url The relative url
+     * @return string the fully qualified url
+     */
     public static function url($url){
-        if($_SERVER['SERVER_PORT'] === "80"){
-            return "http://".$_SERVER['SERVER_NAME'].$url;
+        if(self::getPort() === "80"){
+            return "http://".self::getBaseUrl().$url;
         }
-        return "http://".$_SERVER['SERVER_NAME'].":".$_SERVER['SERVER_PORT'].$url;
+        return "http://".self::getBaseUrl().":".self::getPort().$url;
     }
+    
+    private static function getBaseUrl(){
+        return $_SERVER['SERVER_NAME'];
+    }
+    
+    private static function getPort(){
+        return $_SERVER['SERVER_PORT'];
+    }
+    
 }
