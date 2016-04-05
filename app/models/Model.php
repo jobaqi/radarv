@@ -50,19 +50,16 @@ class Model {
     }
 
     static function setUsername($username) {
-        self::$username = $username;
-        return self;
+        return self::$username = $username;
     }
 
     static function setPassword($password) {
-        self::$password = $password;
-        return self;
+        return self::$password = $password;
     }
     
     static function setCredentials($username, $password){
         self::setUsername($username);
-        self::setPassword($password);
-        return self;    
+        return self::setPassword($password);   
     }
 
     function getProperty_values() {
