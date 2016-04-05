@@ -6,5 +6,11 @@
  * and open the template in the editor.
  */
 
-$dotEnv = new Dotenv\Dotenv(".");
+// Path to .env
+$dotEnvPath = dirname(__dir__);
+
+/*
+ * Load .env file
+ */
+$dotEnv = new Dotenv\Dotenv($dotEnvPath);
 $dotEnv->load();

@@ -10,3 +10,12 @@
  * Require helper functions
  */
 require 'app/helpers/functions.php';
+
+if(getenv("APP_DEBUG") === true){
+    ini_set('display_errors', 1); 
+    error_reporting(E_ALL);
+}
+else{
+    ini_set('display_errors', 0); 
+    error_reporting(0);
+}
