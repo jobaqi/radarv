@@ -78,7 +78,6 @@ class Model {
 
     static function setDatabase($database) {
         self::$database = $database;
-        return self;
     }
 
 
