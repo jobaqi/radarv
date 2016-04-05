@@ -9,10 +9,10 @@
 /*
  * Database credentials
  */
-\app\models\Model::setUsername($_ENV('DB_USERNAME'));
-\app\models\Model::setPassword($_ENV('DB_PASSWORD'));
+\app\models\Model::setUsername(getenv('DB_USERNAME'));
+\app\models\Model::setPassword(getenv('DB_PASSWORD'));
 
 /*
  * Database
  */
-app\models\Model::setDatabase($_ENV('DB_DATABASE'));
+app\models\Model::setDatabase(getenv('DB_DATABASE'));
