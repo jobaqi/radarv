@@ -6,6 +6,5 @@
  * and open the template in the editor.
  */
 
-$loader = (new \josegonzalez\Dotenv\Loader('.env'))
-        ->parse()
-        ->toEnv();
+$dotEnv = new Dotenv\Dotenv(".");
+$dotEnv->load();
