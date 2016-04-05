@@ -9,8 +9,8 @@
 /*
  * Database credentials
  */
-\app\models\Model::setUsername(getenv('DB_USERNAME'));
-\app\models\Model::setPassword(getenv('DB_PASSWORD'));
+app\models\Model::setUsername(getenv('DB_USERNAME'));
+app\models\Model::setPassword(getenv('DB_PASSWORD'));
 
 /*
  * Database

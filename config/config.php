@@ -6,3 +6,7 @@
  * and open the template in the editor.
  */
 
+/*
+ * Require helper functions
+ */
+require 'app/helpers/functions.php';

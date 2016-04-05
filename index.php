@@ -9,12 +9,10 @@ require ('vendor/autoload.php');
 require('autoload.php');
 require_once('app/routes.php');
 
-require 'config/configLoader.php';
-
 /*
- * Include helpers
+ * Require config
  */
-require 'app/helpers/functions.php';
+require 'config/configLoader.php';
 
 /*
  * Start the framework
