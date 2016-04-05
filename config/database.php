@@ -6,13 +6,21 @@
  * and open the template in the editor.
  */
 
-/*
- * Database credentials
- */
-app\models\Model::setUsername(getenv('DB_USERNAME'));
-app\models\Model::setPassword(getenv('DB_PASSWORD'));
+use Illuminate\Database\Capsule\Manager as Capsule;
 
-/*
- * Database
- */
-app\models\Model::setDatabase(getenv('DB_DATABASE'));
+$capsule = new Capsule();
+
+$capsule->addConnection([
+    'driver' => 'mysql',
+    'host' => 'localhost',
+    'database' => getenv("DB_DATABASE") ?: "pvi",
+    'username' => getenv("DB_USERNAME") ?: "root",
+    'password' => getenv("DB_PASSWORD") ?: "",
+    'charset' => 'utf8',
+    'collation' => 'utf8_unicode_ci',
+    'prefix'    => ''
+]);
+
+$capsule->setAsGlobal();
+
+$capsule->bootEloquent();

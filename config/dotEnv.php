@@ -8,9 +8,13 @@
 
 // Path to .env
 $dotEnvPath = dirname(__dir__);
+$dotEnvFile = $dotEnvPath.DIRECTORY_SEPARATOR.".env";
 
 /*
- * Load .env file
+ * Load .env file if it exists
  */
-$dotEnv = new Dotenv\Dotenv($dotEnvPath);
-$dotEnv->load();
+
+if(is_file($dotEnvFile) && is_readable($dotEnvFile)){
+    $dotEnv = new Dotenv\Dotenv($dotEnvPath);
+    $dotEnv->load();
+}

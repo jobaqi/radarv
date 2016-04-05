@@ -11,12 +11,11 @@
  *
  * @author Jordy
  */
-namespace app\models;
+use Illuminate\Database\Eloquent\Model as Eloquent;
 
-class Employee extends Model{
-   protected $fillable = ['id'];
-   
-   
-   
-   
+
+//namespace app\models;
+
+class Employee extends Eloquent {
+    protected $fillable = ['first_name', 'last_name', 'date_of_birth', 'contract_id', 'function_id'];
 }

@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 
+require 'dotEnv.php';
 require 'config.php';
 require 'database.php';
-require 'dotEnv.php';
 require 'flight.php';
