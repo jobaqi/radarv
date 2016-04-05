@@ -9,20 +9,7 @@ require ('vendor/autoload.php');
 require('autoload.php');
 require_once('app/routes.php');
 
-/*
- * Controller path
- */
-Flight::path("app/controllers");
-
-/*
- * Views path
- */
-Flight::set('flight.views.path', "app/views");
-
-/*
- * Database credentials
- */
-app\models\Model::setCredentials("root", "r6vegas2");
+require 'config/configLoader.php';
 
 /*
  * Include helpers

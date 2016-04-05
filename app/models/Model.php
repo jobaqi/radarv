@@ -21,6 +21,7 @@ class Model {
     protected $property_values;
     protected static $username;
     protected static $password;
+    protected static $database;
     
 
     function getConnection() {
@@ -70,6 +71,17 @@ class Model {
         $this->property_values = $property_values;
         return $this;
     }
+    
+    static function getDatabase() {
+        return self::$database;
+    }
+
+    static function setDatabase($database) {
+        self::$database = $database;
+        return self;
+    }
+
+
 
 
      
