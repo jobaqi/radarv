@@ -23,7 +23,13 @@ class Path {
      */
     public static function url($url){
         if(self::getPort() === "80"){
+            if(self::getRootDirName() === self::getFirstRequestUri()){
+                return "http://".self::getBaseUrl().self::getFirstRequestUri()."/".$url;
+            }
             return "http://".self::getBaseUrl().$url;
+        }
+        if(self::getRootDirName() === self::getFirstRequestUri()){
+            return "http://".self::getBaseUrl().":".self::getPort().self::getFirstRequestUri()."/".$url;
         }
         return "http://".self::getBaseUrl().":".self::getPort().$url;
     }
@@ -32,8 +38,23 @@ class Path {
         return $_SERVER['SERVER_NAME'];
     }
     
+    private static function getRequestUri(){
+        return $_SERVER['REQUEST_URI'];
+    }
+    
     private static function getPort(){
         return $_SERVER['SERVER_PORT'];
     }
     
+    private static function getRootDirPath(){
+        return dirname(dirname(__dir__));
+    }
+    
+    private static function getRootDirName(){
+        return end(explode(DIRECTORY_SEPARATOR, self::getRootDirPath()));
+    }
+    
+    private static function getFirstRequestUri(){
+        return explode("/", self::getRequestUri())[1];
+    }
 }
