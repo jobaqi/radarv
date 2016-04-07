@@ -7,5 +7,5 @@
  */
 
 function url($url){
-    return app\helpers\Path::url($url);
+    return \App\Helpers\Path::url($url);
 }

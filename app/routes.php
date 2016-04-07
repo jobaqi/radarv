@@ -8,14 +8,14 @@
 /*
  * Index route
  */
-Flight::route('/', ['HomeController', 'index']);
+Flight::route('/', ['\App\Controllers\HomeController', 'index']);
 
 /*
  * PVI route
  */
-Flight::route('/pvi', ['HomeController', 'pvi']);
+Flight::route('/pvi', ['\App\Controllers\HomeController', 'pvi']);
 
 /*
  * Analysis route
  */
-Flight::route('/analysis', ['HomeController', 'analysis']);
+Flight::route('/analysis', ['\App\Controllers\HomeController', 'analysis']);

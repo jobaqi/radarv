@@ -6,7 +6,7 @@
  * and open the template in the editor.
  */
 require ('vendor/autoload.php');
-require('autoload.php');
+//require('autoload.php');
 require_once('app/routes.php');
 
 /*

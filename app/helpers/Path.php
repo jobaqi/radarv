@@ -12,7 +12,7 @@
  * @author Jordy
  */
 
-namespace app\helpers;
+namespace App\Helpers;
 
 class Path {
     

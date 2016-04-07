@@ -7,8 +7,10 @@
     },
     
     "autoload": {
-        "classmap": [
-            "app/models"
-        ]
+        "psr-4": {
+            "App\\Models\\": "app/models/",
+            "App\\Helpers\\": "app/helpers/",
+            "App\\Controllers\\": "app/controllers/"
+        }
     }
 }

@@ -11,7 +11,7 @@
  *
  * @author Jordy
  */
-
+namespace App\Controllers;
 
 class Controller {
     
@@ -24,7 +24,7 @@ class Controller {
      * @return void
      */
     protected static function renderWithLayout($view, Array $vars, $section = "body", $layout = "layout"){
-        Flight::render($view, $vars, $section);
-        Flight::render($layout);
+        \Flight::render($view, $vars, $section);
+        \Flight::render($layout);
     }
 }

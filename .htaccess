@@ -2,3 +2,8 @@ RewriteEngine On
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ index.php [QSA,L]
+
+<IfModule mod_php5.c>
+php_flag log_errors on 
+php_value error_log ./phpErrors.log
+</IfModule>

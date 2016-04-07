@@ -1,6 +1,6 @@
 <?php
 
-/* 
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -12,13 +12,13 @@ $capsule = new Capsule();
 
 $capsule->addConnection([
     'driver' => 'mysql',
-    'host' => 'localhost',
-    'database' => getenv("DB_DATABASE") ?: "pvi",
-    'username' => getenv("DB_USERNAME") ?: "root",
-    'password' => getenv("DB_PASSWORD") ?: "",
+    'host' => getenv("DB_HOST") ? : 'sql6.pcextreme.nl',
+    'database' => getenv("DB_DATABASE") ? : "15635pvi",
+    'username' => getenv("DB_USERNAME") ? : "15635pvi",
+    'password' => getenv("DB_PASSWORD") ? : "radarv",
     'charset' => 'utf8',
     'collation' => 'utf8_unicode_ci',
-    'prefix'    => ''
+    'prefix' => ''
 ]);
 
 $capsule->setAsGlobal();
