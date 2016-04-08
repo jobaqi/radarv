@@ -19,3 +19,8 @@ Flight::route('/pvi', ['\App\Controllers\HomeController', 'pvi']);
  * Analysis route
  */
 Flight::route('/analysis', ['\App\Controllers\HomeController', 'analysis']);
+
+/*
+ * EmployeeOverview route
+ */
+Flight::route('/employee', ['\App\Controllers\HomeController', 'employee']);
