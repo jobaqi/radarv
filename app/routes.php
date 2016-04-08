@@ -11,6 +11,11 @@
 Flight::route('/', ['\App\Controllers\HomeController', 'index']);
 
 /*
+ * Login route
+ */
+Flight::route('/login', ['\App\Controllers\HomeController', 'login']);
+
+/*
  * PVI route
  */
 Flight::route('/pvi', ['\App\Controllers\HomeController', 'pvi']);
