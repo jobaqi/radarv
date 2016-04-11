@@ -15,4 +15,11 @@ namespace App\Controllers;
  */
 class AuthController extends Controller{
   use \App\Traits\CanAuthenticateAndRegisterEmployees; 
+  
+  /**
+   * Render login page
+   */
+  static function showLogin(){
+    return $this->renderWithLayout("auth/login", ['title' => 'Login']);
+  }
 }

@@ -8,24 +8,25 @@
 /*
  * Index route
  */
-Flight::route('/', ['\App\Controllers\HomeController', 'index']);
-
-/*
- * Login route
- */
-Flight::route('/login', ['\App\Controllers\HomeController', 'login']);
+Flight::route('GET /', ['\App\Controllers\HomeController', 'index']);
 
 /*
  * PVI route
  */
-Flight::route('/pvi', ['\App\Controllers\HomeController', 'pvi']);
+Flight::route('GET /pvi', ['\App\Controllers\HomeController', 'pvi']);
 
 /*
  * Analysis route
  */
-Flight::route('/analysis', ['\App\Controllers\HomeController', 'analysis']);
+Flight::route('GET /analysis', ['\App\Controllers\HomeController', 'analysis']);
 
 /*
  * EmployeeOverview route
  */
-Flight::route('/employee', ['\App\Controllers\HomeController', 'employee']);
+Flight::route('GET /employee', ['\App\Controllers\HomeController', 'employee']);
+
+/*
+ * Authentication routes
+ */
+Flight::route('GET /login', ['\App\Controllers\AuthController', 'showLogin']);
+Flight::route('POST /login', ['\App\Controllers\AuthController', 'authenticate']);

@@ -18,7 +18,7 @@ trait CanAuthenticateAndRegisterEmployees{
    * @param String $password
    */
   function authenticate($username, $password){
-    
+      var_dump(\App\Repositories\EmployeeRepository::findById(1)->firstName);
   }
   
   /**
