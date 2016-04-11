@@ -16,6 +16,8 @@ namespace App\Helpers;
 class Hash {
   
   static function hash($string){
-    return password_hash($string, PASSWORD_DEFAULT);
+    return password_hash($string, PASSWORD_BCRYPT, [
+        'cost' => 12
+    ]);
   }
 }
