@@ -9,3 +9,7 @@
 function url($url){
     return \App\Helpers\Path::url($url);
 }
+
+function hash($string){
+  return App\Helpers\Hash::hash($string);
+}
