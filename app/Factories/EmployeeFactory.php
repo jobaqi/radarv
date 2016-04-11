@@ -20,7 +20,16 @@ class EmployeeFactory {
         $this->model = $employee;
     }
     
-    
+    /**
+     * Insert a new employee into the database
+     * @param String $first_name
+     * @param String $last_name
+     * @param String $date_of_birth yyy-mm-dd
+     * @param int $contract_id
+     * @param int $function_id
+     * @param String $password
+     * @return App\Models\Employee
+     */
     static function insertIntoDatabase($first_name, $last_name, $date_of_birth, $contract_id, $function_id, $password){
       return $this->model->create([
           'first_name' => $first_name,

@@ -9,18 +9,29 @@
 namespace App\Repositories;
 
 /**
- * Description of EmployeeRepository
+ * Interact with the employee table
  *
  * @author Jordy
  */
 class EmployeeRepository {
   private $employee;
           
+  /**
+   * Set $this->model to the Employee model
+   * @param \App\Models\Employee $employee
+   * return void
+   */
   function __construct(\App\Models\Employee $employee){
     $this->model = $employee;
   }
   
+  /**
+   * Find an employee by id
+   * @param int $id
+   * @return App\Models\Employee
+   */
   static function findById($id){
     return $this->model->find($id);
   }
+  
 }
