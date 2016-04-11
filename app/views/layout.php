@@ -197,7 +197,66 @@
             <button class="btn" data-dismiss="modal" aria-hidden="true">Sluiten</button>
             </div>
         </div>
+
         <div id="medewerk" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h6 id="myModalLabel"><i class="icon-cog"></i> Medewerker toevoegen (aan analyseblad)</h6>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="inputName"><i class="icon-user"></i> Naam</label>
+                        <div class="controls">
+                            <input type="text" id="inputName" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputName"><i class="icon-user"></i> Achternaam</label>
+                        <div class="controls">
+                            <input type="text" id="inputName" placeholder="achternaam">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputName"><i class="icon-user"></i> Geboorte Datum</label>
+                        <div class="controls">
+                            <input type="text" id="inputName" placeholder="JJ-MM-DD">
+                        </div>
+                    </div>
+                     <div class="control-group">
+                        <label class="control-label" for="inputName"><i class="icon-user"></i>Functie</label>
+
+
+                        <div class="controls">
+                            <select class="span6">
+                                <option value="number">[functienaam uit database]
+                                <option value="01">[functienaam uit database]
+                            </select>
+                 
+                        </div>
+
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputInline"><i class="icon-circle"></i>Aanstellingsomvang</label>
+                        <div class="controls">
+         					<input type="text" id="inputWeeks" placeholder="in WTF">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputEmail"><i class="icon-envelope"></i>Inzetbaar in weken</label>
+                        <div class="controls">
+                            <input type="text" id="inputEmail" placeholder="Email">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+            <button class="btn btn-primary">Opslaan</button>
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+        </div>
+
+        <div id="klassen" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                 <h6 id="myModalLabel"><i class="icon-cog"></i> Medewerker toevoegen (aan analyseblad)</h6>
@@ -223,6 +282,90 @@
             <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
             </div>
         </div>
+
+        <div id="vakken" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h6 id="myModalLabel"><i class="icon-cog"></i> Medewerker toevoegen (aan analyseblad)</h6>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="inputName"><i class="icon-user"></i> Naam</label>
+                        <div class="controls">
+                            <input type="text" id="inputName" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputEmail"><i class="icon-envelope"></i> Email</label>
+                        <div class="controls">
+                            <input type="text" id="inputEmail" placeholder="Email">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+            <button class="btn btn-primary">Opslaan</button>
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+        </div>
+
+
+        <div id="taken" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h6 id="myModalLabel"><i class="icon-cog"></i> Medewerker toevoegen (aan analyseblad)</h6>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="inputName"><i class="icon-user"></i> Naam</label>
+                        <div class="controls">
+                            <input type="text" id="inputName" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputEmail"><i class="icon-envelope"></i> Email</label>
+                        <div class="controls">
+                            <input type="text" id="inputEmail" placeholder="Email">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+            <button class="btn btn-primary">Opslaan</button>
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+        </div>
+
+        <div id="regelingen" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h6 id="myModalLabel"><i class="icon-cog"></i> Medewerker toevoegen (aan analyseblad)</h6>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal">
+                    <div class="control-group">
+                        <label class="control-label" for="inputName"><i class="icon-user"></i> Naam</label>
+                        <div class="controls">
+                            <input type="text" id="inputName" placeholder="Name">
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <label class="control-label" for="inputEmail"><i class="icon-envelope"></i> Email</label>
+                        <div class="controls">
+                            <input type="text" id="inputEmail" placeholder="Email">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+            <button class="btn btn-primary">Opslaan</button>
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+            </div>
+        </div>
+
+
         <!-- / Module: Settings -->
         <?= $body ?>
         <!-- Footer -->

@@ -11,6 +11,11 @@
 Flight::route('/', ['\App\Controllers\HomeController', 'index']);
 
 /*
+ * Login route
+ */
+Flight::route('/login', ['\App\Controllers\HomeController', 'login']);
+
+/*
  * PVI route
  */
 Flight::route('/pvi', ['\App\Controllers\HomeController', 'pvi']);
@@ -19,3 +24,8 @@ Flight::route('/pvi', ['\App\Controllers\HomeController', 'pvi']);
  * Analysis route
  */
 Flight::route('/analysis', ['\App\Controllers\HomeController', 'analysis']);
+
+/*
+ * EmployeeOverview route
+ */
+Flight::route('/employee', ['\App\Controllers\HomeController', 'employee']);
