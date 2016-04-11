@@ -1,9 +1,6 @@
 <!-- Content Container -->
 <div class="container">
-    <!-- Main Navigation: Box -->
-    <div class="navbar navbar-inverse" id="nav">
-    </div>
-    <!-- / Main Navigation: Box -->
+
     <!-- Forms -->
     <div class="row-fluid">
         <!-- Forms: Box -->

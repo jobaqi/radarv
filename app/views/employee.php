@@ -2,7 +2,7 @@
 <div class="container">
 
     <div class="row-fluid">
-			<!-- Create Account: Box -->
+			<!-- Create Empoloyee: Box -->
 			<div class="span12">
 
 				<!-- Create Account: Top Bar -->
@@ -24,17 +24,17 @@
 						<table class="data-table">
 							<thead>
 								<tr>
-										<th style=" border-right:1px solid #c2c2c2;">Voornaam</th>
-										<th style=" border-right:1px solid #c2c2c2;">Achternaam</th>
-										<th style=" border-right:1px solid #c2c2c2;">Geboortedatum</th>
-										<th style=" border-right:1px solid #c2c2c2;">Functie</th>
-										<th style=" border-right:1px solid #c2c2c2;">Schaal</th>
-										<th style=" border-right:1px solid #c2c2c2;">Aanstelling WTF</th>
-										<th style=" border-right:1px solid #c2c2c2;">Uren jaarbasis</th>
-										<th style=" border-right:1px solid #c2c2c2;">Weken inzetbaar</th>
-										<th style=" border-right:1px solid #c2c2c2;">Uren inzetbaar</th>
-										<th style=" border-right:1px solid #c2c2c2;">Regelingen</th>
-										<th style=" border-right:1px solid #c2c2c2;">Resterend inzetbaar</th>	
+										<th style=" border-right:1px solid #c2c2c2; text-align: center">Voornaam</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center">Achternaam</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center">Geboortedatum</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center">Functie</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center">Schaal</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center">Aanstelling WTF</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center">Uren jaarbasis</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center">Weken inzetbaar</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center">Uren inzetbaar</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center">Regelingen</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center">Resterend inzetbaar</th>	
 										<th class="right">Actie</th>
 							
 								</tr>
@@ -78,7 +78,7 @@
 								<!-- Alert -->
 								<div class="alert alert-info">
 									<a class="close" data-dismiss="alert">&times;</a>
-									<i class="icon-info"></i> You can add users through this panel
+									<i class="icon-info"></i> Voeg een medewerker toe!
 								</div>
 								<!-- / Alert -->
 
@@ -183,6 +183,6 @@
 				<!-- / Create Account: Content -->
 
 			</div>
-			<!-- / Create Account: Box -->
+			<!-- / Create Employee: Box -->
 	</div>
 </div>
