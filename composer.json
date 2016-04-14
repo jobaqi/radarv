@@ -3,7 +3,8 @@
         "mikecao/flight": "^1.2",
         "vlucas/phpdotenv": "^2.2",
         "illuminate/database": "^5.2",
-        "illuminate/events": "^5.2"
+        "illuminate/events": "^5.2",
+        "leeoniya/dump-r": "^2.1"
     },
     
     "autoload": {

@@ -23,7 +23,7 @@ class HomeController extends Controller{
 
 //        return self::renderWithLayout('index', ['title' => 'RadarV-Index']);
       $repo = new \App\Repositories\EmployeeRepository();
-      dump($_SERVER);
+      \dump_r($_SERVER);
     }
 }
 

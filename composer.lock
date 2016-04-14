@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b977e1f8f55658e32d0c68074449a350",
-    "content-hash": "29524468922c14fc2430a3564759c3e3",
+    "hash": "5076ab3b3bda9038f24504d532cd63a2",
+    "content-hash": "f1575a764c1b83574a72c6f205b31fe5",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -319,6 +319,59 @@
             "description": "The Illuminate Support package.",
             "homepage": "http://laravel.com",
             "time": "2016-03-30 18:18:45"
+        },
+        {
+            "name": "leeoniya/dump-r",
+            "version": "2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/leeoniya/dump_r.php.git",
+                "reference": "f6d3694f4ddd7dc08d7b3900875116eaf600034d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/leeoniya/dump_r.php/zipball/f6d3694f4ddd7dc08d7b3900875116eaf600034d",
+                "reference": "f6d3694f4ddd7dc08d7b3900875116eaf600034d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "suggest": {
+                "jdorn/sql-formatter": "Pretty-print dumped SQL strings"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "dump_r.php"
+                ],
+                "psr-4": {
+                    "dump_r\\": "src/dump_r"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Leon Sorokin",
+                    "email": "leeoniya@gmail.com",
+                    "homepage": "https://github.com/leeoniya",
+                    "role": "Developer"
+                }
+            ],
+            "description": "a cleaner, leaner mix of print_r() and var_dump()",
+            "homepage": "https://github.com/leeoniya/dump_r.php",
+            "keywords": [
+                "debug",
+                "dump",
+                "pretty",
+                "print",
+                "print_r",
+                "var_dump"
+            ],
+            "time": "2015-09-04 22:05:16"
         },
         {
             "name": "mikecao/flight",
