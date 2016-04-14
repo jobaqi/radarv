@@ -18,12 +18,32 @@ Flight::route('GET /pvi', ['\App\Controllers\HomeController', 'pvi']);
 /*
  * Analysis route
  */
-Flight::route('GET /analysis', ['\App\Controllers\HomeController', 'analysis']);
+Flight::route('GET /Analyse', ['\App\Controllers\StatistiekenController', 'analysis']);
 
 /*
  * EmployeeOverview route
  */
-Flight::route('GET /employee', ['\App\Controllers\HomeController', 'employee']);
+Flight::route('GET /Medewerker', ['\App\Controllers\EmployeeController', 'employee']);
+
+/*
+ * ClassesOverview route
+ */
+Flight::route('GET /Klassen', ['\App\Controllers\ClassesController', 'classes']);
+
+/*
+ * ArrangementOverview route
+ */
+Flight::route('GET /Regelingen', ['\App\Controllers\ArrangementController', 'arrangement']);
+
+/*
+ * TaskOverview route
+ */
+Flight::route('GET /Taken', ['\App\Controllers\TaskController', 'task']);
+
+/*
+ * SubjectOverview route
+ */
+Flight::route('GET /Vakken', ['\App\Controllers\SubjectController', 'subject']);
 
 /*
  * Authentication routes

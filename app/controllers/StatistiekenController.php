@@ -14,14 +14,12 @@
  */
 namespace App\Controllers;
 
-class HomeController extends Controller{
-    
+class StatistiekenController extends Controller{
+
     /**
-     * 
-     * @return 
+     * Show analysis page
      */
-    public static function index(){
-        return self::renderWithLayout('index', ['title' => 'RadarV-Index']);   
+    public static function analysis(){
+        return self::renderWithLayout('analysis', ['title' => 'Analyse overzicht']);
     }
 }
-
