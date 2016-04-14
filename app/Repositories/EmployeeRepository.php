@@ -13,25 +13,25 @@ namespace App\Repositories;
  *
  * @author Jordy
  */
-class EmployeeRepository {
-  private $employee;
-          
-  /**
-   * Set $this->model to the Employee model
-   * @param \App\Models\Employee $employee
-   * return void
-   */
-  function __construct(\App\Models\Employee $employee){
-    $this->model = $employee;
-  }
-  
-  /**
-   * Find an employee by id
-   * @param int $id
-   * @return App\Models\Employee
-   */
-  static function findById($id){
-    return $this->model->find($id);
-  }
-  
+class EmployeeRepository extends BaseRepository {
+         
+  public function __construct() {
+      $this->setModel(new \App\Models\Employee());
+    } 
+    
+    
+    /**
+     * Insert a new employee into the database
+     * @param String $first_name
+     * @param String $last_name
+     * @param String $date_of_birth yyy-mm-dd
+     * @param int $contract_id
+     * @param int $function_id
+     * @param String $password
+     * @return App\Models\Employee
+     */
+    static function insertIntoDatabase($data){
+      $this->model->create($data);
+      return $this;
+    }
 }

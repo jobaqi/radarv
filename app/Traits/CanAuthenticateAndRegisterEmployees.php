@@ -13,12 +13,36 @@ namespace App\Traits;
 trait CanAuthenticateAndRegisterEmployees{
   
   /**
+   * Render login page
+   */
+  static function showLogin(){
+    return Self::renderWithLayout("auth/login", ['title' => 'Login']);
+  }
+  
+  static function showRegister(){
+    return Self::renderWithLayout("auth/register", ['title' => 'Registreren']);
+  }
+  /**
    * Authenticate an employee
    * @param String $username
    * @param String $password
    */
-  function authenticate($username, $password){
-      var_dump(\App\Repositories\EmployeeRepository::findById(1)->firstName);
+  function authenticate(){
+      $repo = new \App\Repositories\EmployeeRepository();
+      $firstName = \Flight::request()->data->firstName;
+      $password = \Flight::request()->data->password;
+      
+      $user = $repo->findBy("first_name", $firstName, true);
+      
+      if(!empty($user)){
+        if(\App\Helpers\Hash::check($password, genHash($password))){
+          echo "Yest";
+        }
+        else {
+          echo "Nope";
+        }
+      }
+//      return "First name/Password don't match.";
   }
   
   /**
@@ -29,9 +53,17 @@ trait CanAuthenticateAndRegisterEmployees{
    * @param int $contract_id
    * @param int $function_id
    * @param String $password
-   * @return App\Models\Employee
+   * @return \App\Repositories\EmployeeRepository
    */
   function register($first_name, $last_name, $date_of_birth, $contract_id, $function_id, $password){
-    return \App\Factories\EmployeeFactory::insertIntoDatabase($first_name, $last_name, $date_of_birth, $contract_id, $function_id, $password);
+    $employeeRepository = new \App\Repositories\EmployeeRepository();
+    return $employeeRepository->insertIntoDatabase([
+        'first_name' => $first_name,
+        'last_name' => $last_name,
+        'date_of_birth' => $date_of_birth,
+        'contract_id' => $contract_id,
+        'function_id' => $function_id,
+        'password' => $password
+    ]);
   }
 }

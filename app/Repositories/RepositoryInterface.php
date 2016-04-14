@@ -6,15 +6,14 @@
  * and open the template in the editor.
  */
 
-namespace App\Controllers;
+namespace App\Repositories;
 
 /**
- * Description of AuthController
  *
  * @author Jordy
  */
-class AuthController extends Controller{
-  use \App\Traits\CanAuthenticateAndRegisterEmployees; 
-  
-  
+interface RepositoryInterface {
+  function findById($id);
+  function getAll();
+  function findBy($prop, $val);
 }

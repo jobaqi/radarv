@@ -20,4 +20,8 @@ class Hash {
         'cost' => 12
     ]);
   }
+  
+  static function check($string, $checkHash){
+    return password_verify($string, $checkHash);
+  }
 }

@@ -30,3 +30,5 @@ Flight::route('GET /employee', ['\App\Controllers\HomeController', 'employee']);
  */
 Flight::route('GET /login', ['\App\Controllers\AuthController', 'showLogin']);
 Flight::route('POST /login', ['\App\Controllers\AuthController', 'authenticate']);
+Flight::route('GET /register', ['\App\Controllers\AuthController', 'showRegister']);
+Flight::route('POST /register', ['\App\Controllers\AuthController', 'register']);

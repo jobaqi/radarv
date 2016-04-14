@@ -10,6 +10,6 @@ function url($url){
     return \App\Helpers\Path::url($url);
 }
 
-function hash($string){
+function genHash($string){
   return App\Helpers\Hash::hash($string);
 }

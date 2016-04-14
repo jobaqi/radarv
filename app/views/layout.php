@@ -7,11 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <!-- Styles -->
-        <link href='public\css\chosen.css' rel='stylesheet' type="text/css">
-        <link href="public\css\bootstrap.css" rel="stylesheet" type="text/css">
-        <link href="public\css\theme\avocado.css" rel="stylesheet" type="text/css" id="theme-style">
-        <link href="public\css\prism.css" rel="stylesheet/less" type="text/css">
-        <link href='public\css\fullcalendar.css' rel='stylesheet' type="text/css">
+        <link href='public/dist/styles.css' rel='stylesheet' type="text/css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,600,300' rel='stylesheet' type='text/css'>
         <style type="text/css">
             body { padding-top: 102px; }
@@ -21,9 +17,8 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
         <script src="public\js\charts\excanvas.js"></script>
-        <script src="public\js\charts\jquery.js"></script>
-        <script src="public\js\jquery.jpanelmenu.js"></script>
         <script src="public\js\jquery.js"></script>
+        <script src="public\js\jquery.jpanelmenu.js"></script>
         <script src="public\js\avocado-custom-predom.js"></script>
         <!-- HTML5, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
@@ -383,7 +378,6 @@
     <!-- Javascript
         ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src='public\js\jquery.js'></script>
     <script src='public\js\calendar\fullcalendar.js'></script>
     <script src="public\js\jquery-ui-1.10.2.custom.js"></script>
     <script src="public\js\jquery.prism.js"></script>
