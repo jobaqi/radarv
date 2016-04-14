@@ -55,22 +55,22 @@
                         <li class="dropdown">
                             <!-- User Navigation: Messages Link -->
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="icon-envelope icon-white"></i>
-                            <span class="hidden-phone"> Invoer gegevens </span>
+                            <i class=" icon-align-justify"></i>
+                            <span class="hidden-phone">Overzichten</span>
                             </a>
                             <!-- / User Navigation: Messages Link -->
                             <!-- / User Navigation: Messages Dropdown -->
                             <ul class="dropdown-menu widget">
                                 <!-- User Navigation: Messages Message -->
-                                <li><a href="<?= url('/Medewerker') ?>"><i class="icon-cog"></i> Medewerkers overzicht</a></li>
-                                <li><a href="<?= url('/Klassen') ?>"><i class="icon-cog"></i> Klassen overzicht</a></li>
-                                <li><a href="<?= url('/Vakken') ?>"><i class="icon-cog"></i> Vakken overzicht</a></li>
-                                <li><a href="<?= url('/Taken') ?>"><i class="icon-cog"></i> Taken overzicht</a></li>
-                                <li><a href="<?= url('/Regelingen') ?>"><i class="icon-cog"></i> Regelingen overzicht</a></li>
+                                <li><a href="<?= url('/Medewerker') ?>"><i class="icon-th-list"></i> Medewerkers overzicht</a></li>
+                                <li><a href="<?= url('/Klassen') ?>"><i class="icon-th-list"></i> Klassen overzicht</a></li>
+                                <li><a href="<?= url('/Vakken') ?>"><i class="icon-th-list"></i> Vakken overzicht</a></li>
+                                <li><a href="<?= url('/Taken') ?>"><i class="icon-th-list"></i> Taken overzicht</a></li>
+                                <li><a href="<?= url('/Regelingen') ?>"><i class="icon-th-list"></i> Regelingen overzicht</a></li>
                                 <!-- User Navigation: Messages View All Messages -->
                                 <li>
                                     <a href="<?= url('/pvi') ?>" class="text-center">
-                                    <i class="icon-inbox"></i> Een nieuwe PVI
+                                    <i class="icon-check"></i> Een nieuwe PVI
                                     </a>
                                 </li>
                                 <!-- / User Navigation: Messages View All Messages -->
@@ -82,7 +82,7 @@
                         <li class="dropdown">
                             <!-- User Navigation: Messages Link -->
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="icon-envelope icon-white"></i>
+                            <i class="icon-signal"></i>
                             <span class="hidden-phone"> Statistieken </span>
                             </a>
                             <!-- / User Navigation: Messages Link -->
@@ -91,17 +91,10 @@
                                 <!-- User Navigation: Messages Message -->
                                 <li>
                                     <a href="<?= url('/analysis') ?>" class="message">
-                                        <h3><i class="icon-user"></i> Analyseblad </h3>
+                                        <h3><i class=" icon-th-list"></i> Analyseblad </h3>
                                     </a>
                                 </li>
                                 <!-- / User Navigation: Messagses Message -->
-                                <!-- User Navigation: Messages Message -->
-                                <li>
-                                    <a href="#" class="message">
-                                        <h3><i class="icon-user"></i> Overzichten</h3>
-                                    </a>
-                                </li>
-                                <!-- / User Navigation: Messages Message -->
                             </ul>
                             <!-- / User Navigation: Messages Dropdown -->
                         </li>
