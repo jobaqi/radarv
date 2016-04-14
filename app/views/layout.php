@@ -47,7 +47,7 @@
                     </a>
                     <!-- / Mobile Menu Button -->
                     <!-- / Logo / Brand Name -->
-                    <a class="brand" href="#"><i class="icon-leaf"></i> PVI<b> App</b></a>
+                    <a class="brand" href="<?= url('/') ?>"><i class="icon-leaf"></i> PVI<b> App</b></a>
                     <!-- / Logo / Brand Name -->
                     <!-- User Navigation -->
                     <ul class="nav pull-right">
@@ -90,7 +90,7 @@
                             <ul class="dropdown-menu widget">
                                 <!-- User Navigation: Messages Message -->
                                 <li>
-                                    <a href="<?= url('/analysis') ?>" class="message">
+                                    <a href="<?= url('/Analyse') ?>" class="message">
                                         <h3><i class=" icon-th-list"></i> Analyseblad </h3>
                                     </a>
                                 </li>
@@ -130,7 +130,6 @@
                     <!-- Top Fixed Bar: Breadcrumb Location -->
                     <ul class="pull-left">
                         <li><a href="<?= url('/') ?>"><i class="icon-home"></i> Home</a> <span class="divider">/</span></li>
-                        <li><a href="#"><i class="icon-magic"></i> Invoer gegevens</a> <span class="divider">/</span></li>
                         <li class="active"><a href="<?= url('/pvi') ?>"><i class="icon-check"></i> PVI</a></li>
                     </ul>
                     <!-- / Top Fixed Bar: Breadcrumb Location -->
