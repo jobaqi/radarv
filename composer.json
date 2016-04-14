@@ -10,7 +10,10 @@
         "psr-4": {
             "App\\Models\\": "app/models/",
             "App\\Helpers\\": "app/helpers/",
-            "App\\Controllers\\": "app/controllers/"
+            "App\\Controllers\\": "app/controllers/",
+            "App\\Traits\\": "app/Traits/",
+            "App\\Factories\\": "app/Factories",
+            "App\\Repositories\\": "app/Repositories"
         }
     }
 }

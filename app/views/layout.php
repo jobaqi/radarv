@@ -7,11 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <!-- Styles -->
-        <link href='public\css\chosen.css' rel='stylesheet' type="text/css">
-        <link href="public\css\bootstrap.css" rel="stylesheet" type="text/css">
-        <link href="public\css\theme\avocado.css" rel="stylesheet" type="text/css" id="theme-style">
-        <link href="public\css\prism.css" rel="stylesheet/less" type="text/css">
-        <link href='public\css\fullcalendar.css' rel='stylesheet' type="text/css">
+        <link href='public/dist/styles.css' rel='stylesheet' type="text/css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,600,300' rel='stylesheet' type='text/css'>
         <style type="text/css">
             body { padding-top: 102px; }
@@ -21,9 +17,8 @@
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
         <script src="public\js\charts\excanvas.js"></script>
-        <script src="public\js\charts\jquery.js"></script>
-        <script src="public\js\jquery.jpanelmenu.js"></script>
         <script src="public\js\jquery.js"></script>
+        <script src="public\js\jquery.jpanelmenu.js"></script>
         <script src="public\js\avocado-custom-predom.js"></script>
         <!-- HTML5, for IE6-8 support of HTML5 elements -->
         <!--[if lt IE 9]>
@@ -47,7 +42,7 @@
                     </a>
                     <!-- / Mobile Menu Button -->
                     <!-- / Logo / Brand Name -->
-                    <a class="brand" href="#"><i class="icon-leaf"></i> PVI<b> App</b></a>
+                    <a class="brand" href="<?= url('/') ?>"><i class="icon-leaf"></i> PVI<b> App</b></a>
                     <!-- / Logo / Brand Name -->
                     <!-- User Navigation -->
                     <ul class="nav pull-right">
@@ -55,22 +50,22 @@
                         <li class="dropdown">
                             <!-- User Navigation: Messages Link -->
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="icon-envelope icon-white"></i>
-                            <span class="hidden-phone"> Invoer gegevens </span>
+                            <i class=" icon-align-justify"></i>
+                            <span class="hidden-phone">Overzichten</span>
                             </a>
                             <!-- / User Navigation: Messages Link -->
                             <!-- / User Navigation: Messages Dropdown -->
                             <ul class="dropdown-menu widget">
                                 <!-- User Navigation: Messages Message -->
-                                <li><a href="#medewerk" data-toggle="modal"><i class="icon-cog"></i> Medewerkers</a></li>
-                                <li><a href="#klassen" data-toggle="modal"><i class="icon-cog"></i> Klassen</a></li>
-                                <li><a href="#vakken" data-toggle="modal"><i class="icon-cog"></i> Vakken</a></li>
-                                <li><a href="#taken" data-toggle="modal"><i class="icon-cog"></i> Taken</a></li>
-                                <li><a href="#regelingen" data-toggle="modal"><i class="icon-cog"></i> Regelingen</a></li>
+                                <li><a href="<?= url('/Medewerker') ?>"><i class="icon-th-list"></i> Medewerkers overzicht</a></li>
+                                <li><a href="<?= url('/Klassen') ?>"><i class="icon-th-list"></i> Klassen overzicht</a></li>
+                                <li><a href="<?= url('/Vakken') ?>"><i class="icon-th-list"></i> Vakken overzicht</a></li>
+                                <li><a href="<?= url('/Taken') ?>"><i class="icon-th-list"></i> Taken overzicht</a></li>
+                                <li><a href="<?= url('/Regelingen') ?>"><i class="icon-th-list"></i> Regelingen overzicht</a></li>
                                 <!-- User Navigation: Messages View All Messages -->
                                 <li>
-                                    <a href="#" class="text-center">
-                                    <i class="icon-inbox"></i> Een nieuwe PVI
+                                    <a href="<?= url('/pvi') ?>" class="text-center">
+                                    <i class="icon-check"></i> Een nieuwe PVI
                                     </a>
                                 </li>
                                 <!-- / User Navigation: Messages View All Messages -->
@@ -82,7 +77,7 @@
                         <li class="dropdown">
                             <!-- User Navigation: Messages Link -->
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="icon-envelope icon-white"></i>
+                            <i class="icon-signal"></i>
                             <span class="hidden-phone"> Statistieken </span>
                             </a>
                             <!-- / User Navigation: Messages Link -->
@@ -90,18 +85,11 @@
                             <ul class="dropdown-menu widget">
                                 <!-- User Navigation: Messages Message -->
                                 <li>
-                                    <a href="analyseblad.html" class="message">
-                                        <h3><i class="icon-user"></i> Analyseblad </h3>
+                                    <a href="<?= url('/Analyse') ?>" class="message">
+                                        <h3><i class=" icon-th-list"></i> Analyseblad </h3>
                                     </a>
                                 </li>
-                                <!-- / User Navigation: Messages Message -->
-                                <!-- User Navigation: Messages Message -->
-                                <li>
-                                    <a href="#" class="message">
-                                        <h3><i class="icon-user"></i> Overzichten</h3>
-                                    </a>
-                                </li>
-                                <!-- / User Navigation: Messages Message -->
+                                <!-- / User Navigation: Messagses Message -->
                             </ul>
                             <!-- / User Navigation: Messages Dropdown -->
                         </li>
@@ -137,8 +125,7 @@
                     <!-- Top Fixed Bar: Breadcrumb Location -->
                     <ul class="pull-left">
                         <li><a href="<?= url('/') ?>"><i class="icon-home"></i> Home</a> <span class="divider">/</span></li>
-                        <li><a href="#"><i class="icon-magic"></i> Invoer gegevens</a> <span class="divider">/</span></li>
-                        <li class="active"><a href="#"><i class="icon-check"></i> PVI</a></li>
+                        <li class="active"><a href="<?= url('/pvi') ?>"><i class="icon-check"></i> PVI</a></li>
                     </ul>
                     <!-- / Top Fixed Bar: Breadcrumb Location -->
                     <!-- Top Fixed Bar: Breadcrumb Right Navigation -->
@@ -198,172 +185,7 @@
             </div>
         </div>
 
-        <div id="medewerk" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h6 id="myModalLabel"><i class="icon-cog"></i> Medewerker toevoegen (aan analyseblad)</h6>
-            </div>
-            <div class="modal-body">
-                <form class="form-horizontal">
-                    <div class="control-group">
-                        <label class="control-label" for="inputName"><i class="icon-user"></i> Naam</label>
-                        <div class="controls">
-                            <input type="text" id="inputName" placeholder="Name">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="inputName"><i class="icon-user"></i> Achternaam</label>
-                        <div class="controls">
-                            <input type="text" id="inputName" placeholder="achternaam">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="inputName"><i class="icon-user"></i> Geboorte Datum</label>
-                        <div class="controls">
-                            <input type="text" id="inputName" placeholder="JJ-MM-DD">
-                        </div>
-                    </div>
-                     <div class="control-group">
-                        <label class="control-label" for="inputName"><i class="icon-user"></i>Functie</label>
 
-
-                        <div class="controls">
-                            <select class="span6">
-                                <option value="number">[functienaam uit database]
-                                <option value="01">[functienaam uit database]
-                            </select>
-                 
-                        </div>
-
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="inputInline"><i class="icon-circle"></i>Aanstellingsomvang</label>
-                        <div class="controls">
-         					<input type="text" id="inputWeeks" placeholder="in WTF">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="inputEmail"><i class="icon-envelope"></i>Inzetbaar in weken</label>
-                        <div class="controls">
-                            <input type="text" id="inputEmail" placeholder="Email">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-            <button class="btn btn-primary">Opslaan</button>
-            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-            </div>
-        </div>
-
-        <div id="klassen" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h6 id="myModalLabel"><i class="icon-cog"></i> Medewerker toevoegen (aan analyseblad)</h6>
-            </div>
-            <div class="modal-body">
-                <form class="form-horizontal">
-                    <div class="control-group">
-                        <label class="control-label" for="inputName"><i class="icon-user"></i> Naam</label>
-                        <div class="controls">
-                            <input type="text" id="inputName" placeholder="Name">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="inputEmail"><i class="icon-envelope"></i> Email</label>
-                        <div class="controls">
-                            <input type="text" id="inputEmail" placeholder="Email">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-            <button class="btn btn-primary">Opslaan</button>
-            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-            </div>
-        </div>
-
-        <div id="vakken" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h6 id="myModalLabel"><i class="icon-cog"></i> Medewerker toevoegen (aan analyseblad)</h6>
-            </div>
-            <div class="modal-body">
-                <form class="form-horizontal">
-                    <div class="control-group">
-                        <label class="control-label" for="inputName"><i class="icon-user"></i> Naam</label>
-                        <div class="controls">
-                            <input type="text" id="inputName" placeholder="Name">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="inputEmail"><i class="icon-envelope"></i> Email</label>
-                        <div class="controls">
-                            <input type="text" id="inputEmail" placeholder="Email">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-            <button class="btn btn-primary">Opslaan</button>
-            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-            </div>
-        </div>
-
-
-        <div id="taken" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h6 id="myModalLabel"><i class="icon-cog"></i> Medewerker toevoegen (aan analyseblad)</h6>
-            </div>
-            <div class="modal-body">
-                <form class="form-horizontal">
-                    <div class="control-group">
-                        <label class="control-label" for="inputName"><i class="icon-user"></i> Naam</label>
-                        <div class="controls">
-                            <input type="text" id="inputName" placeholder="Name">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="inputEmail"><i class="icon-envelope"></i> Email</label>
-                        <div class="controls">
-                            <input type="text" id="inputEmail" placeholder="Email">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-            <button class="btn btn-primary">Opslaan</button>
-            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-            </div>
-        </div>
-
-        <div id="regelingen" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h6 id="myModalLabel"><i class="icon-cog"></i> Medewerker toevoegen (aan analyseblad)</h6>
-            </div>
-            <div class="modal-body">
-                <form class="form-horizontal">
-                    <div class="control-group">
-                        <label class="control-label" for="inputName"><i class="icon-user"></i> Naam</label>
-                        <div class="controls">
-                            <input type="text" id="inputName" placeholder="Name">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="inputEmail"><i class="icon-envelope"></i> Email</label>
-                        <div class="controls">
-                            <input type="text" id="inputEmail" placeholder="Email">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-            <button class="btn btn-primary">Opslaan</button>
-            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-            </div>
-        </div>
 
 
         <!-- / Module: Settings -->
@@ -383,7 +205,6 @@
     <!-- Javascript
         ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src='public\js\jquery.js'></script>
     <script src='public\js\calendar\fullcalendar.js'></script>
     <script src="public\js\jquery-ui-1.10.2.custom.js"></script>
     <script src="public\js\jquery.prism.js"></script>

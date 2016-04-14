@@ -1,9 +1,6 @@
 <!-- Content Container -->
 <div class="container">
-    <!-- Main Navigation: Box -->
-    <div class="navbar navbar-inverse" id="nav">
-    </div>
-    <!-- / Main Navigation: Box -->
+
     <!-- Forms -->
     <div class="row-fluid">
         <!-- Forms: Box -->
@@ -174,7 +171,7 @@
                         <!-- Forms: Content -->
                         <div class="well no-padding">
                             <div class="span12">
-                                <!-- Add News: WYSIWYG Edior -->
+                                <!-- Add News: WYSIWYG Editor -->
                                 <table class="table well">
                                     <thead>
                                         <tr>
@@ -223,7 +220,7 @@
                                         </tr>
                                     </tbody>
                                 </table>
-                                <!-- / Add News: WYSIWYG Edior -->
+                                <!-- / Add News: WYSIWYG Editor -->
                                 <div class="accordion">
                                     <div class="accordion-group">
                                         <div class="accordion-heading">

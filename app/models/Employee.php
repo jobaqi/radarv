@@ -15,5 +15,5 @@
 namespace App\Models;
 
 class Employee extends \Illuminate\Database\Eloquent\Model {
-    protected $fillable = ['first_name', 'last_name', 'date_of_birth', 'contract_id', 'function_id'];
+    protected $fillable = ['first_name', 'last_name', 'date_of_birth', 'contract_id', 'function_id', 'password'];
 }

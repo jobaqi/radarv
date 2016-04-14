@@ -21,24 +21,8 @@ class HomeController extends Controller{
      * @return 
      */
     public static function index(){
+
         return self::renderWithLayout('index', ['title' => 'RadarV-Index']);        
     }
-        
-    /**
-     * Show pvi page
-     */
-    public static function pvi(){
-        return self::renderWithLayout("pvi", ['title' => 'RadarV-PVI']);
-    }
-    
-    /**
-     * Show analysis page
-     */
-    public static function analysis(){
-        return self::renderWithLayout('analysis', ['title' => 'RadarV-analysis']);
-    }
-
-    //     public static function employee(){
-    //     return self::renderWithLayout('employee', ['title' => 'EmployeeOverview']);
-    // }
 }
+

@@ -11,7 +11,7 @@
             <!-- Basic World Map: Top Bar -->
             <div class="top-bar">
                 <ul class="tab-container">
-                    <li class="active"><a href="#tab-medewerkers"><i class="icon-home"></i>Analyse</a></li>
+                    <li class="active"><a href="#tab-medewerkers"><i class="icon-th-list"></i>Analyse</a></li>
                     <!--aantal tabladen wordt geladen uit database (aantal medewerkers)-->
                     <li><a href="#tab-1">1</a></li>
                     <li><a href="#tab-2">2</a></li>
@@ -46,7 +46,7 @@
                                     <tbody>
                                         <tr>
                                             <th>1</th>
-                                            <th><a href="pvi.html">Vinod Poenai</a></th>
+                                            <th><a href="<?= url('/pvi') ?>">Vinod Poenai</a></th>
                                             <th>1.0</th>
                                             <th>LC</th>
                                             <th>0</th>
@@ -60,7 +60,7 @@
                                         </tr>
                                         <tr>
                                             <th>2</th>
-                                            <th><a href="pvi.html">Anjo Eijeriks</a></th>
+                                            <th><a href="<?= url('/pvi') ?>">Anjo Eijeriks</a></th>
                                             <th>1.0</th>
                                             <th>LC</th>
                                             <th>170</th>
@@ -81,10 +81,10 @@
                         <!-- / Forms: Content -->
                     </div>
                     <div class="tab-pane" id="tab-1">
-                        <p>Vinod Poenai kan nog 100 uur ingezet worden. <a href="pvi.html">Bekijk detailpagina</a></p>
+                        <p>Vinod Poenai kan nog 100 uur ingezet worden. <a href="<?= url('/pvi') ?>">Bekijk detailpagina</a></p>
                     </div>
                     <div class="tab-pane" id="tab-2">
-                        <p>Anjo Eijeriks wordt 10 uur teveel ingezet. <a href="pvi.html">Bekijk detailpagina</a></p>
+                        <p>Anjo Eijeriks wordt 10 uur teveel ingezet. <a href="<?= url('/pvi') ?>">Bekijk detailpagina</a></p>
                     </div>
                 </div>
             </div>
