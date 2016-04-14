@@ -14,14 +14,12 @@
  */
 namespace App\Controllers;
 
-class HomeController extends Controller{
-    
+class ClassesController extends Controller{
+
     /**
-     * 
-     * @return 
+     * Show class overview page
      */
-    public static function index(){
-        return self::renderWithLayout('index', ['title' => 'RadarV-Index']);        
+        public static function classes(){
+        return self::renderWithLayout('classes', ['title' => 'Klassen overzicht']);
     }
 }
-

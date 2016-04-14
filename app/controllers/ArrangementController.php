@@ -14,14 +14,13 @@
  */
 namespace App\Controllers;
 
-class HomeController extends Controller{
-    
-    /**
-     * 
-     * @return 
+class ArrangementController extends Controller{
+
+     /**
+     *
+     * Show arrangement overview page
      */
-    public static function index(){
-        return self::renderWithLayout('index', ['title' => 'RadarV-Index']);        
+        public static function arrangement(){
+        return self::renderWithLayout('arrangement', ['title' => 'Regelingen overzicht']);
     }
 }
-

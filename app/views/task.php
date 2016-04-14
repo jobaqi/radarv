@@ -2,14 +2,14 @@
 <div class="container">
 
     <div class="row-fluid">
-			<!-- Create Empoloyee: Box -->
+			<!-- Create subject: Box -->
 			<div class="span12">
 
 				<!-- Create Account: Top Bar -->
 				<div class="top-bar">
 					<ul class="tab-container">
-					  <li class="active"><a href="#user-overview"><i class="icon-th-list"></i>Medewerkers overzicht</a></li>
-					  <li><a href="#user-create"><i class="icon-plus"></i>Toevoegen medewerker</a></li>
+					  <li class="active"><a href="#subject-overview"><i class="icon-th-list"></i>Taken overzicht</a></li>
+					  <li><a href="#subject-create"><i class="icon-plus"></i>Toevoegen taak</a></li>
 					</ul>
 				</div>
 				<!-- / Create Account: Top Bar -->
@@ -17,9 +17,9 @@
 				<!-- Create Account: Content -->
 				<div class="well no-padding tab-content">
 					
-					<!-- Create Account: Content User Overview  EERSTE TABBLAD-->
-					<div class="tab-pane active" id="user-overview">
-					<!-- Create Account: Content User Overview Table -->
+					<!-- Create Account: Content subject Overview  EERSTE TABBLAD-->
+					<div class="tab-pane active" id="subject-overview">
+					<!-- Create Account: Content subject Overview Table -->
 						<table class="data-table">
 							<thead>
 								<tr>
@@ -60,12 +60,12 @@
 							</tbody>
 
 						</table>
-						<!-- / Create Account: Content User Overview Table -->
+						<!-- / Create Account: Content subject Overview Table -->
 					</div>
-					<!-- / Create Account: Content User Overview -->
+					<!-- / Create Account: Content subject Overview -->
 
 					<!-- / Create Account: Tab TWEEDE TABBLAD -->   
-					<div class="tab-pane" id="user-create">
+					<div class="tab-pane" id="subject-create">
 						
 							<!-- Create A: Tab -->  
 						
@@ -184,7 +184,7 @@
 								
 								<!-- Create Account: Form Aanstelling -->
 								<div class="control-group">
-									<label class="control-label" for="inputAanstelling"><i class="icon-envelope"></i> Aanstelling</label>
+									<label class="control-label" for="inputAanstelling"><i class="icon-user"></i> Aanstelling</label>
 									<div class="controls">
 										<input type="text" id="inputAanstelling" placeholder="WTF">
 									</div>
@@ -228,6 +228,6 @@
 				<!-- / Create Account: Content -->
 
 			</div>
-			<!-- / Create Employee: Box -->
+			<!-- / Create subject: Box -->
 	</div>
 </div>

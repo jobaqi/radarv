@@ -14,14 +14,13 @@
  */
 namespace App\Controllers;
 
-class HomeController extends Controller{
-    
-    /**
-     * 
-     * @return 
-     */
-    public static function index(){
-        return self::renderWithLayout('index', ['title' => 'RadarV-Index']);        
-    }
-}
+class SubjectController extends Controller{
 
+     /**
+     * Show subject overview page
+     */
+        public static function subject(){
+        return self::renderWithLayout('subject', ['title' => 'Vakken Overzicht']);
+    }
+
+}
