@@ -41,17 +41,17 @@
 							</thead>
 							<tbody>
 								<tr>
-									<td>Vinod</td>
-									<td>Poenai</td>
-									<td>06/08/1984</td>
-									<td>Senior docent</td>
-									<td>LC</td>
-									<td>1.0</td>
-									<td>1659:00</td>
-									<td>30</td>
-									<td>1244:15</td>
-									<td>Desk. bevordering (59) / OR (20)</td>
-									<td>1068:15</td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
 									<td class="right">
 										<a href=""><i class="icon-edit-sign"></i></a>
 										<a href=""><i class="icon-remove"></i></a>

@@ -38,7 +38,7 @@ class HomeController extends Controller{
         return self::renderWithLayout('analysis', ['title' => 'RadarV-analysis']);
     }
 
-        public static function employee(){
-        return self::renderWithLayout('employee', ['title' => 'EmployeeOverview']);
-    }
+    //     public static function employee(){
+    //     return self::renderWithLayout('employee', ['title' => 'EmployeeOverview']);
+    // }
 }

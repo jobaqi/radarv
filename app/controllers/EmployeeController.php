@@ -4,18 +4,19 @@
  * @author Bart Allert
  */
 
+namespace App\Controllers;
 
+class EmployeeController extends Controller{
 
-
-	/**
+	/*
      * Show employee page
      */
     public static function employee(){
         return self::renderWithLayout("employee", ['title' => 'EmployeeOverView']);
     }
-	 /**
-     * Show pvi page
-     */
+	 /*
+      * Show pvi page
+      */
     public static function pvi(){
         return self::renderWithLayout("pvi", ['title' => 'RadarV-PVI']);
     }
@@ -35,6 +36,6 @@
 
 		$employees = App\Models\employee::all();
 
-		var_dump($employees);
+        var_dump($employees);
 	}
 }
