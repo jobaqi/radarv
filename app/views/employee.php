@@ -23,37 +23,37 @@
 						<table class="data-table">
 							<thead>
 								<tr>
-										<th style=" border-right:1px solid #c2c2c2; text-align: center">Voornaam</th>
-										<th style=" border-right:1px solid #c2c2c2; text-align: center">Achternaam</th>
-										<th style=" border-right:1px solid #c2c2c2; text-align: center">Geboortedatum</th>
-										<th style=" border-right:1px solid #c2c2c2; text-align: center">Functie</th>
-										<th style=" border-right:1px solid #c2c2c2; text-align: center">Schaal</th>
-										<th style=" border-right:1px solid #c2c2c2; text-align: center">Aanstelling WTF</th>
-										<th style=" border-right:1px solid #c2c2c2; text-align: center">Uren jaarbasis</th>
-										<th style=" border-right:1px solid #c2c2c2; text-align: center">Weken inzetbaar</th>
-										<th style=" border-right:1px solid #c2c2c2; text-align: center">Uren inzetbaar</th>
-										<th style=" border-right:1px solid #c2c2c2; text-align: center">Regelingen</th>
-										<th style=" border-right:1px solid #c2c2c2; text-align: center">Resterend inzetbaar</th>	
-										<th class="right">Actie</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Voornaam</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Achternaam</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Geboortedatum</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Functie</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Schaal</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Aanstelling WTF</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Uren jaarbasis</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Weken inzetbaar</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Uren inzetbaar</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Regelingen</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Resterend inzetbaar</th>	
+										<th class="right" style="text-align: center">Actie</th>
 							
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td>Vinod</td>
-									<td>Poenai</td>
-									<td>06/08/1984</td>
-									<td>Senior docent</td>
-									<td>LC</td>
-									<td>1.0</td>
-									<td>1659:00</td>
-									<td>30</td>
-									<td>1244:15</td>
-									<td>Desk. bevordering (59) / OR (20)</td>
-									<td>1068:15</td>
+									<td style="text-align: center;">Vinod</td>
+									<td style="text-align: center;">Poenai</td>
+									<td style="text-align: center;">06/08/1984</td>
+									<td style="text-align: center;">Senior docent</td>
+									<td style="text-align: center;">LC</td>
+									<td style="text-align: center;">1.0</td>
+									<td style="text-align: center;">1659:00</td>
+									<td style="text-align: center;">30</td>
+									<td style="text-align: center;">1244:15</td>
+									<td style="text-align: center;">Desk. bevordering (59) / OR (20)</td>
+									<td style="text-align: center;">1068:15</td>
 									<td class="right">
-										<a href=""><i class="icon-edit-sign"></i></a>
-										<a href=""><i class="icon-remove"></i></a>
+										<a href=""><button type="button" class="btn btn-danger">Delete</button></a>									
+										<a href=""><button type="button" class="btn btn-info">Edit</button></a>
 									</td>
 								</tr>
 
