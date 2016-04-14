@@ -13,3 +13,7 @@ function url($url){
 function genHash($string){
   return App\Helpers\Hash::hash($string);
 }
+
+function dump($variable){
+  return \App\Helpers\Dumper::dump($variable);
+}
