@@ -8,11 +8,12 @@ namespace App\Controllers;
 
 class EmployeeController extends Controller{
 
-	/*
+    /*
      * Show employee page
      */
-    public static function employee(){
-        return self::renderWithLayout("employee", ['title' => 'EmployeeOverView']);
+    public static function index(){
+        $erepo = new \App\Repositories\EmployeeRepository();
+        return self::renderWithLayout("employee", ['title' => 'EmployeeOverView', 'employees' => $erepo->getAll()]);
     }
 	 /*
       * Show pvi page
