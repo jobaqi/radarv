@@ -17,11 +17,11 @@ namespace App\Controllers;
 class HomeController extends Controller{
     
     /**
-     * 
-     * @return 
+     * Render index
      */
     public static function index(){
-        return self::renderWithLayout('index', ['title' => 'RadarV-Index']);   
+    	
+    	return self::renderWithLayout('index', ['title' => 'RadarV-Index']);
     }
 }
 

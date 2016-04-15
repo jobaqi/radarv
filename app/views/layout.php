@@ -7,7 +7,11 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <!-- Styles -->
-        <link href='public/dist/styles.css' rel='stylesheet' type="text/css">
+        <link href='public\css\chosen.css' rel='stylesheet' type="text/css">
+        <link href="public\css\bootstrap.css" rel="stylesheet" type="text/css">
+        <link href="public\css\theme\avocado.css" rel="stylesheet" type="text/css" id="theme-style">
+        <link href="public\css\prism.css" rel="stylesheet/less" type="text/css">
+        <link href='public\css\fullcalendar.css' rel='stylesheet' type="text/css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,600,300' rel='stylesheet' type='text/css'>
         <style type="text/css">
             body { padding-top: 102px; }
@@ -34,11 +38,11 @@
                 <div class="container">
                     <!-- Mobile Menu Button -->
                     <a href="#">
-                    <button type="button" class="btn btn-navbar mobile-menu">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    </button>
+                        <button type="button" class="btn btn-navbar mobile-menu">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                     </a>
                     <!-- / Mobile Menu Button -->
                     <!-- / Logo / Brand Name -->
@@ -50,8 +54,8 @@
                         <li class="dropdown">
                             <!-- User Navigation: Messages Link -->
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class=" icon-align-justify"></i>
-                            <span class="hidden-phone">Overzichten</span>
+                                <i class=" icon-align-justify"></i>
+                                <span class="hidden-phone">Overzichten</span>
                             </a>
                             <!-- / User Navigation: Messages Link -->
                             <!-- / User Navigation: Messages Dropdown -->
@@ -65,7 +69,7 @@
                                 <!-- User Navigation: Messages View All Messages -->
                                 <li>
                                     <a href="<?= url('/pvi') ?>" class="text-center">
-                                    <i class="icon-check"></i> Een nieuwe PVI
+                                        <i class="icon-check"></i> Een nieuwe PVI
                                     </a>
                                 </li>
                                 <!-- / User Navigation: Messages View All Messages -->
@@ -77,8 +81,8 @@
                         <li class="dropdown">
                             <!-- User Navigation: Messages Link -->
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="icon-signal"></i>
-                            <span class="hidden-phone"> Statistieken </span>
+                                <i class="icon-signal"></i>
+                                <span class="hidden-phone"> Statistieken </span>
                             </a>
                             <!-- / User Navigation: Messages Link -->
                             <!-- / User Navigation: Messages Dropdown -->
@@ -98,8 +102,8 @@
                         <li class="dropdown">
                             <!-- User Navigation: User Link -->
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="icon-user icon-white"></i> 
-                            <span class="hidden-phone">P. de Jager</span>
+                                <i class="icon-user icon-white"></i> 
+                                <span class="hidden-phone">P. de Jager</span>
                             </a>
                             <!-- / User Navigation: User Link -->
                             <!-- User Navigation: User Dropdown -->
@@ -180,8 +184,8 @@
                 </form>
             </div>
             <div class="modal-footer">
-            <button class="btn btn-primary">Opslaan</button>
-            <button class="btn" data-dismiss="modal" aria-hidden="true">Sluiten</button>
+                <button class="btn btn-primary">Opslaan</button>
+                <button class="btn" data-dismiss="modal" aria-hidden="true">Sluiten</button>
             </div>
         </div>
 
