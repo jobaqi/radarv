@@ -46,8 +46,8 @@
                                 echo "<td>$employee->first_name</td>";
                                 echo "<td>$employee->last_name</td>";
                                 echo "<td>$employee->date_of_birth</td>";
-                                echo "<td></td>";
-                                echo "<td></td>";
+                                echo "<td>".$employee->contract->total_hours_WTF."</td>";
+                                echo "<td>".$employee->contract->weeks_available."</td>";
                                 echo "<td></td>";
                                 echo "<td></td>";
                                 echo "<td></td>";

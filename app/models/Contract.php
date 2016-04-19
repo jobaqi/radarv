@@ -14,10 +14,6 @@
 
 namespace App\Models;
 
-class Employee extends \Illuminate\Database\Eloquent\Model {
-    protected $fillable = ['first_name', 'last_name', 'date_of_birth', 'contract_id', 'function_id', 'password'];
-
-    public function contract(){
-    	return $this->belongsTo('App\Models\Contract');
-    }
+class Contract extends \Illuminate\Database\Eloquent\Model {
+    protected $fillable = ['total_hours_WTF', 'weeks_available'];
 }

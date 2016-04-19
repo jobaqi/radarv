@@ -25,8 +25,4 @@ class EmployeeController extends Controller{
                                       'last_name' => '',
                                       'date_of_birth' =>'']);
     }
-    public static function View(){
-        $employees = App\Models\employee::all();
-        var_dump($employees);
-    }
 }
