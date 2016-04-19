@@ -23,7 +23,7 @@ Flight::route('GET /Analyse', ['\App\Controllers\StatistiekenController', 'analy
 /*
  * EmployeeOverview route
  */
-Flight::route('GET /medewerker', ['\App\Controllers\EmployeeController', 'employee']);
+Flight::route('GET /medewerker', ['\App\Controllers\EmployeeController', 'index']);
 
 /*
  * ClassesOverview route
