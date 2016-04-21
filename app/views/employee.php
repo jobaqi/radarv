@@ -46,8 +46,8 @@
                                 echo "<td>$employee->first_name</td>";
                                 echo "<td>$employee->last_name</td>";
                                 echo "<td>$employee->date_of_birth</td>";
-                                echo "<td></td>";
-                                echo "<td></td>";
+                                echo "<td>".$employee->contract->total_hours_WTF."</td>";
+                                echo "<td>".$employee->contract->weeks_available."</td>";
                                 echo "<td></td>";
                                 echo "<td></td>";
                                 echo "<td></td>";
@@ -75,7 +75,7 @@
 
 
                     <!-- Create Account: Form -->
-                    <form class="form-horizontal">
+                    <form action="#" class="form-horizontal">
 
                         <!-- Create Account: Form PeopleSoft -->
                         <div class="control-group">
@@ -108,8 +108,7 @@
                         <div class="control-group">
                             <label class="control-label" for="inputDate"><i class="icon-calendar"></i> Geboorte datum</label>
                             <div class="controls">
-
-                                <select class="span12">
+                                <select class="m-wrap">
 
                                     <?php
                                     for ($i = 31; $i > 0; $i--) {
@@ -117,9 +116,8 @@
                                       echo '<option value="' . $i . '">' . $i . '';
                                     }
                                     ?>
-
                                 </select>
-                                <select class="span12">
+                                <select class="m-wrap">
                                     <option value="Januari">Januari
                                     <option value="Februari">Februari
                                     <option value="Maart">Maart
@@ -133,14 +131,13 @@
                                     <option value="November">November
                                     <option value="December">December
                                 </select>
-                                <select class="span12">
+                                <select class="m-wrap">
 
-                                <?php
-                                for ($i = date('Y'); $i > 1950; $i--) {
-                                  echo '<option value="' . $i . '">' . $i . '';
-                                }
-                                ?>
-
+                                    <?php
+                                    for ($i = date('Y'); $i > 1950; $i--) {
+                                      echo '<option value="' . $i . '">' . $i . '';
+                                    }
+                                    ?>
                                 </select>
                             </div>
                         </div>
@@ -192,13 +189,13 @@
 
                         <!-- Create Account: Form Regelingen -->
                         <div class="control-group">
-                            <label class="control-label" for="inputRegelingen"><i class="icon-user"></i> Regelingen</label>
+                            <label class="control-label">Regelingen</label>
                             <div class="controls">
-
-                                <select class="span6">
-                                    <option value="Regelingen">Regelingen
-                                    <option value="regeling 1">regeling 1
-                                    <option value="regeling 2">regeling 2
+                                <select class="m-wrap input-block-level" multiple="multiple" data-placeholder="Kies uw regelingen" tabindex="1">
+                                    <option value="regeling 1">regeling 1</option>
+                                    <option value="regeling 2">regeling 2</option>
+                                    <option value="regeling 3">regeling 3</option>
+                                    <option value="regeling 4">regeling 4</option>
                                 </select>
                             </div>
                         </div>

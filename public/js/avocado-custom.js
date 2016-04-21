@@ -1088,7 +1088,8 @@ $("[rel='tooltip']").each(function( index ) {
 
 if ($("select")[0]){
 
-  $("select").chosen({disable_search_threshold: 10});
+  $("select.input-block-level").chosen({disable_search_threshold: 10, width: "100%" });
+  $("select:not(.input-block-level)").chosen({disable_search_threshold: 10 });
 
 };
 
