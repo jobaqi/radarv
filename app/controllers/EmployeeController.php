@@ -17,12 +17,4 @@ class EmployeeController extends Controller{
     public static function pvi(){
         return self::renderWithLayout("pvi", ['title' => 'RadarV-PVI']);
     }
-    /*
-     * create a employee
-     */
-    public static function store(){
-         App\Models\employee::create(['first_name' => '',
-                                      'last_name' => '',
-                                      'date_of_birth' =>'']);
-    }
 }
