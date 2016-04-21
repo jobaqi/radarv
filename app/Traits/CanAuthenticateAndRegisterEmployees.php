@@ -35,7 +35,7 @@ trait CanAuthenticateAndRegisterEmployees{
       $user = $repo->findBy("first_name", $firstName, true);
       
       if(!empty($user)){
-        if(\App\Helpers\Hash::check($password, genHash($password))){
+        if(\App\Helpers\Hash::check($user->password, genHash($password))){
           echo "Yest";
         }
         else {
@@ -47,16 +47,19 @@ trait CanAuthenticateAndRegisterEmployees{
   
   /**
    * Insert a new employee into the database
-   * @param String $first_name
-   * @param String $last_name
-   * @param String $date_of_birth yyy-mm-dd
-   * @param int $contract_id
-   * @param int $function_id
-   * @param String $password
    * @return \App\Repositories\EmployeeRepository
    */
-  function register($first_name, $last_name, $date_of_birth, $contract_id, $function_id, $password){
+  function register(){
+    
     $employeeRepository = new \App\Repositories\EmployeeRepository();
+    $data =  \Flight::request()->data;
+    $first_name = $data->firstName;
+    $last_name = $data->lastName;
+    $date_of_birth = $data->dateOfBirth;
+    $contract_id = $data->contractId;
+    $function_id = $data->functionId;
+    $password = $data->password;
+    
     return $employeeRepository->insertIntoDatabase([
         'first_name' => $first_name,
         'last_name' => $last_name,
