@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.5.1
+-- version 4.1.14
 -- http://www.phpmyadmin.net
 --
--- Host: localhost:3306
--- Gegenereerd op: 22 apr 2016 om 01:37
--- Serverversie: 5.6.29
--- PHP-versie: 5.6.20
+-- Machine: 127.0.0.1
+-- Gegenereerd op: 22 apr 2016 om 11:35
+-- Serverversie: 5.6.17
+-- PHP-versie: 5.5.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,10 +14,10 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
--- Database: `pvi`
+-- Databank: `pvi`
 --
 
 -- --------------------------------------------------------
@@ -26,11 +26,13 @@ SET time_zone = "+00:00";
 -- Tabelstructuur voor tabel `classes`
 --
 
-CREATE TABLE `classes` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `classes` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
-  `study_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `study_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_class_study1_idx` (`study_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -38,12 +40,15 @@ CREATE TABLE `classes` (
 -- Tabelstructuur voor tabel `contractrulings`
 --
 
-CREATE TABLE `contractrulings` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `contractrulings` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `hours` int(11) NOT NULL,
   `contract_id` int(11) NOT NULL,
-  `rulings_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `rulings_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_contractRulings_contract1_idx` (`contract_id`),
+  KEY `fk_contractRulings_rulings1_idx` (`rulings_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -51,18 +56,19 @@ CREATE TABLE `contractrulings` (
 -- Tabelstructuur voor tabel `contracts`
 --
 
-CREATE TABLE `contracts` (
-  `id` int(11) NOT NULL,
-  `total_hours_WTF` int(11) NOT NULL,
-  `weeks_available` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `contracts` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `total_hours_WTF` float NOT NULL,
+  `weeks_available` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `contracts`
 --
 
 INSERT INTO `contracts` (`id`, `total_hours_WTF`, `weeks_available`) VALUES
-(1, 1659, 40);
+(4, 0.5, 20);
 
 -- --------------------------------------------------------
 
@@ -70,13 +76,17 @@ INSERT INTO `contracts` (`id`, `total_hours_WTF`, `weeks_available`) VALUES
 -- Tabelstructuur voor tabel `employeeclasssubjects`
 --
 
-CREATE TABLE `employeeclasssubjects` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `employeeclasssubjects` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `subject_id` int(11) NOT NULL,
   `class_id` int(11) NOT NULL,
   `Employee_id` int(11) NOT NULL,
-  `percentage_preparation` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `percentage_preparation` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_employeeClassSubject_subject1_idx` (`subject_id`),
+  KEY `fk_employeeClassSubject_class1_idx` (`class_id`),
+  KEY `fk_employeeClassSubject_Employee1_idx` (`Employee_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -84,23 +94,25 @@ CREATE TABLE `employeeclasssubjects` (
 -- Tabelstructuur voor tabel `employees`
 --
 
-CREATE TABLE `employees` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `employees` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `first_name` varchar(255) NOT NULL,
   `last_name` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
   `date_of_birth` date NOT NULL,
   `function_id` int(11) DEFAULT NULL,
   `contract_id` int(11) DEFAULT NULL,
-  `deleted_at` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `deleted_at` date DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_Employee_function_idx` (`function_id`),
+  KEY `fk_Employee_contract1_idx` (`contract_id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `employees`
 --
 
-INSERT INTO `employees` (`id`, `first_name`, `last_name`, `password`, `date_of_birth`, `function_id`, `contract_id`, `deleted_at`) VALUES
-(1, 'Vinod', 'Poenai', 'test123', '1999-06-25', 1, 1, NULL);
+INSERT INTO `employees` (`id`, `first_name`, `last_name`, `date_of_birth`, `function_id`, `contract_id`, `deleted_at`) VALUES
+(3, 'Vinod', 'Peonai', '2016-04-04', 1, 4, NULL);
 
 -- --------------------------------------------------------
 
@@ -108,11 +120,14 @@ INSERT INTO `employees` (`id`, `first_name`, `last_name`, `password`, `date_of_b
 -- Tabelstructuur voor tabel `employeetasks`
 --
 
-CREATE TABLE `employeetasks` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `employeetasks` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `Employee_id` int(11) NOT NULL,
-  `task_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `task_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_employeeTask_Employee1_idx` (`Employee_id`),
+  KEY `fk_employeeTask_task1_idx` (`task_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -120,18 +135,19 @@ CREATE TABLE `employeetasks` (
 -- Tabelstructuur voor tabel `functions`
 --
 
-CREATE TABLE `functions` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `functions` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
-  `scale` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `scale` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `functions`
 --
 
 INSERT INTO `functions` (`id`, `name`, `scale`) VALUES
-(1, 'Senior docent', 1);
+(1, 'Leraar', 1);
 
 -- --------------------------------------------------------
 
@@ -139,11 +155,12 @@ INSERT INTO `functions` (`id`, `name`, `scale`) VALUES
 -- Tabelstructuur voor tabel `quarters`
 --
 
-CREATE TABLE `quarters` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `quarters` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `start_date` date NOT NULL,
-  `end_date` date NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `end_date` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -151,21 +168,11 @@ CREATE TABLE `quarters` (
 -- Tabelstructuur voor tabel `rulings`
 --
 
-CREATE TABLE `rulings` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `rulings` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
-  `Hours` int(12) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Tabelstructuur voor tabel `sessions`
---
-
-CREATE TABLE `sessions` (
-  `id` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -173,10 +180,11 @@ CREATE TABLE `sessions` (
 -- Tabelstructuur voor tabel `studies`
 --
 
-CREATE TABLE `studies` (
-  `id` int(11) NOT NULL,
-  `name` varchar(45) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE IF NOT EXISTS `studies` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -184,12 +192,15 @@ CREATE TABLE `studies` (
 -- Tabelstructuur voor tabel `subjectquarters`
 --
 
-CREATE TABLE `subjectquarters` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `subjectquarters` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `weeks` int(11) NOT NULL,
   `subject_id` int(11) NOT NULL,
-  `quarter_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `quarter_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_subjectQuarter_subject1_idx` (`subject_id`),
+  KEY `fk_subjectQuarter_quarter1_idx` (`quarter_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -197,11 +208,12 @@ CREATE TABLE `subjectquarters` (
 -- Tabelstructuur voor tabel `subjects`
 --
 
-CREATE TABLE `subjects` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `subjects` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
-  `hours` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `hours` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -209,11 +221,14 @@ CREATE TABLE `subjects` (
 -- Tabelstructuur voor tabel `taskquarters`
 --
 
-CREATE TABLE `taskquarters` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `taskquarters` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `task_id` int(11) NOT NULL,
-  `quarter_id` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `quarter_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_taskQuarter_task1_idx` (`task_id`),
+  KEY `fk_taskQuarter_quarter1_idx` (`quarter_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -221,188 +236,13 @@ CREATE TABLE `taskquarters` (
 -- Tabelstructuur voor tabel `tasks`
 --
 
-CREATE TABLE `tasks` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `tasks` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
-  `hours` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `hours` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
---
--- Indexen voor geëxporteerde tabellen
---
-
---
--- Indexen voor tabel `classes`
---
-ALTER TABLE `classes`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_class_study1_idx` (`study_id`);
-
---
--- Indexen voor tabel `contractrulings`
---
-ALTER TABLE `contractrulings`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_contractRulings_contract1_idx` (`contract_id`),
-  ADD KEY `fk_contractRulings_rulings1_idx` (`rulings_id`);
-
---
--- Indexen voor tabel `contracts`
---
-ALTER TABLE `contracts`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexen voor tabel `employeeclasssubjects`
---
-ALTER TABLE `employeeclasssubjects`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_employeeClassSubject_subject1_idx` (`subject_id`),
-  ADD KEY `fk_employeeClassSubject_class1_idx` (`class_id`),
-  ADD KEY `fk_employeeClassSubject_Employee1_idx` (`Employee_id`);
-
---
--- Indexen voor tabel `employees`
---
-ALTER TABLE `employees`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_Employee_function_idx` (`function_id`),
-  ADD KEY `fk_Employee_contract1_idx` (`contract_id`);
-
---
--- Indexen voor tabel `employeetasks`
---
-ALTER TABLE `employeetasks`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_employeeTask_Employee1_idx` (`Employee_id`),
-  ADD KEY `fk_employeeTask_task1_idx` (`task_id`);
-
---
--- Indexen voor tabel `functions`
---
-ALTER TABLE `functions`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexen voor tabel `quarters`
---
-ALTER TABLE `quarters`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexen voor tabel `rulings`
---
-ALTER TABLE `rulings`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexen voor tabel `studies`
---
-ALTER TABLE `studies`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexen voor tabel `subjectquarters`
---
-ALTER TABLE `subjectquarters`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_subjectQuarter_subject1_idx` (`subject_id`),
-  ADD KEY `fk_subjectQuarter_quarter1_idx` (`quarter_id`);
-
---
--- Indexen voor tabel `subjects`
---
-ALTER TABLE `subjects`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexen voor tabel `taskquarters`
---
-ALTER TABLE `taskquarters`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_taskQuarter_task1_idx` (`task_id`),
-  ADD KEY `fk_taskQuarter_quarter1_idx` (`quarter_id`);
-
---
--- Indexen voor tabel `tasks`
---
-ALTER TABLE `tasks`
-  ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT voor geëxporteerde tabellen
---
-
---
--- AUTO_INCREMENT voor een tabel `classes`
---
-ALTER TABLE `classes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT voor een tabel `contractrulings`
---
-ALTER TABLE `contractrulings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT voor een tabel `contracts`
---
-ALTER TABLE `contracts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT voor een tabel `employeeclasssubjects`
---
-ALTER TABLE `employeeclasssubjects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT voor een tabel `employees`
---
-ALTER TABLE `employees`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT voor een tabel `employeetasks`
---
-ALTER TABLE `employeetasks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT voor een tabel `functions`
---
-ALTER TABLE `functions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT voor een tabel `quarters`
---
-ALTER TABLE `quarters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT voor een tabel `rulings`
---
-ALTER TABLE `rulings`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT voor een tabel `studies`
---
-ALTER TABLE `studies`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT voor een tabel `subjectquarters`
---
-ALTER TABLE `subjectquarters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT voor een tabel `subjects`
---
-ALTER TABLE `subjects`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT voor een tabel `taskquarters`
---
-ALTER TABLE `taskquarters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT voor een tabel `tasks`
---
-ALTER TABLE `tasks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- Beperkingen voor geëxporteerde tabellen
 --
@@ -424,8 +264,8 @@ ALTER TABLE `contractrulings`
 -- Beperkingen voor tabel `employeeclasssubjects`
 --
 ALTER TABLE `employeeclasssubjects`
-  ADD CONSTRAINT `fk_employeeClassSubject_Employee1` FOREIGN KEY (`Employee_id`) REFERENCES `employees` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_employeeClassSubject_class1` FOREIGN KEY (`class_id`) REFERENCES `classes` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_employeeClassSubject_Employee1` FOREIGN KEY (`Employee_id`) REFERENCES `employees` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_employeeClassSubject_subject1` FOREIGN KEY (`subject_id`) REFERENCES `subjects` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
