@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Gegenereerd op: 22 apr 2016 om 02:50
+-- Gegenereerd op: 22 apr 2016 om 03:00
 -- Serverversie: 5.6.29
 -- PHP-versie: 5.6.20
 
