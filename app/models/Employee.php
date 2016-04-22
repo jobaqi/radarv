@@ -18,6 +18,10 @@ class Employee extends \Illuminate\Database\Eloquent\Model {
     protected $fillable = ['first_name', 'last_name', 'date_of_birth', 'contract_id', 'function_id', 'password'];
 
     public function contract(){
-    	return $this->belongsTo('App\Models\Contract');
+    	return $this->belongsTo('App\Models\Contract', 'contract_id', 'id');
+    }
+
+    public function func(){
+    	return $this->belongsTo('App\Models\Func', 'function_id', 'id');
     }
 }

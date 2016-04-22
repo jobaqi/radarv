@@ -40,27 +40,23 @@
                         </thead>
                         <tbody>
                             <!-- Loop through employees -->
-                            <?php
-                              foreach($employees as $employee){
-                                echo "<tr>";
-                                echo "<td>$employee->first_name</td>";
-                                echo "<td>$employee->last_name</td>";
-                                echo "<td>$employee->date_of_birth</td>";
-                                echo "<td>".$employee->contract->total_hours_WTF."</td>";
-                                echo "<td>".$employee->contract->weeks_available."</td>";
-                                echo "<td></td>";
-                                echo "<td></td>";
-                                echo "<td></td>";
-                                echo "<td></td>";
-                                echo "<td></td>";
-                                echo "<td></td>";
-                                echo "<td class='right'>";
-                                echo "<a href=''><i class='icon-edit-sign'></i></a>";
-                                echo "<a href=''><i class='icon-remove'></i></a>";
-                                echo "</td>";
-                                echo "</tr>";
-                              }
-                            ?>
+                            <?php foreach($employees as $employee): ?>
+                            <tr>
+                                <td><?php echo e($employee->first_name); ?></td>
+                                <td><?php echo e($employee->last_name); ?></td>
+                                <td><?php echo e($employee->date_of_birth); ?></td>
+                                <td><?php echo e($employee->func->name); ?></td>
+                                <td><?php echo e($employee->func->scale); ?></td>
+                                <td><?php echo e($employee->contract->total_hours_WTF); ?></td>
+                                <td><?php echo e(\App\Helpers\Formula::yearBasis($employee->contract->total_hours_WTF)); ?></td>
+                                <td><?php echo e($employee->contract->weeks_available); ?></td>
+                                <td><?php echo e(\App\Helpers\Formula::hoursAvailable($employee->contract->total_hours_WTF, $employee->contract->weeks_available)); ?></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            
+                            <?php endforeach; ?>
                         </tbody>
 
                     </table>

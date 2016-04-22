@@ -10,7 +10,7 @@
 /**
  * Handles main page handling
  *
- * @author Quinten
+ * @author Jordy
  */
 namespace App\Controllers;
 
@@ -20,8 +20,8 @@ class HomeController extends Controller{
      * Render index
      */
     public static function index(){
-    	
     	return self::renderWithLayout('index', ['title' => 'RadarV-Index']);
+    	
     }
 }
 

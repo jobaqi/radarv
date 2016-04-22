@@ -1,4 +1,4 @@
-    <?php
+<?php
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -24,7 +24,7 @@ class Formula {
     if(is_numeric($totalHours)){
         return 1659 * $totalHours;
     }
-    return "Total hours must be a number";
+    return "Total hours: \"$totalHours\" is not a number";
   }
   
   /**
@@ -53,7 +53,6 @@ class Formula {
       return $minutes / 60;
     }
     return "\$minutes must be a number";
-    
   }
   
 }
