@@ -1,6 +1,6 @@
 <?php 
 /*
- * @author Bart Allert
+ * @author Bart Allertz
  */
 namespace App\Controllers;
 use App\Models\Employee;
