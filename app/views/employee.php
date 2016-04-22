@@ -56,17 +56,58 @@
                                 echo "<td></td>";
                                 echo "<td class='right'>";
                                 echo "<a href=''><i class='icon-edit-sign'></i></a>";
-                                echo "<a href=''><i class='icon-remove'></i></a>";
+                                echo "<a href='#edit' data-toggle=''modal><i class='icon-remove'></i></a>";
                                 echo "</td>";
                                 echo "</tr>";
                               }
                             ?>
-                        </tbody>
+                        </tbody>    
 
                     </table>
                     <!-- / Create Account: Content User Overview Table -->
                 </div>
                 <!-- / Create Account: Content User Overview -->
+                <!-- Moldule: Settings -->
+                    <div id="edit" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 id="myModalLabel1"><i class="icon-remove"></i> Edit</h3>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal">
+                                <div class="control-group">
+                                    <label class="control-label" for="inputName"><i class="icon-user"></i> Voornaam</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputName" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputUsername"><i class="icon-user"></i> inputAchternaam</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputUsername" placeholder="Username">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputPassword"><i class="icon-key"></i> Password</label>
+                                    <div class="controls">
+                                        <input type="password" id="inputPassword" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputEmail"><i class="icon-envelope"></i> Email</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputEmail" placeholder="Email">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary">Opslaan</button>
+                            <button class="btn" data-dismiss="modal" aria-hidden="true">Sluiten</button>
+                        </div>
+                    </div>
+
+                <!-- / Module: Settings -->
 
                 <!-- / Create Account: Tab TWEEDE TABBLAD -->   
                 <div class="tab-pane" id="user-create">

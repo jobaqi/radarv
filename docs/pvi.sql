@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.2
+-- version 4.5.5.1
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Gegenereerd op: 11 apr 2016 om 07:21
--- Serverversie: 5.6.28
--- PHP-versie: 5.5.31
+-- Gegenereerd op: 22 apr 2016 om 01:37
+-- Serverversie: 5.6.29
+-- PHP-versie: 5.6.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -57,6 +57,13 @@ CREATE TABLE `contracts` (
   `weeks_available` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Gegevens worden geëxporteerd voor tabel `contracts`
+--
+
+INSERT INTO `contracts` (`id`, `total_hours_WTF`, `weeks_available`) VALUES
+(1, 1659, 40);
+
 -- --------------------------------------------------------
 
 --
@@ -88,6 +95,13 @@ CREATE TABLE `employees` (
   `deleted_at` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Gegevens worden geëxporteerd voor tabel `employees`
+--
+
+INSERT INTO `employees` (`id`, `first_name`, `last_name`, `password`, `date_of_birth`, `function_id`, `contract_id`, `deleted_at`) VALUES
+(1, 'Vinod', 'Poenai', 'test123', '1999-06-25', 1, 1, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -112,6 +126,13 @@ CREATE TABLE `functions` (
   `scale` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Gegevens worden geëxporteerd voor tabel `functions`
+--
+
+INSERT INTO `functions` (`id`, `name`, `scale`) VALUES
+(1, 'Senior docent', 1);
+
 -- --------------------------------------------------------
 
 --
@@ -132,7 +153,8 @@ CREATE TABLE `quarters` (
 
 CREATE TABLE `rulings` (
   `id` int(11) NOT NULL,
-  `name` varchar(45) NOT NULL
+  `name` varchar(45) NOT NULL,
+  `Hours` int(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -325,7 +347,7 @@ ALTER TABLE `contractrulings`
 -- AUTO_INCREMENT voor een tabel `contracts`
 --
 ALTER TABLE `contracts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT voor een tabel `employeeclasssubjects`
 --
@@ -335,7 +357,7 @@ ALTER TABLE `employeeclasssubjects`
 -- AUTO_INCREMENT voor een tabel `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT voor een tabel `employeetasks`
 --
@@ -345,7 +367,7 @@ ALTER TABLE `employeetasks`
 -- AUTO_INCREMENT voor een tabel `functions`
 --
 ALTER TABLE `functions`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT voor een tabel `quarters`
 --

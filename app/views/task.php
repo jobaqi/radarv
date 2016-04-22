@@ -34,8 +34,8 @@
 									<td style="text-align: center;">Taak a</td>
 									<td style="text-align: center;">40 uur</td>
 									<td class="right">
-										<a href=""><button type="button" class="btn btn-danger">Delete</button></a>									
-										<a href=""><button type="button" class="btn btn-info">Edit</button></a>
+										<a href=''><i class='icon-edit-sign'></i></a>
+										<a href=''><i class='icon-remove'></i></a>
 									</td>
 								</tr>
 
