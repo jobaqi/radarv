@@ -13,7 +13,7 @@ Flight::route('GET /', ['\App\Controllers\HomeController', 'index']);
 /*
  * PVI route
  */
-Flight::route('GET /pvi', ['\App\Controllers\HomeController', 'pvi']);
+Flight::route('GET /pvi', ['\App\Controllers\EmployeeController', 'pvi']);
 
 /*
  * Analysis route

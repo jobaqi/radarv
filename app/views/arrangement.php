@@ -23,16 +23,18 @@
 						<table class="data-table">
 							<thead>
 								<tr>
-										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Naam</th>	
+										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Naam</th>
+										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Uren</th>		
 										<th class="right" style="text-align: center">Actie</th>							
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td style="text-align: center;">Desk. bevordering (59) / OR (20)</td>		
+									<td style="text-align: center;">Desk. bevordering (59) / OR (20)</td>
+									<td style="text-align: center;">40</td>		
 									<td class="right">
-										<a href=""><button type="button" class="btn btn-danger">Delete</button></a>									
-										<a href=""><button type="button" class="btn btn-info">Edit</button></a>
+										<a href=''><i class='icon-edit-sign'></i></a>
+										<a href=''><i class='icon-remove'></i></a>
 									</td>
 								</tr>
 

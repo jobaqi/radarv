@@ -55,14 +55,54 @@
                                 <td></td>
                                 <td></td>
                             </tr>
-                            
                             <?php endforeach; ?>
+                            
                         </tbody>
-
                     </table>
                     <!-- / Create Account: Content User Overview Table -->
                 </div>
                 <!-- / Create Account: Content User Overview -->
+                <!-- Moldule: Settings -->
+                    <div id="edit" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel1" aria-hidden="true">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h3 id="myModalLabel1"><i class="icon-remove"></i> Edit</h3>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-horizontal">
+                                <div class="control-group">
+                                    <label class="control-label" for="inputName"><i class="icon-user"></i> Voornaam</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputName" placeholder="Name">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputUsername"><i class="icon-user"></i> inputAchternaam</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputUsername" placeholder="Username">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputPassword"><i class="icon-key"></i> Password</label>
+                                    <div class="controls">
+                                        <input type="password" id="inputPassword" placeholder="Password">
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label" for="inputEmail"><i class="icon-envelope"></i> Email</label>
+                                    <div class="controls">
+                                        <input type="text" id="inputEmail" placeholder="Email">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-primary">Opslaan</button>
+                            <button class="btn" data-dismiss="modal" aria-hidden="true">Sluiten</button>
+                        </div>
+                    </div>
+
+                <!-- / Module: Settings -->
 
                 <!-- / Create Account: Tab TWEEDE TABBLAD -->   
                 <div class="tab-pane" id="user-create">
@@ -71,7 +111,7 @@
 
 
                     <!-- Create Account: Form -->
-                    <form action="#" class="form-horizontal">
+                    <form class="form-horizontal">
 
                         <!-- Create Account: Form PeopleSoft -->
                         <div class="control-group">
@@ -104,7 +144,8 @@
                         <div class="control-group">
                             <label class="control-label" for="inputDate"><i class="icon-calendar"></i> Geboorte datum</label>
                             <div class="controls">
-                                <select class="m-wrap">
+
+                                <select class="span12">
 
                                     <?php
                                     for ($i = 31; $i > 0; $i--) {
@@ -112,8 +153,9 @@
                                       echo '<option value="' . $i . '">' . $i . '';
                                     }
                                     ?>
+
                                 </select>
-                                <select class="m-wrap">
+                                <select class="span12">
                                     <option value="Januari">Januari
                                     <option value="Februari">Februari
                                     <option value="Maart">Maart
@@ -127,13 +169,14 @@
                                     <option value="November">November
                                     <option value="December">December
                                 </select>
-                                <select class="m-wrap">
+                                <select class="span12">
 
-                                    <?php
-                                    for ($i = date('Y'); $i > 1950; $i--) {
-                                      echo '<option value="' . $i . '">' . $i . '';
-                                    }
-                                    ?>
+                                <?php
+                                for ($i = date('Y'); $i > 1950; $i--) {
+                                  echo '<option value="' . $i . '">' . $i . '';
+                                }
+                                ?>
+
                                 </select>
                             </div>
                         </div>
@@ -185,13 +228,13 @@
 
                         <!-- Create Account: Form Regelingen -->
                         <div class="control-group">
-                            <label class="control-label">Regelingen</label>
+                            <label class="control-label" for="inputRegelingen"><i class="icon-user"></i> Regelingen</label>
                             <div class="controls">
-                                <select class="m-wrap input-block-level" multiple="multiple" data-placeholder="Kies uw regelingen" tabindex="1">
-                                    <option value="regeling 1">regeling 1</option>
-                                    <option value="regeling 2">regeling 2</option>
-                                    <option value="regeling 3">regeling 3</option>
-                                    <option value="regeling 4">regeling 4</option>
+
+                                <select class="span6">
+                                    <option value="Regelingen">Regelingen
+                                    <option value="regeling 1">regeling 1
+                                    <option value="regeling 2">regeling 2
                                 </select>
                             </div>
                         </div>

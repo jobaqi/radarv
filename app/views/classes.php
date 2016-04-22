@@ -34,8 +34,8 @@
 									<td style="text-align: center;">4VAOW3A</td>
 									<td style="text-align: center;">Applicatie Ontwikkeling</td>
 									<td style="text-align: center;"  class="right">
-										<a href=""><button type="button" class="btn btn-danger">Delete</button></a>									
-										<a href=""><button type="button" class="btn btn-info">Edit</button></a>
+										<a href=''><i class='icon-edit-sign'></i></a>
+										<a href=''><i class='icon-remove'></i></a>
 									</td>
 								</tr>
 
