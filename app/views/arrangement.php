@@ -61,6 +61,14 @@
 								</div>
 							</div>
 							<!-- / Create Class: Form Naam -->
+							<!-- Create Account: Form Uren -->
+							<div class="control-group">
+								<label class="control-label" for="inputUren"><i class="icon-user"></i>Uren</label>
+								<div class="controls">
+									<input type="text" class="typeahead" id="inputUren" placeholder="">
+								</div>
+							</div>
+							<!-- / Create Class: Form Uren -->
                         	<!-- Create Account: Form Actions -->
                         	<div class="form-actions">
                            		<button type="submit" class="btn btn-primary">Aanmaken</button>
