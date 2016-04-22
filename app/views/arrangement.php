@@ -24,7 +24,7 @@
 							<thead>
 								<tr>
 										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Naam</th>
-										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Uren</th>		
+										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Uren jaarbasis</th>		
 										<th class="right" style="text-align: center">Actie</th>							
 								</tr>
 							</thead>
@@ -63,7 +63,7 @@
 							<!-- / Create Class: Form Naam -->
 							<!-- Create Account: Form Uren -->
 							<div class="control-group">
-								<label class="control-label" for="inputUren"><i class="icon-user"></i>Uren</label>
+								<label class="control-label" for="inputUren"><i class="icon-user"></i>Uren jaarbasis</label>
 								<div class="controls">
 									<input type="text" class="typeahead" id="inputUren" placeholder="">
 								</div>
