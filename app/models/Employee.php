@@ -24,4 +24,7 @@ class Employee extends \Illuminate\Database\Eloquent\Model {
     public function func(){
     	return $this->belongsTo('App\Models\Func', 'function_id', 'id');
     }
+    public function Ruling(){
+        return $this->belongsTo('App\Models\Ruling', 'Ruling_id', 'id');
+    }
 }
