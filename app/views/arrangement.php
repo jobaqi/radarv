@@ -62,6 +62,7 @@
 	                                            </div>
 	                                        </div>
 	                                        <div class="control-group">
+	                                            <label class="control-label" for="inputuren"><i class="icon-time"></i> Uren</label>
 	                                            <div class="controls">
 	                                                <input class="span6" type="text" id="inputuren" placeholder="">
 	                                            </div>

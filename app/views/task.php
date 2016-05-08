@@ -46,6 +46,7 @@
 					</div>
 					<!-- / Create Account: Content subject Overview -->
 
+	                <!-- Moldule: Edit Tasks -->
 	                    <div id="edit" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="close-modal" aria-hidden="true">
 	                        <div class="modal-dialog">
 	                            <div class="modal-content">
@@ -62,6 +63,7 @@
 	                                            </div>
 	                                        </div>
 	                                        <div class="control-group">
+	                                            <label class="control-label" for="inputuren"><i class="icon-time"></i> Uren</label>
 	                                            <div class="controls">
 	                                                <input class="span6" type="text" id="inputuren" placeholder="">
 	                                            </div>
@@ -75,7 +77,9 @@
 	                            </div>
 	                        </div>
 	                    </div>
+	                <!-- / Module: Edit Tasks -->
 
+	                <!-- Module: Delete Tasks -->
 	                <div class="modal hide fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	                    <div class="modal-dialog">
 	                        <div class="modal-content">
@@ -93,6 +97,7 @@
 	                        </div>
 	                    </div>
 	                </div>             
+	                <!-- / Module: Delete Tasks -->
 
 					<!-- / Create Account: Tab TWEEDE TABBLAD -->   
 					<div class="tab-pane" id="subject-create">
