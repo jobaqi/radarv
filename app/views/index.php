@@ -5,9 +5,9 @@
             |
             <a href="<?= url('/login') ?>">Login</a>
             |
-            <a href="<?= url('/Medewerker') ?>">Medewerkers overzicht</a>
+            <a href="<?= url('/Analyse') ?>">Analyse overzicht</a>
             |
-            <a href="<?= url('/Analyse') ?>">Analyse overzicht</a> 
+            <a href="<?= url('/Medewerker') ?>">Medewerkers overzicht</a>
             |
             <a href="<?= url('/Klassen') ?>">Klassen overzicht</a>
             |

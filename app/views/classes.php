@@ -23,19 +23,18 @@
 						<table class="data-table">
 							<thead>
 								<tr>
-										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Klas</th>
-										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Studie</th>
-										<th class="right" style="text-align: center;">Actie</th>
-							
+									<th class="custom-header">Klas</th>
+									<th class="custom-header">Studie</th>
+									<th class="custom-header">Actie</th>							
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td style="text-align: center;">4VAOW3A</td>
-									<td style="text-align: center;">Applicatie Ontwikkeling</td>
-									<td style="text-align: center;"  class="right">
-										<a href=''><i class='icon-edit-sign'></i></a>
-										<a href=''><i class='icon-remove'></i></a>
+									<td class="custom-data">4VAOW3A</td>
+									<td class="custom-data">Applicatie Ontwikkeling</td>
+									<td class="custom-data">
+	                                    <a href='#edit' data-toggle="modal"><i class='icon-edit-sign'></i></a>
+	                                    <a href='#delete' data-toggle="modal"><i class='icon-remove'></i></a>
 									</td>
 								</tr>
 
@@ -45,6 +44,63 @@
 						<!-- / Create Account: Content classes Overview Table -->
 					</div>
 					<!-- / Create Account: Content classes Overview -->
+
+	                <!-- Moldule: Edit Classes -->
+	                    <div id="edit" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="close-modal" aria-hidden="true">
+	                        <div class="modal-dialog">
+	                            <div class="modal-content">
+	                                <div class="modal-header">
+	                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	                                    <h3 id="close-modal"><i class="icon-edit-sign"></i> Edit</h3>
+	                                </div>
+	                                <div class="modal-custom-body">
+	                                    <form class="form-horizontal">
+	                                        <div class="control-group">
+	                                            <label class="control-label" for="inpunaam"><i class="icon-user"></i> Naam</label>
+	                                            <div class="controls">
+	                                                <input class="span6" type="text" id="inpunaam" placeholder="">
+	                                            </div>
+	                                        </div>
+	                                        <div class="control-group">
+	                                            <label class="control-label" for="inputklas"><i class="icon-user"></i> Klas</label>
+	                                            <div class="controls">
+
+	                                                <select class="span6">
+	                                                    <option value="Applicatie Ontwikkeling">Applicatie Ontwikkeling
+	                                                    <option value="Media Developer">Media Developer
+	                                                </select>
+	                                            </div>
+	                                        </div>
+	                                    </form>
+	                                </div>
+	                                <div class="modal-footer">
+	                                    <button class="btn btn-primary">Opslaan</button>
+	                                    <button class="btn" data-dismiss="modal" aria-hidden="true">Sluiten</button>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                <!-- / Module: Edit Classes -->
+
+	                 <!-- Module: Delete Classes -->
+	                <div class="modal hide fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	                    <div class="modal-dialog">
+	                        <div class="modal-content">
+	                                <div class="modal-header">
+	                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	                                    <h3 id="close-modal"><i class="icon-remove"></i> Delete</h3>
+	                                </div>
+	                            <div class="modal-body">
+	                                <p>Weer u zeker dat u (Klas) wilt verwijderen?</p>
+	                            </div>
+	                                <div class="modal-footer">
+	                                    <button class="btn btn-danger">Delete</button>
+	                                    <button class="btn" data-dismiss="modal" aria-hidden="true">Sluiten</button>
+	                                </div>
+	                        </div>
+	                    </div>
+	                </div>             
+	                <!-- / Module: Delete Classes -->
 
 					<!-- / Create Account: Tab TWEEDE TABBLAD -->   
 					<div class="tab-pane" id="classes-create">
@@ -58,7 +114,7 @@
 							<div class="control-group">
 								<label class="control-label" for="inputNaam"><i class="icon-user"></i>Naam</label>
 								<div class="controls">
-									<input type="text" class="typeahead" id="inputNaam" placeholder="">
+									<input class="span3" type="text" id="inputNaam" placeholder="">
 								</div>
 							</div>
 							<!-- / Create Class: Form Naam -->
@@ -68,7 +124,7 @@
 								<label class="control-label" for="inputKlas"><i class="icon-user"></i> Klas</label>
 								<div class="controls">
 
-									<select class="span12">
+									<select class="span5">
 										<option value="Applicatie Ontwikkelaar">Applicatie Ontwikkelaar
 										<option value="Media Developer">Media Developer
 									</select>
