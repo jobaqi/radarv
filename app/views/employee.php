@@ -69,7 +69,7 @@
                         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
                         <h3 id="close-modal"><i class="icon-edit-sign"></i> Edit</h3>
                      </div>
-                     <div class="modal-custom-body">
+                     <div class="modal-body">
                         <form class="form-horizontal">
                            <div class="control-group">
                               <label class="control-label" for="Peoplesoft"><i class="icon-user"></i> PeopleSoft#</label>
@@ -155,10 +155,12 @@
                            <div class="control-group">
                               <label class="control-label" for="inputRegelingen"><i class="icon-user"></i> Regelingen</label>
                               <div class="controls">
-                                 <select class="span9 m-wrap block-level" multiple="multiple" data-placeholder="Regelingen">
-                                    <option value="1">regeling 1
-                                    <option value="2">regeling 2
-                                 </select>
+                                 <div class="span9">
+                                    <select class="m-wrap block-level" multiple="multiple" data-placeholder="Regelingen">
+                                       <option value="1">regeling 1
+                                       <option value="2">regeling 2
+                                    </select>
+                                 </div>
                               </div>
                            </div>
                         </form>
@@ -294,10 +296,22 @@
                   <div class="control-group">
                      <label class="control-label" for="inputRegelingen"><i class="icon-user"></i> Regelingen</label>
                      <div class="controls">
-                        <select class="span3 m-wrap block-level" multiple="multiple" data-placeholder="Regelingen">
-                           <option value="1">regeling 1
-                           <option value="2">regeling 2
-                        </select>
+                        <div class="span3">
+                           <select class="m-wrap block-level" multiple="multiple" data-placeholder="Regelingen">
+                              <option value="1">regeling 1
+                              <option value="2">regeling 2
+                              <option value="1">Regeling 1</option>
+                              <option value="2">Regeling 2</option>
+                              <option value="3">Regeling 3</option>
+                              <option value="4">Regeling 4</option>
+                              <option value="5">Regeling 5</option>
+                              <option value="6">Regeling 6</option>
+                              <option value="7">Regeling 7</option>
+                              <option value="8">Regeling 8</option>
+                              <option value="9">Regeling 9</option>
+                              <option value="10">Regeling 10</option>
+                           </select>
+                        </div>
                      </div>
                   </div>
                   <!-- / Create Account: Form Regelingen -->

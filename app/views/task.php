@@ -54,7 +54,7 @@
 	                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
 	                                    <h3 id="close-modal"><i class="icon-edit-sign"></i> Edit</h3>
 	                                </div>
-	                                <div class="modal-custom-body">
+	                                <div class="modal-body">
 	                                    <form class="form-horizontal">
 	                                        <div class="control-group">
 	                                            <label class="control-label" for="inputnaam"><i class="icon-user"></i> Naam</label>
