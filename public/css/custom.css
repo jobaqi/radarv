@@ -1,0 +1,19 @@
+.modal {
+    outline:none;    
+}
+
+.modal-body{
+	padding: 24px;
+	overflow: hidden; 
+}
+
+th.custom-header{
+	text-align:center;
+	border-right:1px;
+	border-right-style: solid;
+	border-right-color: #c2c2c2; 
+}
+
+td.custom-data{
+	text-align: center;
+}

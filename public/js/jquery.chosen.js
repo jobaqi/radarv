@@ -523,7 +523,7 @@
       }
 
       if (this.container_width()=="0px") {
-      	$contWidth = "20%";
+      	$contWidth = "";
 
       }
       else {

@@ -42,6 +42,26 @@ class Formula {
     }
     return "Total hours WTF must be a number";
   }
+
+  /**
+   * Get Total Ruling Hours Annually
+   * @param integer $totalHours
+   * @param integer $weeks
+   * @param integer $hoursannually
+   * @return mixed
+   */
+  static function HoursAnnually($totalHours, $weeks, $hoursAnnually){
+    if(is_numeric($totalHours)){
+      if(is_numeric($weeks)){
+        if(is_numeric($HoursAnnually)){
+          return ($totalHours * $weeks * 40 + ($totalHours * self::minutesToHours(88) * $weeks) - Self::minutesToHours($hoursAnnually));
+        }
+        return "total hours WTF must be a number";
+      }
+      return "total weeks must be a number";
+    }
+    return "Total hours: \"$hoursAnnually\" is not a number ";
+  }
   
   /**
    * Convert minutes to hours

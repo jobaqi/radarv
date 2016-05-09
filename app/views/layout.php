@@ -13,6 +13,7 @@
         <link href="public\css\prism.css" rel="stylesheet/less" type="text/css">
         <link href='public\css\fullcalendar.css' rel='stylesheet' type="text/css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,600,300' rel='stylesheet' type='text/css'>
+        <link href='public\css\custom.css' rel='stylesheet' type="text/css">
         <style type="text/css">
             body { padding-top: 102px; }
         </style>
@@ -188,9 +189,6 @@
                 <button class="btn" data-dismiss="modal" aria-hidden="true">Sluiten</button>
             </div>
         </div>
-
-
-
 
         <!-- / Module: Settings -->
         <?= $body ?>

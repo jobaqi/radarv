@@ -23,18 +23,18 @@
 						<table class="data-table">
 							<thead>
 								<tr>
-										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Naam</th>
-										<th style=" border-right:1px solid #c2c2c2; text-align: center;">Uren jaarbasis</th>		
-										<th class="right" style="text-align: center">Actie</th>							
+										<th class="custom-header">Naam</th>
+										<th class="custom-header">Uren</th>		
+										<th class="custom-header">Actie</th>
 								</tr>
 							</thead>
 							<tbody>
 								<tr>
-									<td style="text-align: center;">Desk. bevordering (59) / OR (20)</td>
-									<td style="text-align: center;">40</td>		
-									<td class="right">
-										<a href=''><i class='icon-edit-sign'></i></a>
-										<a href=''><i class='icon-remove'></i></a>
+									<td class="custom-data">Desk. bevordering (59) / OR (20)</td>
+									<td class="custom-data">40</td>		
+									<td class="custom-data">
+	                                    <a href='#edit' data-toggle="modal"><i class='icon-edit-sign'></i></a>
+	                                    <a href='#delete' data-toggle="modal"><i class='icon-remove'></i></a>
 									</td>
 								</tr>
 
@@ -44,6 +44,59 @@
 						<!-- / Create Account: Content arrangement Overview Table -->
 					</div>
 					<!-- / Create Account: Content arrangement Overview -->
+
+	                <!-- Moldule: Edit Arrangements -->
+	                    <div id="edit" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="close-modal" aria-hidden="true">
+	                        <div class="modal-dialog">
+	                            <div class="modal-content">
+	                                <div class="modal-header">
+	                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	                                    <h3 id="close-modal"><i class="icon-edit-sign"></i> Edit</h3>
+	                                </div>
+	                                <div class="modal-custom-body">
+	                                    <form class="form-horizontal">
+	                                        <div class="control-group">
+	                                            <label class="control-label" for="inputnaam"><i class="icon-user"></i> Naam</label>
+	                                            <div class="controls">
+	                                                <input class="span6" type="text" id="inputnaam" placeholder="">
+	                                            </div>
+	                                        </div>
+	                                        <div class="control-group">
+	                                            <label class="control-label" for="inputuren"><i class="icon-time"></i> Uren</label>
+	                                            <div class="controls">
+	                                                <input class="span6" type="text" id="inputuren" placeholder="">
+	                                            </div>
+	                                        </div>
+	                                    </form>
+	                                </div>
+	                                <div class="modal-footer">
+	                                    <button class="btn btn-primary">Opslaan</button>
+	                                    <button class="btn" data-dismiss="modal" aria-hidden="true">Sluiten</button>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                <!-- / Module: Edit Arrangements -->
+
+	                <!-- Module: Delete Arrangements -->
+	                <div class="modal hide fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	                    <div class="modal-dialog">
+	                        <div class="modal-content">
+	                                <div class="modal-header">
+	                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+	                                    <h3 id="close-modal"><i class="icon-remove"></i> Delete</h3>
+	                                </div>
+	                            <div class="modal-body">
+	                                <p>Weer u zeker dat u (Regeling) wilt verwijderen?</p>
+	                            </div>
+	                                <div class="modal-footer">
+	                                    <button class="btn btn-danger">Delete</button>
+	                                    <button class="btn" data-dismiss="modal" aria-hidden="true">Sluiten</button>
+	                                </div>
+	                        </div>
+	                    </div>
+	                </div>             
+	                <!-- / Module: Delete Arrangements -->
 
 					<!-- / Create Account: Tab TWEEDE TABBLAD -->   
 					<div class="tab-pane" id="arrangement-create">
