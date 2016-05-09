@@ -11,5 +11,5 @@ function url($url){
 }
 
 function genHash($string){
-  return App\Helpers\Hash::hash($string);
+  return \App\Helpers\Hash::hash($string);
 }
