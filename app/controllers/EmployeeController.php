@@ -18,4 +18,10 @@ class EmployeeController extends Controller{
     public static function pvi(){
         return self::renderWithLayout("pvi", ['title' => 'Plan van inzet']);
     }
+     /*
+      * Show create pvi page
+      */
+    public static function createpvi(){
+        return self::renderWithLayout("createpvi", ['title' => 'Nieuw plan van inzet']);
+    }    
 }

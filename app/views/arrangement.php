@@ -62,7 +62,7 @@
 	                                            </div>
 	                                        </div>
 	                                        <div class="control-group">
-	                                            <label class="control-label" for="inputuren"><i class="icon-time"></i> Uren</label>
+	                                            <label class="control-label" for="inputuren"><i class="icon-time"></i> Formule</label>
 	                                            <div class="controls">
 	                                                <input class="span6" type="text" id="inputuren" placeholder="">
 	                                            </div>
@@ -116,7 +116,7 @@
 							<!-- / Create Class: Form Naam -->
 							<!-- Create Account: Form Uren -->
 							<div class="control-group">
-								<label class="control-label" for="inputUren"><i class="icon-user"></i>Uren jaarbasis</label>
+								<label class="control-label" for="inputUren"><i class="icon-user"></i>Formule</label>
 								<div class="controls">
 									<input type="text" class="typeahead" id="inputUren" placeholder="">
 								</div>

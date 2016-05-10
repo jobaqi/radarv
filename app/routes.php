@@ -16,6 +16,11 @@ Flight::route('GET /', ['\App\Controllers\HomeController', 'index']);
 Flight::route('GET /pvi', ['\App\Controllers\EmployeeController', 'pvi']);
 
 /*
+ * Create PVI route
+ */
+Flight::route('GET /nieuwepvi', ['\App\Controllers\EmployeeController', 'createpvi']);
+
+/*
  * Analysis route
  */
 Flight::route('GET /Analyse', ['\App\Controllers\StatistiekenController', 'analysis']);

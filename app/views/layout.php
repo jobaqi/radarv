@@ -69,7 +69,7 @@
                                 <li><a href="<?= url('/Regelingen') ?>"><i class="icon-th-list"></i> Regelingen overzicht</a></li>
                                 <!-- User Navigation: Messages View All Messages -->
                                 <li>
-                                    <a href="<?= url('/pvi') ?>" class="text-center">
+                                    <a href="<?= url('/nieuwepvi') ?>" class="text-center">
                                         <i class="icon-check"></i> Een nieuwe PVI
                                     </a>
                                 </li>

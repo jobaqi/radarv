@@ -12,9 +12,6 @@
             <div class="top-bar">
                 <ul class="tab-container">
                     <li class="active"><a href="#tab-medewerkers"><i class="icon-th-list"></i>Analyse</a></li>
-                    <!--aantal tabladen wordt geladen uit database (aantal medewerkers)-->
-                    <li><a href="#tab-1">1</a></li>
-                    <li><a href="#tab-2">2</a></li>
                 </ul>
             </div>
             <!-- / Tabs: Top Bar -->
@@ -79,12 +76,6 @@
                             <!-- / Add News: Box -->
                         </div>
                         <!-- / Forms: Content -->
-                    </div>
-                    <div class="tab-pane" id="tab-1">
-                        <p>Vinod Poenai kan nog 100 uur ingezet worden. <a href="<?= url('/pvi') ?>">Bekijk detailpagina</a></p>
-                    </div>
-                    <div class="tab-pane" id="tab-2">
-                        <p>Anjo Eijeriks wordt 10 uur teveel ingezet. <a href="<?= url('/pvi') ?>">Bekijk detailpagina</a></p>
                     </div>
                 </div>
             </div>

@@ -16,6 +16,9 @@
             <a href="<?= url('/Taken') ?>">Taken overzicht</a>
             |
             <a href="<?= url('/Vakken') ?>">Vakken overzicht</a>
+            |
+            <a href="<?= url('/nieuwepvi') ?>">Nieuwepvi</a>
+
         </p>
     </div>
 </div>
