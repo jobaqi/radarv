@@ -15,5 +15,5 @@
 namespace App\Models;
 
 class Contract extends \Illuminate\Database\Eloquent\Model {
-    protected $fillable = ['total_hours_WTF', 'weeks_available'];
+    protected $fillable = ['WekenInzetbaar', 'AanstellingsOmvangWTF', 'Functie_id', 'medewerker_id'];
 }

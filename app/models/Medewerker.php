@@ -15,16 +15,16 @@
 namespace App\Models;
 
 class Employee extends \Illuminate\Database\Eloquent\Model {
-    protected $fillable = ['first_name', 'last_name', 'date_of_birth', 'contract_id', 'function_id', 'password'];
+    protected $fillable = ['PeopleSoftNummer', 'Voornaam', 'Achternaam', 'GeboorteDatum', 'VerwijderdOp', 'password'];
 
     public function contract(){
     	return $this->belongsTo('App\Models\Contract', 'contract_id', 'id');
     }
 
     public function func(){
-    	return $this->belongsTo('App\Models\Func', 'function_id', 'id');
+    	return $this->belongsTo('App\Models\Func', 'functie_id', 'id');
     }
     public function Ruling(){
-        return $this->belongsTo('App\Models\Ruling', 'Ruling_id', 'id');
+        return $this->belongsTo('App\Models\regelingen', 'regelingen_id', 'id');
     }
 }

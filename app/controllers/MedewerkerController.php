@@ -5,12 +5,12 @@
 namespace App\Controllers;
 use App\Models\Employee;
 
-class EmployeeController extends Controller{
+class MedewerkerController extends Controller{
     /*
      * Show employee page
      */
     public static function index(){
-        return self::renderWithLayout("employee", ['title' => 'Medewerkers overzicht', 'employees' => Employee::all()]);
+        return self::renderWithLayout("medewerker", ['title' => 'Medewerkers overzicht', 'medewerker' => Medewerker::all()]);
     }
      /*
       * Show pvi page

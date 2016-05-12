@@ -38,15 +38,15 @@
                      <!-- Loop through employees -->
                      <?php foreach($employees as $employee): ?>
                      <tr>
-                        <td class="custom-data"><?php echo e($employee->Peoplesoft_nummer); ?></td>
-                        <td class="custom-data"><?php echo e($employee->first_name); ?></td>
-                        <td class="custom-data"><?php echo e($employee->last_name); ?></td>
-                        <td class="custom-data"><?php echo e($employee->date_of_birth); ?></td>
-                        <td class="custom-data"><?php echo e($employee->func->name); ?></td>
-                        <td class="custom-data"><?php echo e($employee->func->scale); ?></td>
-                        <td class="custom-data"><?php echo e($employee->contract->total_hours_WTF); ?></td>
-                        <td class="custom-data"><?php echo e(\App\Helpers\Formula::yearBasis($employee->contract->total_hours_WTF)); ?></td>
-                        <td class="custom-data"><?php echo e($employee->contract->weeks_available); ?></td>
+                        <td class="custom-data"><?php echo e($medewerker->Peoplesoft_nummer); ?></td>
+                        <td class="custom-data"><?php echo e($medewerker->Voornaam); ?></td>
+                        <td class="custom-data"><?php echo e($medewerker->Achternaam); ?></td>
+                        <td class="custom-data"><?php echo e($medewerker->Geboortedatum); ?></td>
+                        <td class="custom-data"><?php echo e($medewerker->func->naam); ?></td>
+                        <td class="custom-data"><?php echo e($medewerker->func->Schaal); ?></td>
+                        <td class="custom-data"><?php echo e($medewerker->contract->wekenInzetbaar); ?></td>
+                        <td class="custom-data"><?php echo e(\App\Helpers\Formula::yearBasis($employee->contract->wekenInzetbaar)); ?></td>
+                        <td class="custom-data"><?php echo e($employee->contract->wekenInzetbaar); ?></td>
                         <td class="custom-data"><?php echo e(\App\Helpers\Formula::hoursAvailable($employee->contract->total_hours_WTF, $employee->contract->weeks_available)); ?></td>
                         <td class="custom-data"></td>
                         <td class="custom-data"></td>
