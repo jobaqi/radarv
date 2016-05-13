@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
  * @author Bart Allertz
  */
@@ -10,7 +10,7 @@ class MedewerkerController extends Controller{
      * Show employee page
      */
     public static function index(){
-        return self::renderWithLayout("medewerker", ['title' => 'Medewerkers overzicht', 'Medewerker' => Medewerker::all()]);
+        return self::renderWithLayout("medewerker", ['title' => 'MedewerkersOverzicht', 'medewerkers' => medewerker::all()]);
     }
      /*
       * Show pvi page
@@ -24,4 +24,4 @@ class MedewerkerController extends Controller{
     public static function createpvi(){
         return self::renderWithLayout("createpvi", ['title' => 'Nieuw plan van inzet']);
     }    
-} 
+}

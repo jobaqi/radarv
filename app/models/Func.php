@@ -15,6 +15,6 @@
 namespace App\Models;
 
 class Func extends \Illuminate\Database\Eloquent\Model {
-    protected $fillable = ['naam', 'schaal'];
+    protected $fillable = ['Naam', 'Schaal'];
    	protected $table = 'functie';
 }

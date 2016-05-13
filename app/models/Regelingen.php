@@ -14,7 +14,7 @@
 
 namespace App\Models;
 
-class Ruling extends \Illuminate\Database\Eloquent\Model {
+class Regelingen extends \Illuminate\Database\Eloquent\Model {
     protected $fillable = ['Naam', 'uren1WTF1Jaar'];
     protected $table = 'regelingen';
 }

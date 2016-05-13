@@ -7,14 +7,14 @@
  */
 
 /**
- * Description of Employee
+ * Description of Medewerker
  *
  * @author Jordy
  */
 
 namespace App\Models;
 
-class Medewerker extends \Illuminate\Database\Eloquent\Model {
+class medewerker extends \Illuminate\Database\Eloquent\Model {
     protected $fillable = ['PeopleSoftNummer', 'Voornaam', 'Achternaam', 'GeboorteDatum', 'VerwijderdOp', 'password'];
 
     public function contract(){
@@ -24,7 +24,7 @@ class Medewerker extends \Illuminate\Database\Eloquent\Model {
     public function func(){
     	return $this->belongsTo('App\Models\Func', 'functie_id', 'id');
     }
-    public function Ruling(){
-        return $this->belongsTo('App\Models\regelingen', 'regelingen_id', 'id');
+    public function regelingen(){
+        return $this->belongsTo('App\Models\Regelingen', 'regelingen_id', 'id');
     }
 }

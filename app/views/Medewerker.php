@@ -36,9 +36,9 @@
                   </thead>
                   <tbody>
                      <!-- Loop through employees -->
-                     <?php foreach($employees as $employee): ?>
+                     <?php foreach($medewerkers as $medewerker): ?>
                      <tr>
-                        <td class="custom-data"><?php echo e($medewerker->Peoplesoft_nummer); ?></td>
+                        <td class="custom-data"><?php echo e($medewerker->PeopleSoftNummer); ?></td>
                         <td class="custom-data"><?php echo e($medewerker->Voornaam); ?></td>
                         <td class="custom-data"><?php echo e($medewerker->Achternaam); ?></td>
                         <td class="custom-data"><?php echo e($medewerker->Geboortedatum); ?></td>
