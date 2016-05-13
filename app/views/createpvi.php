@@ -139,6 +139,11 @@
                                 <option value="2">6</option>
                                 <option value="3">20</option>
                             </select>
+                                <select class="m-wrap block-level span2" multiple="multiple" data-placeholder="Aantal uren">
+                                <option value="1">10</option>
+                                <option value="2">6</option>
+                                <option value="3">20</option>
+                            </select>
                             </div>
                         </div>
                     </div>                  

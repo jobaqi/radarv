@@ -26,7 +26,7 @@ SET time_zone = "+00:00";
 -- Tabelstructuur voor tabel `contracts`
 --
 
-CREATE TABLE IF NOT EXISTS `contracts` (
+CREATE TABLE IF NOT EXISTS `contracten` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `WekenInzetbaar` int(11) DEFAULT NULL,
   `AanstellingsOmvangWTF` float DEFAULT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `klassen` (
 -- Tabelstructuur voor tabel `medewerkerregeling`
 --
 
-CREATE TABLE IF NOT EXISTS `medewerkerregeling` (
+CREATE TABLE IF NOT EXISTS `medewerkerregelingen` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Regelingen_id` int(11) NOT NULL,
   `Medewerker_id` int(11) NOT NULL,
@@ -159,7 +159,7 @@ CREATE TABLE IF NOT EXISTS `taken` (
 -- Tabelstructuur voor tabel `takenmedewerker`
 --
 
-CREATE TABLE IF NOT EXISTS `takenmedewerker` (
+CREATE TABLE IF NOT EXISTS `takenmedewerkers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `StartWeek` int(11) DEFAULT NULL,
   `AantalWeken` int(11) DEFAULT NULL,
@@ -190,7 +190,7 @@ CREATE TABLE IF NOT EXISTS `vakken` (
 --
 -- Beperkingen voor tabel `contracts`
 --
-ALTER TABLE `contracts`
+ALTER TABLE `contracten`
   ADD CONSTRAINT `fk_Contract_Functie1` FOREIGN KEY (`Functie_id`) REFERENCES `functies` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_Contract_Medewerker1` FOREIGN KEY (`Medewerker_id`) REFERENCES `medewerkers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
@@ -203,7 +203,7 @@ ALTER TABLE `klassen`
 --
 -- Beperkingen voor tabel `medewerkerregeling`
 --
-ALTER TABLE `medewerkerregeling`
+ALTER TABLE `medewerkerregelingen`
   ADD CONSTRAINT `fk_MedewerkerRegeling_Medewerker1` FOREIGN KEY (`Medewerker_id`) REFERENCES `medewerkers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_MedewerkerRegeling_Regelingen1` FOREIGN KEY (`Regelingen_id`) REFERENCES `regelingen` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
@@ -218,7 +218,7 @@ ALTER TABLE `onderwijstaken`
 --
 -- Beperkingen voor tabel `takenmedewerker`
 --
-ALTER TABLE `takenmedewerker`
+ALTER TABLE `takenmedewerkers`
   ADD CONSTRAINT `fk_takenMedewerker_Medewerker1` FOREIGN KEY (`Medewerker_id`) REFERENCES `medewerkers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_takenMedewerker_Taken1` FOREIGN KEY (`Taken_id`) REFERENCES `taken` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 

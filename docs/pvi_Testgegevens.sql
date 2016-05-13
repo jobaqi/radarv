@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- Gegevens worden geëxporteerd voor tabel `functie`
 --
 
-INSERT INTO `functie` (`id`, `Naam`, `Schaal`) VALUES
+INSERT INTO `functies` (`id`, `Naam`, `Schaal`) VALUES
 (1, 'Leraar in opleiding', NULL),
 (2, 'onderwijsassistent', '5'),
 (3, 'instructeur', '7'),
@@ -37,7 +37,7 @@ INSERT INTO `functie` (`id`, `Naam`, `Schaal`) VALUES
 -- Gegevens worden geëxporteerd voor tabel `medewerker`
 --
 
-INSERT INTO `medewerker` (`id`, `PeopleSoftNummer`, `Voornaam`, `Achternaam`, `GeboorteDatum`, `VerwijderdOp`) VALUES
+INSERT INTO `medewerkers` (`id`, `PeopleSoftNummer`, `Voornaam`, `Achternaam`, `GeboorteDatum`, `VerwijderdOp`) VALUES
 (1, 103848, 'Vinod', 'Poenai', '2016-05-03', NULL),
 (2, 103849, 'Henk', 'Wieling', '2016-05-29', NULL),
 (3, 101234, 'Bart', 'Allert', '2016-05-08', NULL),
@@ -47,7 +47,7 @@ INSERT INTO `medewerker` (`id`, `PeopleSoftNummer`, `Voornaam`, `Achternaam`, `G
 -- Gegevens worden geëxporteerd voor tabel `contract`
 --
 
-INSERT INTO `contract` (`id`, `WekenInzetbaar`, `AanstellingsOmvangWTF`, `Functie_id`, `Medewerker_id`) VALUES
+INSERT INTO `contracten` (`id`, `WekenInzetbaar`, `AanstellingsOmvangWTF`, `Functie_id`, `Medewerker_id`) VALUES
 (1, 40, 1, 4, 1),
 (2, 20, 0.8, 3, 2);
 
@@ -64,7 +64,7 @@ INSERT INTO `regelingen` (`id`, `Naam`, `Uren1WTF1Jaar`) VALUES
 -- Gegevens worden geëxporteerd voor tabel `medewerkerregeling`
 --
 
-INSERT INTO `medewerkerregeling` (`id`, `Regelingen_id`, `Medewerker_id`) VALUES
+INSERT INTO `medewerkerregelingen` (`id`, `Regelingen_id`, `Medewerker_id`) VALUES
 (1, 1, 1),
 (2, 2, 1),
 (3, 2, 2),
@@ -74,7 +74,7 @@ INSERT INTO `medewerkerregeling` (`id`, `Regelingen_id`, `Medewerker_id`) VALUES
 -- Gegevens worden geëxporteerd voor tabel `opleiding`
 --
 
-INSERT INTO `opleiding` (`id`, `Naam`) VALUES
+INSERT INTO `opleidingen` (`id`, `Naam`) VALUES
 (1, 'ApplicatieOntwikkelaar'),
 (2, 'ICT Beheerder'),
 (3, 'NetwerkBeheer'),
@@ -121,14 +121,14 @@ INSERT INTO `vakken` (`id`, `Naam`) VALUES
 -- Gegevens worden geëxporteerd voor tabel `takenmedewerker`
 --
 
-INSERT INTO `takenmedewerker` (`id`, `StartWeek`, `AantalWeken`, `UrenOpWeekbasis`, `Taken_id`, `Medewerker_id`) VALUES
+INSERT INTO `takenmedewerkers` (`id`, `StartWeek`, `AantalWeken`, `UrenOpWeekbasis`, `Taken_id`, `Medewerker_id`) VALUES
 (2, 1, 40, 8, 1, 1);
 
 --
 -- Gegevens worden geëxporteerd voor tabel `onderwijstaak`
 --
 
-INSERT INTO `onderwijstaak` (`id`, `PercentageVoorbereidingNazorg`, `AantalWeken`, `StartWeek`, `AantalUrenPerWeek`, `Medewerker_id`, `Klassen_id`, `Vakken_id`) VALUES
+INSERT INTO `onderwijstaken` (`id`, `PercentageVoorbereidingNazorg`, `AantalWeken`, `StartWeek`, `AantalUrenPerWeek`, `Medewerker_id`, `Klassen_id`, `Vakken_id`) VALUES
 (1, 40, 20, 1, 2, 1, 1, 1),
 (2, 40, 20, 21, 4, 1, 1, 1);
 
