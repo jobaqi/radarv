@@ -40,7 +40,7 @@
                     <div class="control-group">
                         <div id="custom-checkbox" class="controls">
                             <label class="checkbox">
-                                <div class="checker"><span><input type="checkbox" value=""></span></div> Besproken met: Peter de Jager / Datum: [vandaag] (als niet gechecked is kan niet opslaan)
+                                <div class="checker"><span><input type="checkbox" value=""></span></div> Besproken met: Peter de Jager / Datum: <?php echo date("d-m-y"); ?> (als niet gechecked is kan niet opslaan)
                             </label>
                         </div>
                     </div> 
@@ -53,7 +53,7 @@
         <div class="span6">
             <!-- Forms: Top Bar -->
             <div class="top-bar">
-                <h3><i class="icon-cog"></i>Regelingen</h3>
+                <h3><i class="icon-cog"></i>Inzetbaar</h3>
             </div>
             <!-- / Forms: Top Bar -->
             <!-- Forms: Content -->
@@ -62,7 +62,7 @@
                 <form class="form-horizontal">
                     <!-- Forms: inzetbaar -->	
                     <div class="control-group">
-                        <label class="control-label" for="inputInline"><i class="icon-circle"></i>Weken inzetbaar</label>
+                        <label class="control-label" for="inputInline"><i class="icon-circle"></i>Weken</label>
                         <div class="controls">
                             <select class="span4">
                                 <option value="number">40
@@ -77,7 +77,7 @@
                     <!-- / Forms inzetbaar -->
                     <!-- Forms: Form overige auto berekening -->
                     <div class="control-group">
-                        <label class="control-label" for="inputInline"><i class="icon-check"></i>Overige</label>
+                        <label class="control-label" for="inputInline"><i class="icon-check"></i>Regelingen</label>
                         <div class="controls">
                             <label class="label"><i class="icon-circle"></i>??? uur Ind. desk. bevordering</label>
                         </div>

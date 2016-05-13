@@ -121,7 +121,7 @@
 
 							<!-- Create Account: Form Klas -->
 							<div class="control-group">
-								<label class="control-label" for="inputKlas"><i class="icon-user"></i> Klas</label>
+								<label class="control-label" for="inputKlas"><i class="icon-user"></i> Opleiding</label>
 								<div class="controls">
 
 									<select class="span5">
