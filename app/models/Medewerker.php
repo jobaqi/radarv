@@ -14,7 +14,7 @@
 
 namespace App\Models;
 
-class Employee extends \Illuminate\Database\Eloquent\Model {
+class Medewerker extends \Illuminate\Database\Eloquent\Model {
     protected $fillable = ['PeopleSoftNummer', 'Voornaam', 'Achternaam', 'GeboorteDatum', 'VerwijderdOp', 'password'];
 
     public function contract(){

@@ -45,9 +45,9 @@
                         <td class="custom-data"><?php echo e($medewerker->func->naam); ?></td>
                         <td class="custom-data"><?php echo e($medewerker->func->Schaal); ?></td>
                         <td class="custom-data"><?php echo e($medewerker->contract->wekenInzetbaar); ?></td>
-                        <td class="custom-data"><?php echo e(\App\Helpers\Formula::yearBasis($employee->contract->wekenInzetbaar)); ?></td>
-                        <td class="custom-data"><?php echo e($employee->contract->wekenInzetbaar); ?></td>
-                        <td class="custom-data"><?php echo e(\App\Helpers\Formula::hoursAvailable($employee->contract->total_hours_WTF, $employee->contract->weeks_available)); ?></td>
+                        <td class="custom-data"><?php echo e(\App\Helpers\Formula::yearBasis($medewerker->contract->wekenInzetbaar)); ?></td>
+                        <td class="custom-data"><?php echo e($medewerker->contract->wekenInzetbaar); ?></td>
+                        <td class="custom-data"><?php echo e(\App\Helpers\Formula::hoursAvailable($medewerker->AanstellingsOmvangWTF, $medewerker->contract->wekenInzetbaar)); ?></td>
                         <td class="custom-data"></td>
                         <td class="custom-data"></td>
                         <td class="custom-data">

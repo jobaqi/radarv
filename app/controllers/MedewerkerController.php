@@ -3,14 +3,14 @@
  * @author Bart Allertz
  */
 namespace App\Controllers;
-use App\Models\Employee;
+use App\Models\Medewerker;
 
 class MedewerkerController extends Controller{
     /*
      * Show employee page
      */
     public static function index(){
-        return self::renderWithLayout("medewerker", ['title' => 'Medewerkers overzicht', 'medewerker' => Medewerker::all()]);
+        return self::renderWithLayout("medewerker", ['title' => 'Medewerkers overzicht', 'Medewerker' => Medewerker::all()]);
     }
      /*
       * Show pvi page
@@ -24,4 +24,4 @@ class MedewerkerController extends Controller{
     public static function createpvi(){
         return self::renderWithLayout("createpvi", ['title' => 'Nieuw plan van inzet']);
     }    
-}
+} 
