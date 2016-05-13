@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Machine: 127.0.0.1
--- Gegenereerd op: 13 mei 2016 om 12:07
+-- Gegenereerd op: 13 mei 2016 om 12:13
 -- Serverversie: 5.6.17
 -- PHP-versie: 5.5.12
 
@@ -40,10 +40,10 @@ CREATE TABLE IF NOT EXISTS `contracts` (
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `functie`
+-- Tabelstructuur voor tabel `functies`
 --
 
-CREATE TABLE IF NOT EXISTS `functie` (
+CREATE TABLE IF NOT EXISTS `functies` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Naam` varchar(45) DEFAULT NULL,
   `Schaal` varchar(45) DEFAULT NULL,
@@ -98,10 +98,10 @@ CREATE TABLE IF NOT EXISTS `medewerkers` (
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `onderwijstaak`
+-- Tabelstructuur voor tabel `onderwijstaken`
 --
 
-CREATE TABLE IF NOT EXISTS `onderwijstaak` (
+CREATE TABLE IF NOT EXISTS `onderwijstaken` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `PercentageVoorbereidingNazorg` int(11) DEFAULT NULL,
   `AantalWeken` int(11) DEFAULT NULL,
@@ -119,10 +119,10 @@ CREATE TABLE IF NOT EXISTS `onderwijstaak` (
 -- --------------------------------------------------------
 
 --
--- Tabelstructuur voor tabel `opleiding`
+-- Tabelstructuur voor tabel `opleidingen`
 --
 
-CREATE TABLE IF NOT EXISTS `opleiding` (
+CREATE TABLE IF NOT EXISTS `opleidingen` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `Naam` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -191,14 +191,14 @@ CREATE TABLE IF NOT EXISTS `vakken` (
 -- Beperkingen voor tabel `contracts`
 --
 ALTER TABLE `contracts`
-  ADD CONSTRAINT `fk_Contract_Functie1` FOREIGN KEY (`Functie_id`) REFERENCES `functie` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_Contract_Functie1` FOREIGN KEY (`Functie_id`) REFERENCES `functies` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_Contract_Medewerker1` FOREIGN KEY (`Medewerker_id`) REFERENCES `medewerkers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Beperkingen voor tabel `klassen`
 --
 ALTER TABLE `klassen`
-  ADD CONSTRAINT `fk_Klassen_Opleiding1` FOREIGN KEY (`Opleiding_id`) REFERENCES `opleiding` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_Klassen_Opleiding1` FOREIGN KEY (`Opleiding_id`) REFERENCES `opleidingen` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Beperkingen voor tabel `medewerkerregeling`
@@ -208,9 +208,9 @@ ALTER TABLE `medewerkerregeling`
   ADD CONSTRAINT `fk_MedewerkerRegeling_Regelingen1` FOREIGN KEY (`Regelingen_id`) REFERENCES `regelingen` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Beperkingen voor tabel `onderwijstaak`
+-- Beperkingen voor tabel `onderwijstaken`
 --
-ALTER TABLE `onderwijstaak`
+ALTER TABLE `onderwijstaken`
   ADD CONSTRAINT `fk_Onderwijstaak_Klassen1` FOREIGN KEY (`Klassen_id`) REFERENCES `klassen` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_Onderwijstaak_Medewerker1` FOREIGN KEY (`Medewerker_id`) REFERENCES `medewerkers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_Onderwijstaak_Vakken1` FOREIGN KEY (`Vakken_id`) REFERENCES `vakken` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
