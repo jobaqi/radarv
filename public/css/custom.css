@@ -28,9 +28,13 @@ form.form-horizontal{
 	margin-bottom: 0px;
 }
 .well .control-group .controls{
-	margin-left: 0px;
+	margin-left:0px;
 }
 
 div.accordion-inner{
 	height: 150px;
+}
+
+label.label{
+	margin-left: 10px;
 }

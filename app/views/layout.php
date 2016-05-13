@@ -211,7 +211,6 @@
     <script src="public\js\jquery-ui-1.10.2.custom.js"></script>
     <script src="public\js\jquery.prism.js"></script>
     <script src="public\js\jquery.dataTables.js"></script>
-    <script src="public\js\charts\jquery.flot.js"></script>
     <script src="public\js\bootstrap\bootstrap.js"></script>
     <script src="public\js\bootstrap\bootstrap-wysiwyg.js"></script>
     <script src="public\js\bootstrap\bootstrap-typeahead.js"></script>
