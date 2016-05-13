@@ -114,13 +114,30 @@
                     <div class="control-group">
                         <div class="controls">
                             <div class="span11">
-                            <select class="m-wrap block-level span11" multiple="multiple" data-placeholder="Opleiding - Kwartaal - Klas - Vak">
-                                <option value="1">Applicatie ontwikkeling - KW1 - 4VAOW3A - Java</option>
-                                <option value="2">Applicatie ontwikkeling - KW2 - 4VAOW3A - C#</option>
-                                <option value="3">Applicatie ontwikkeling - KW3 - 4VAOW3A - C++</option>
-                                <option value="4">Applicatie ontwikkeling - KW4 - 4VAOW3A - Database</option>
-                                <option value="5">Media Developer - KW2 - 4MDR3A - PHP</option>
-                                <option value="6">Media Developer - KW4 - 4MDR3A - Laravel</option>
+                            <select class="m-wrap block-level span2" multiple="multiple" data-placeholder="percentage">
+                                <option value="1">40</option>
+                                <option value="2">25</option>
+                                <option value="3">73</option>
+                            </select>
+                            <select class="m-wrap block-level span2" multiple="multiple" data-placeholder="Vak">
+                                <option value="1">C#</option>
+                                <option value="2">Javascript</option>
+                                <option value="3">Database</option>
+                            </select>
+                            <select class="m-wrap block-level span2" multiple="multiple" data-placeholder="Klas">
+                                <option value="1">4VAOW3A</option>
+                                <option value="2">4MDR1B</option>
+                                <option value="3">4VAOW2A</option>
+                            </select>
+                            <select class="m-wrap block-level span2" multiple="multiple" data-placeholder="Start week">
+                                <option value="1">1</option>
+                                <option value="2">14</option>
+                                <option value="3">21</option>
+                            </select>
+                            <select class="m-wrap block-level span2" multiple="multiple" data-placeholder="Aantal weken">
+                                <option value="1">10</option>
+                                <option value="2">6</option>
+                                <option value="3">20</option>
                             </select>
                             </div>
                         </div>
