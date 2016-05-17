@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- Gegevens worden geëxporteerd voor tabel `functie`
 --
 
-INSERT INTO `functies` (`id`, `Naam`, `Schaal`) VALUES
+INSERT INTO `functies` (`id`, `naam`, `schaal`) VALUES
 (1, 'Leraar in opleiding', NULL),
 (2, 'onderwijsassistent', '5'),
 (3, 'instructeur', '7'),
@@ -37,7 +37,7 @@ INSERT INTO `functies` (`id`, `Naam`, `Schaal`) VALUES
 -- Gegevens worden geëxporteerd voor tabel `medewerker`
 --
 
-INSERT INTO `medewerkers` (`id`, `PeopleSoftNummer`, `Voornaam`, `Achternaam`, `GeboorteDatum`, `VerwijderdOp`) VALUES
+INSERT INTO `medewerkers` (`id`, `peopleSoftNummer`, `voornaam`, `achternaam`, `geboorteDatum`, `verwijderdOp`) VALUES
 (1, 103848, 'Vinod', 'Poenai', '2016-05-03', NULL),
 (2, 103849, 'Henk', 'Wieling', '2016-05-29', NULL),
 (3, 101234, 'Bart', 'Allert', '2016-05-08', NULL),
@@ -47,7 +47,7 @@ INSERT INTO `medewerkers` (`id`, `PeopleSoftNummer`, `Voornaam`, `Achternaam`, `
 -- Gegevens worden geëxporteerd voor tabel `contract`
 --
 
-INSERT INTO `contracten` (`id`, `WekenInzetbaar`, `AanstellingsOmvangWTF`, `Functie_id`, `Medewerker_id`) VALUES
+INSERT INTO `contracten` (`id`, `wekenInzetbaar`, `aanstellingsOmvangWTF`, `functie_id`, `medewerker_id`) VALUES
 (1, 40, 1, 4, 1),
 (2, 20, 0.8, 3, 2);
 
@@ -55,7 +55,7 @@ INSERT INTO `contracten` (`id`, `WekenInzetbaar`, `AanstellingsOmvangWTF`, `Func
 -- Gegevens worden geëxporteerd voor tabel `regelingen`
 --
 
-INSERT INTO `regelingen` (`id`, `Naam`, `Uren1WTF1Jaar`) VALUES
+INSERT INTO `regelingen` (`id`, `naam`, `urenEenWTFEenJaar`) VALUES
 (1, 'ind. desk. bevordering', 59),
 (2, 'BAPO', 24),
 (3, 'Senioren', 28);
@@ -64,7 +64,7 @@ INSERT INTO `regelingen` (`id`, `Naam`, `Uren1WTF1Jaar`) VALUES
 -- Gegevens worden geëxporteerd voor tabel `medewerkerregeling`
 --
 
-INSERT INTO `medewerkerregelingen` (`id`, `Regelingen_id`, `Medewerker_id`) VALUES
+INSERT INTO `medewerkerregelingen` (`id`, `regelingen_id`, `medewerker_id`) VALUES
 (1, 1, 1),
 (2, 2, 1),
 (3, 2, 2),
@@ -74,7 +74,7 @@ INSERT INTO `medewerkerregelingen` (`id`, `Regelingen_id`, `Medewerker_id`) VALU
 -- Gegevens worden geëxporteerd voor tabel `opleiding`
 --
 
-INSERT INTO `opleidingen` (`id`, `Naam`) VALUES
+INSERT INTO `opleidingen` (`id`, `naam`) VALUES
 (1, 'ApplicatieOntwikkelaar'),
 (2, 'ICT Beheerder'),
 (3, 'NetwerkBeheer'),
@@ -84,7 +84,7 @@ INSERT INTO `opleidingen` (`id`, `Naam`) VALUES
 -- Gegevens worden geëxporteerd voor tabel `klassen`
 --
 
-INSERT INTO `klassen` (`id`, `Naam`, `Opleiding_id`) VALUES
+INSERT INTO `klassen` (`id`, `naam`, `opleiding_id`) VALUES
 (1, '4VAOW1A', 1),
 (2, '4VAOW3A', 1),
 (3, '4VMDR3A', 1),
@@ -97,7 +97,7 @@ INSERT INTO `klassen` (`id`, `Naam`, `Opleiding_id`) VALUES
 -- Gegevens worden geëxporteerd voor tabel `taken`
 --
 
-INSERT INTO `taken` (`id`, `Naam`) VALUES
+INSERT INTO `taken` (`id`, `naam`) VALUES
 (1, 'Kerndocent'),
 (2, 'Natschool'),
 (3, 'Info- ouder- opendag/avond'),
@@ -107,7 +107,7 @@ INSERT INTO `taken` (`id`, `Naam`) VALUES
 -- Gegevens worden geëxporteerd voor tabel `vakken`
 --
 
-INSERT INTO `vakken` (`id`, `Naam`) VALUES
+INSERT INTO `vakken` (`id`, `naam`) VALUES
 (1, 'Database'),
 (2, 'Javascript'),
 (3, 'C#'),
@@ -121,14 +121,14 @@ INSERT INTO `vakken` (`id`, `Naam`) VALUES
 -- Gegevens worden geëxporteerd voor tabel `takenmedewerker`
 --
 
-INSERT INTO `takenmedewerkers` (`id`, `StartWeek`, `AantalWeken`, `UrenOpWeekbasis`, `Taken_id`, `Medewerker_id`) VALUES
+INSERT INTO `takenmedewerkers` (`id`, `startWeek`, `aantalWeken`, `urenOpWeekbasis`, `taken_id`, `medewerker_id`) VALUES
 (2, 1, 40, 8, 1, 1);
 
 --
 -- Gegevens worden geëxporteerd voor tabel `onderwijstaak`
 --
 
-INSERT INTO `onderwijstaken` (`id`, `PercentageVoorbereidingNazorg`, `AantalWeken`, `StartWeek`, `AantalUrenPerWeek`, `Medewerker_id`, `Klassen_id`, `Vakken_id`) VALUES
+INSERT INTO `onderwijstaken` (`id`, `percentageVoorbereidingNazorg`, `aantalWeken`, `startWeek`, `aantalUrenPerWeek`, `medewerker_id`, `klassen_id`, `vakken_id`) VALUES
 (1, 40, 20, 1, 2, 1, 1, 1),
 (2, 40, 20, 21, 4, 1, 1, 1);
 

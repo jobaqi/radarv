@@ -109,7 +109,8 @@
                     <i class="icon-book"></i> Onderwijs
                 </a>
             </div>
-            <div id="collapseOne" class="accordion-body collapse">
+            <form id="form-accordion">
+            <div id="collapseOne" class="accordion-body collapse">            
                 <div class="accordion-inner">
                     <div class="control-group">
                         <div class="controls">
@@ -149,6 +150,7 @@
                     </div>                  
                 </div>
             </div>
+            </form>
         </div>
         <div class="accordion-group">
             <div class="accordion-heading">
@@ -156,6 +158,7 @@
                     <i class="icon-ticket"></i> Taken
                 </a>
             </div>
+            <form>
             <div id="collapseTwo" class="accordion-body collapse">
                 <div class="accordion-inner">
                     <div class="control-group">
@@ -174,6 +177,7 @@
                     </div>  
                 </div>
             </div>
+            </form>
         </div>
     </div>
     <div class="form-actions">

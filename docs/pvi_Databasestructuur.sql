@@ -28,13 +28,13 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `contracten` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `WekenInzetbaar` int(11) DEFAULT NULL,
-  `AanstellingsOmvangWTF` float DEFAULT NULL,
-  `Functie_id` int(11) NOT NULL,
-  `Medewerker_id` int(11) NOT NULL,
+  `wekenInzetbaar` int(11) DEFAULT NULL,
+  `aanstellingsOmvangWTF` float DEFAULT NULL,
+  `functie_id` int(11) NOT NULL,
+  `medewerker_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_Contract_Functie1_idx` (`Functie_id`),
-  KEY `fk_Contract_Medewerker1_idx` (`Medewerker_id`)
+  KEY `fk_contract_functie1_idx` (`functie_id`),
+  KEY `fk_contract_fedewerker1_idx` (`medewerker_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 -- --------------------------------------------------------
@@ -45,8 +45,8 @@ CREATE TABLE IF NOT EXISTS `contracten` (
 
 CREATE TABLE IF NOT EXISTS `functies` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Naam` varchar(45) DEFAULT NULL,
-  `Schaal` varchar(45) DEFAULT NULL,
+  `naam` varchar(45) DEFAULT NULL,
+  `schaal` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
@@ -58,10 +58,10 @@ CREATE TABLE IF NOT EXISTS `functies` (
 
 CREATE TABLE IF NOT EXISTS `klassen` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Naam` varchar(45) DEFAULT NULL,
-  `Opleiding_id` int(11) NOT NULL,
+  `naam` varchar(45) DEFAULT NULL,
+  `opleiding_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_Klassen_Opleiding1_idx` (`Opleiding_id`)
+  KEY `fk_klassen_opleiding1_idx` (`opleiding_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=8 ;
 
 -- --------------------------------------------------------
@@ -72,11 +72,11 @@ CREATE TABLE IF NOT EXISTS `klassen` (
 
 CREATE TABLE IF NOT EXISTS `medewerkerregelingen` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Regelingen_id` int(11) NOT NULL,
-  `Medewerker_id` int(11) NOT NULL,
+  `regelingen_id` int(11) NOT NULL,
+  `medewerker_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_MedewerkerRegeling_Regelingen1_idx` (`Regelingen_id`),
-  KEY `fk_MedewerkerRegeling_Medewerker1_idx` (`Medewerker_id`)
+  KEY `fk_medewerkerRegeling_regelingen1_idx` (`regelingen_id`),
+  KEY `fk_medewerkerRegeling_medewerker1_idx` (`medewerker_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
 -- --------------------------------------------------------
@@ -87,11 +87,11 @@ CREATE TABLE IF NOT EXISTS `medewerkerregelingen` (
 
 CREATE TABLE IF NOT EXISTS `medewerkers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `PeopleSoftNummer` int(11) DEFAULT NULL,
-  `Voornaam` varchar(45) DEFAULT NULL,
-  `Achternaam` varchar(45) DEFAULT NULL,
-  `GeboorteDatum` date DEFAULT NULL,
-  `VerwijderdOp` date DEFAULT NULL,
+  `peopleSoftNummer` int(11) DEFAULT NULL,
+  `voornaam` varchar(45) DEFAULT NULL,
+  `achternaam` varchar(45) DEFAULT NULL,
+  `geboorteDatum` date DEFAULT NULL,
+  `verwijderdOp` date DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
@@ -103,17 +103,17 @@ CREATE TABLE IF NOT EXISTS `medewerkers` (
 
 CREATE TABLE IF NOT EXISTS `onderwijstaken` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `PercentageVoorbereidingNazorg` int(11) DEFAULT NULL,
-  `AantalWeken` int(11) DEFAULT NULL,
-  `StartWeek` int(11) DEFAULT NULL,
-  `AantalUrenPerWeek` int(11) DEFAULT NULL,
-  `Medewerker_id` int(11) NOT NULL,
-  `Klassen_id` int(11) NOT NULL,
-  `Vakken_id` int(11) NOT NULL,
+  `percentageVoorbereidingNazorg` int(11) DEFAULT NULL,
+  `aantalWeken` int(11) DEFAULT NULL,
+  `startWeek` int(11) DEFAULT NULL,
+  `aantalUrenPerWeek` int(11) DEFAULT NULL,
+  `medewerker_id` int(11) NOT NULL,
+  `klassen_id` int(11) NOT NULL,
+  `vakken_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_Onderwijstaak_Medewerker1_idx` (`Medewerker_id`),
-  KEY `fk_Onderwijstaak_Klassen1_idx` (`Klassen_id`),
-  KEY `fk_Onderwijstaak_Vakken1_idx` (`Vakken_id`)
+  KEY `fk_onderwijstaak_medewerker1_idx` (`medewerker_id`),
+  KEY `fk_onderwijstaak_klassen1_idx` (`klassen_id`),
+  KEY `fk_onderwijstaak_vakken1_idx` (`vakken_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 -- --------------------------------------------------------
@@ -124,7 +124,7 @@ CREATE TABLE IF NOT EXISTS `onderwijstaken` (
 
 CREATE TABLE IF NOT EXISTS `opleidingen` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Naam` varchar(45) DEFAULT NULL,
+  `naam` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
@@ -136,8 +136,8 @@ CREATE TABLE IF NOT EXISTS `opleidingen` (
 
 CREATE TABLE IF NOT EXISTS `regelingen` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Naam` varchar(45) DEFAULT NULL,
-  `Uren1WTF1Jaar` int(11) DEFAULT NULL,
+  `naam` varchar(45) DEFAULT NULL,
+  `urenEenWTFEenJaar` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
@@ -149,7 +149,7 @@ CREATE TABLE IF NOT EXISTS `regelingen` (
 
 CREATE TABLE IF NOT EXISTS `taken` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Naam` varchar(45) DEFAULT NULL,
+  `naam` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
 
@@ -161,14 +161,14 @@ CREATE TABLE IF NOT EXISTS `taken` (
 
 CREATE TABLE IF NOT EXISTS `takenmedewerkers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `StartWeek` int(11) DEFAULT NULL,
-  `AantalWeken` int(11) DEFAULT NULL,
-  `UrenOpWeekbasis` int(11) DEFAULT NULL,
-  `Taken_id` int(11) NOT NULL,
-  `Medewerker_id` int(11) NOT NULL,
+  `startWeek` int(11) DEFAULT NULL,
+  `aantalWeken` int(11) DEFAULT NULL,
+  `urenOpWeekbasis` int(11) DEFAULT NULL,
+  `taken_id` int(11) NOT NULL,
+  `medewerker_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
-  KEY `fk_takenMedewerker_Taken1_idx` (`Taken_id`),
-  KEY `fk_takenMedewerker_Medewerker1_idx` (`Medewerker_id`)
+  KEY `fk_takenMedewerker_Taken1_idx` (`taken_id`),
+  KEY `fk_takenMedewerker_Medewerker1_idx` (`medewerker_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
 
 -- --------------------------------------------------------
@@ -179,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `takenmedewerkers` (
 
 CREATE TABLE IF NOT EXISTS `vakken` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `Naam` varchar(45) DEFAULT NULL,
+  `naam` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
@@ -191,8 +191,8 @@ CREATE TABLE IF NOT EXISTS `vakken` (
 -- Beperkingen voor tabel `contracts`
 --
 ALTER TABLE `contracten`
-  ADD CONSTRAINT `fk_Contract_Functie1` FOREIGN KEY (`Functie_id`) REFERENCES `functies` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `fk_Contract_Medewerker1` FOREIGN KEY (`Medewerker_id`) REFERENCES `medewerkers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+  ADD CONSTRAINT `fk_contract_functie1` FOREIGN KEY (`functie_id`) REFERENCES `functies` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  ADD CONSTRAINT `fk_contract_medewerker1` FOREIGN KEY (`medewerker_id`) REFERENCES `medewerkers` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Beperkingen voor tabel `klassen`
