@@ -14,7 +14,17 @@
 
 namespace App\Models;
 
-class Regelingen extends \Illuminate\Database\Eloquent\Model {
-    protected $fillable = ['Naam', 'uren1WTF1Jaar'];
+class Regeling extends \Illuminate\Database\Eloquent\Model {
+
+	/**
+     * The attributes that should be mass-asignable
+     * @var array
+     */
+    protected $fillable = ['naam', 'urenEenWTFEenJaar'];
+
+    /**
+     * This model's table
+     * @var string
+     */
     protected $table = 'regelingen';
 }

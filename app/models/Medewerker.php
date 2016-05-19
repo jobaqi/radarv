@@ -14,17 +14,36 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 class medewerker extends \Illuminate\Database\Eloquent\Model {
-    protected $fillable = ['PeopleSoftNummer', 'Voornaam', 'Achternaam', 'GeboorteDatum', 'VerwijderdOp', 'password'];
+    use SoftDeletes; // So employees never actually get deleted, they just get disabled
 
+    /**
+     * The attributes that should be mutated to dates
+     * @var array
+     */
+    protected $dates = ['deleted_at'];
+
+    /**
+     * The attributes that should be mass-asignable
+     * @var array
+     */
+    protected $fillable = ['peopleSoftNummer', 'voornaam', 'achternaam', 'geboorteDatum', 'password'];
+
+    /**
+     * Get this employee's contract
+     * @return App\Models\Contract
+     */
     public function contract(){
-    	return $this->belongsTo('App\Models\Contract', 'contract_id', 'id');
+    	return $this->hasOne('App\Models\Contract', 'medewerker_id');
     }
 
-    public function func(){
-    	return $this->belongsTo('App\Models\Func', 'functie_id', 'id');
-    }
-    public function regelingen(){
-        return $this->belongsTo('App\Models\Regelingen', 'regelingen_id', 'id');
+    /**
+     * Get this employee's ruling
+     * @return App\Models\Regeling
+     */
+    public function regeling(){
+        return $this->hasMany('App\Models\Regeling', 'medewerkerregelingen', 'id');
     }
 }

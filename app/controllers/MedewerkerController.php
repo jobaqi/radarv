@@ -10,7 +10,9 @@ class MedewerkerController extends Controller{
      * Show employee page
      */
     public static function index(){
-        return self::renderWithLayout("medewerker", ['title' => 'MedewerkersOverzicht', 'medewerkers' => medewerker::all()]);
+        return self::renderWithLayout("employee", ['title' => 'MedewerkersOverzicht', 'employees' => Medewerker::all()]);
+        
+
     }
      /*
       * Show pvi page

@@ -15,5 +15,32 @@
 namespace App\Models;
 
 class Contract extends \Illuminate\Database\Eloquent\Model {
-    protected $fillable = ['WekenInzetbaar', 'AanstellingsOmvangWTF', 'Functie_id', 'medewerker_id'];
+
+	/**
+     * The attributes that should be mass-asignable
+     * @var array
+     */
+    protected $fillable = ['wekenInzetbaar', 'aanstellingsOmvangWTF', 'functie_id', 'medewerker_id'];
+
+    /**
+     * This model's table
+     * @var string
+     */
+    protected $table = 'contracten';
+
+    /**
+     * Get the employee associated with this contract
+     * @return App\Models\Medewerker
+     */
+    public function employee(){
+    	return $this->belongsTo('App\Models\Medewerker','medewerker_id');
+    }
+
+    /**
+     * Get the function associated with this contract
+     * @return App\Models\Func
+     */
+    public function func(){
+    	return $this->belongsTo('App\Models\Func', 'functie_id');
+    }
 }
