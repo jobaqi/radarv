@@ -7,24 +7,19 @@
  */
 
 /**
- * Description of Func
+ * Description of Klas
  *
- * @author Jordy
+ * @author Bart
  */
 
 namespace App\Models;
 
-class Func extends \Illuminate\Database\Eloquent\Model {
+class Vakken extends \Illuminate\Database\Eloquent\Model {
 
 	/**
      * The attributes that should be mass-asignable
      * @var array
      */
-    protected $fillable = ['naam', 'schaal'];
-
-    /**
-     * This model's table
-     * @var string
-     */
-   	protected $table = 'functies';
+    protected $fillable = ['naam', 'vakCode'];
+    protected $table = 'Vakken';
 }

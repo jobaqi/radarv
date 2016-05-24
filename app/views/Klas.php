@@ -29,14 +29,17 @@
 								</tr>
 							</thead>
 							<tbody>
+								<?php foreach($klassen as $klas): ?>
+								
 								<tr>
-									<td class="custom-data">4VAOW3A</td>
-									<td class="custom-data">Applicatie Ontwikkeling</td>
+									<td class="custom-data"><?php echo e($klas->naam); ?></td>
+									<td class="custom-data"><?php echo e($klas->Opleiding->naam); ?></td>
 									<td class="custom-data">
 	                                    <a href='#edit' data-toggle="modal"><i class='icon-edit-sign'></i></a>
 	                                    <a href='#delete' data-toggle="modal"><i class='icon-remove'></i></a>
 									</td>
 								</tr>
+                     			<?php endforeach; ?>
 
 							</tbody>
 

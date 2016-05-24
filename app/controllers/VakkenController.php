@@ -13,13 +13,15 @@
  * @author Quinten
  */
 namespace App\Controllers;
+use App\Models\Vakken;
 
-class ClassesController extends Controller{
+class VakkenController extends Controller{
 
-    /**
-     * Show class overview page
+     /**
+     * Show subject overview page
      */
-        public static function classes(){
-        return self::renderWithLayout('classes', ['title' => 'Klassen overzicht']);
+        public static function subject(){
+        return self::renderWithLayout('vakken', ['title' => 'Vakken Overzicht', 'vakken' => vakken::all()]);
     }
+
 }

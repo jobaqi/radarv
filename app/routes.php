@@ -23,7 +23,7 @@ Flight::route('GET /nieuwepvi', ['\App\Controllers\MedewerkerController', 'creat
 /*
  * Analysis route
  */
-Flight::route('GET /Analyse', ['\App\Controllers\StatistiekenController', 'analysis']);
+Flight::route('GET /analyse', ['\App\Controllers\StatistiekenController', 'analysis']);
 
 /*
  * EmployeeOverview route
@@ -33,12 +33,12 @@ Flight::route('GET /medewerker', ['\App\Controllers\MedewerkerController', 'inde
 /*
  * ClassesOverview route
  */
-Flight::route('GET /klassen', ['\App\Controllers\ClassesController', 'classes']);
+Flight::route('GET /klassen', ['\App\Controllers\KlasController', 'classes']);
 
 /*
  * ArrangementOverview route
  */
-Flight::route('GET /regelingen', ['\App\Controllers\ArrangementController', 'arrangement']);
+Flight::route('GET /regelingen', ['\App\Controllers\regelingenController', 'regelingen']);
 
 /*
  * TaskOverview route
@@ -48,7 +48,7 @@ Flight::route('GET /taken', ['\App\Controllers\TaskController', 'task']);
 /*
  * SubjectOverview route
  */
-Flight::route('GET /vakken', ['\App\Controllers\SubjectController', 'subject']);
+Flight::route('GET /vakken', ['\App\Controllers\VakkenController', 'subject']);
 
 /*
  * Authentication routes

@@ -2,14 +2,14 @@
 <div class="container">
 
     <div class="row-fluid">
-			<!-- Create subject: Box -->
+			<!-- Create arrangement: Box -->
 			<div class="span12">
 
 				<!-- Create Account: Top Bar -->
 				<div class="top-bar">
 					<ul class="tab-container">
-					  <li class="active"><a href="#subject-overview"><i class="icon-th-list"></i>Vakken overzicht</a></li>
-					  <li><a href="#subject-create"><i class="icon-plus"></i>Toevoegen vak</a></li>
+					  <li class="active"><a href="#arrangement-overview"><i class="icon-th-list"></i>Regelingen overzicht</a></li>
+					  <li><a href="#arrangement-create"><i class="icon-plus"></i>Toevoegen Regeling</a></li>
 					</ul>
 				</div>
 				<!-- / Create Account: Top Bar -->
@@ -17,36 +17,37 @@
 				<!-- Create Account: Content -->
 				<div class="well no-padding tab-content">
 					
-					<!-- Create Account: Content subject Overview  EERSTE TABBLAD-->
-					<div class="tab-pane active" id="subject-overview">
-					<!-- Create Account: Content subject Overview Table -->
+					<!-- Create Account: Content arrangement Overview  EERSTE TABBLAD-->
+					<div class="tab-pane active" id="arrangement-overview">
+					<!-- Create Account: Content arrangement Overview Table -->
 						<table class="data-table">
 							<thead>
 								<tr>
 										<th class="custom-header">Naam</th>
-										<th class="custom-header">Uren</th>	
+										<th class="custom-header">Uren</th>		
 										<th class="custom-header">Actie</th>
-							
 								</tr>
 							</thead>
 							<tbody>
+								<?php foreach($regelingen as $regeling): <?
 								<tr>
-									<td class="custom-data">Taak a</td>
-									<td class="custom-data">40 uur</td>
+									<td class="custom-data">Desk. bevordering (59) / OR (20)</td>
+									<td class="custom-data">40</td>		
 									<td class="custom-data">
 	                                    <a href='#edit' data-toggle="modal"><i class='icon-edit-sign'></i></a>
 	                                    <a href='#delete' data-toggle="modal"><i class='icon-remove'></i></a>
 									</td>
 								</tr>
+								<?php endforeach; <?
 
 							</tbody>
 
 						</table>
-						<!-- / Create Account: Content subject Overview Table -->
+						<!-- / Create Account: Content arrangement Overview Table -->
 					</div>
-					<!-- / Create Account: Content subject Overview -->
+					<!-- / Create Account: Content arrangement Overview -->
 
-	                <!-- Moldule: Edit Subjects -->
+	                <!-- Moldule: Edit Arrangements -->
 	                    <div id="edit" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="close-modal" aria-hidden="true">
 	                        <div class="modal-dialog">
 	                            <div class="modal-content">
@@ -63,7 +64,7 @@
 	                                            </div>
 	                                        </div>
 	                                        <div class="control-group">
-	                                            <label class="control-label" for="inputuren"><i class="icon-time"></i> Uren</label>
+	                                            <label class="control-label" for="inputuren"><i class="icon-time"></i> Formule</label>
 	                                            <div class="controls">
 	                                                <input class="span6" type="text" id="inputuren" placeholder="">
 	                                            </div>
@@ -77,9 +78,9 @@
 	                            </div>
 	                        </div>
 	                    </div>
-	                <!-- / Module: Edit Subjects -->
+	                <!-- / Module: Edit Arrangements -->
 
-	                <!-- Module: Delete Subjects -->
+	                <!-- Module: Delete Arrangements -->
 	                <div class="modal hide fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	                    <div class="modal-dialog">
 	                        <div class="modal-content">
@@ -88,7 +89,7 @@
 	                                    <h3 id="close-modal"><i class="icon-remove"></i> Delete</h3>
 	                                </div>
 	                            <div class="modal-body">
-	                                <p>Weer u zeker dat u (Vak) wilt verwijderen?</p>
+	                                <p>Weer u zeker dat u (Regeling) wilt verwijderen?</p>
 	                            </div>
 	                                <div class="modal-footer">
 	                                    <button class="btn btn-danger">Delete</button>
@@ -97,15 +98,15 @@
 	                        </div>
 	                    </div>
 	                </div>             
-	                <!-- / Module: Delete Subjects -->
+	                <!-- / Module: Delete Arrangements -->
 
 					<!-- / Create Account: Tab TWEEDE TABBLAD -->   
-					<div class="tab-pane" id="subject-create">
+					<div class="tab-pane" id="arrangement-create">
 						
-							<!-- Create A: Tab -->  
+						<!-- Create A: Tab -->  
 						
-							<!-- Create Account: Form -->
-							<form class="form-horizontal">
+						<!-- Create Account: Form -->
+						<form class="form-horizontal">
 
 							<!-- Create Account: Form Naam -->
 							<div class="control-group">
@@ -117,35 +118,27 @@
 							<!-- / Create Class: Form Naam -->
 							<!-- Create Account: Form Uren -->
 							<div class="control-group">
-								<label class="control-label" for="inputUren"><i class="icon-time"></i>Uren</label>
+								<label class="control-label" for="inputUren"><i class="icon-user"></i>Formule</label>
 								<div class="controls">
 									<input type="text" class="typeahead" id="inputUren" placeholder="">
 								</div>
 							</div>
-							<!-- / Create Class: Form Naam -->
+							<!-- / Create Class: Form Uren -->
                         	<!-- Create Account: Form Actions -->
                         	<div class="form-actions">
                            		<button type="submit" class="btn btn-primary">Aanmaken</button>
                         	</div>
-                        	<!-- / Create Account: Form Actions -->		
-							<div class="row-fluid">
-								<div class="span5">
+                        	<!-- / Create Account: Form Actions -->								
 
-								</div>
-							</div>
-							</form> 
-							<!-- / Create Account: Form -->   
-
-							<!-- / Create A: Tab SPAN 12 -->  
-
+						<!-- / Create A: Tab SPAN 12 -->  
 
 					</div>
-						<!-- / Create Account: Tab -->
-
+				<!-- / Create Account: Tab -->   
+				
 				</div>
 				<!-- / Create Account: Content -->
 
 			</div>
-			<!-- / Create subject: Box -->
+			<!-- / Create arrangement: Box -->
 	</div>
 </div>
