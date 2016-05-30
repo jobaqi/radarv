@@ -55,7 +55,7 @@
                            }
                         ?>
                         <td class="custom-data"><?php echo e($regeling_hours); ?></td>
-                        <td class="custom-data"><?php echo e(\App\Helpers\Formula::remainingHours($employee->contract->aanstellingsOmvangWTF, $regeling_hours)); ?></td>
+                        <td class="custom-data"><?php echo e(round(\App\Helpers\Formula::remainingHours($employee->contract->aanstellingsOmvangWTF, $regeling_hours))); ?></td>
                         <td class="custom-data">
                            <a href='#edit' data-toggle="modal"><i class='icon-edit-sign'></i></a>
                            <a href='<?php echo e(url("/medewerker/$employee->id/delete"))?>' data-toggle="modal"><i class='icon-remove'></i></a>

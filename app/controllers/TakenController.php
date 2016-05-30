@@ -13,14 +13,15 @@
  * @author Quinten
  */
 namespace App\Controllers;
+use App\Models\Taken;
 
-class SubjectController extends Controller{
+class TakenController extends Controller{
 
      /**
-     * Show subject overview page
+     * Show taken overview page
      */
-        public static function subject(){
-        return self::renderWithLayout('subject', ['title' => 'Vakken Overzicht']);
+        public static function taken(){
+        	return self::RenderWithLayOut("taken", ['title' => 'takenOverzicht', 'taken' => Taken::all()]);
     }
 
 }

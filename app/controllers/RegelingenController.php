@@ -1,11 +1,11 @@
 <?php 
 
 namespace App\Controllers;
-use App\Models\Regelingen;
+use App\Models\Regeling;
 
 class RegelingenController extends Controller{
 
-	public static function index(){
-		 return self::renderWithLayout("employee", ['title' => 'EmployeeOverView', 'employees' => Regelingen::all()]);
+	public static function regelingen(){
+		 return self::renderWithLayout("regeling", ['title' => 'RegelingenOverView', 'regelingen' => Regeling::all()]);
 	}
 }

@@ -8,8 +8,8 @@
 				<!-- Create Account: Top Bar -->
 				<div class="top-bar">
 					<ul class="tab-container">
-					  <li class="active"><a href="#subject-overview"><i class="icon-th-list"></i>Vakken overzicht</a></li>
-					  <li><a href="#subject-create"><i class="icon-plus"></i>Toevoegen vak</a></li>
+					  <li class="active"><a href="#subject-overview"><i class="icon-th-list"></i>Taken overzicht</a></li>
+					  <li><a href="#subject-create"><i class="icon-plus"></i>Toevoegen taak</a></li>
 					</ul>
 				</div>
 				<!-- / Create Account: Top Bar -->
@@ -24,20 +24,22 @@
 							<thead>
 								<tr>
 										<th class="custom-header">Naam</th>
-										<th class="custom-header">Uren</th>	
+										<th class="custom-header">Uren op week basis</th>	
 										<th class="custom-header">Actie</th>
 							
 								</tr>
 							</thead>
 							<tbody>
+								<?php foreach($taken as $taak): ?>
 								<tr>
-									<td class="custom-data">Taak a</td>
-									<td class="custom-data">40 uur</td>
+									<td class="custom-data"><?php echo e($taak->naam); ?></td>
+									<td class="custom-data"><?php echo e($taak->naam); ?></td>
 									<td class="custom-data">
 	                                    <a href='#edit' data-toggle="modal"><i class='icon-edit-sign'></i></a>
 	                                    <a href='#delete' data-toggle="modal"><i class='icon-remove'></i></a>
 									</td>
 								</tr>
+							<?php endforeach; ?>
 
 							</tbody>
 
@@ -46,7 +48,7 @@
 					</div>
 					<!-- / Create Account: Content subject Overview -->
 
-	                <!-- Moldule: Edit Subjects -->
+	                <!-- Moldule: Edit Tasks -->
 	                    <div id="edit" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="close-modal" aria-hidden="true">
 	                        <div class="modal-dialog">
 	                            <div class="modal-content">
@@ -77,9 +79,9 @@
 	                            </div>
 	                        </div>
 	                    </div>
-	                <!-- / Module: Edit Subjects -->
+	                <!-- / Module: Edit Tasks -->
 
-	                <!-- Module: Delete Subjects -->
+	                <!-- Module: Delete Tasks -->
 	                <div class="modal hide fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	                    <div class="modal-dialog">
 	                        <div class="modal-content">
@@ -88,7 +90,7 @@
 	                                    <h3 id="close-modal"><i class="icon-remove"></i> Delete</h3>
 	                                </div>
 	                            <div class="modal-body">
-	                                <p>Weer u zeker dat u (Vak) wilt verwijderen?</p>
+	                                <p>Weer u zeker dat u (Taak) wilt verwijderen?</p>
 	                            </div>
 	                                <div class="modal-footer">
 	                                    <button class="btn btn-danger">Delete</button>
@@ -97,13 +99,14 @@
 	                        </div>
 	                    </div>
 	                </div>             
-	                <!-- / Module: Delete Subjects -->
+	                <!-- / Module: Delete Tasks -->
 
 					<!-- / Create Account: Tab TWEEDE TABBLAD -->   
 					<div class="tab-pane" id="subject-create">
 						
 							<!-- Create A: Tab -->  
 						
+
 							<!-- Create Account: Form -->
 							<form class="form-horizontal">
 
@@ -140,7 +143,7 @@
 
 
 					</div>
-						<!-- / Create Account: Tab -->
+						<!-- / Create Account: Tab -->   
 
 				</div>
 				<!-- / Create Account: Content -->

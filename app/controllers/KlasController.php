@@ -10,17 +10,18 @@
 /**
  * Handles main page handling
  *
- * @author Quinten
+ * @author Bart
  */
 namespace App\Controllers;
+use App\Models\Klas;
 
-class TaskController extends Controller{
 
-     /**
-     * Show task overview page
+class KlasController extends Controller{
+
+    /**
+     * Show class overview page
      */
-        public static function task(){
-        return self::renderWithLayout('task', ['title' => 'Taken overzicht']);
+        public static function classes(){
+        return self::renderWithLayout("Klas", ['title' => 'ClassesOverView', 'klassen' => Klas::all()]);
     }
-
 }

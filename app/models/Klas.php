@@ -7,24 +7,22 @@
  */
 
 /**
- * Description of Func
+ * Description of Klas
  *
- * @author Jordy
+ * @author Bart
  */
 
 namespace App\Models;
 
-class Func extends \Illuminate\Database\Eloquent\Model {
+class Klas extends \Illuminate\Database\Eloquent\Model {
 
 	/**
      * The attributes that should be mass-asignable
      * @var array
      */
-    protected $fillable = ['naam', 'schaal'];
+    protected $fillable = ['naam'];
 
-    /**
-     * This model's table
-     * @var string
-     */
-   	protected $table = 'functies';
+    public function opleiding(){
+        return $this->belongsTo('App\Models\Opleiding');
+    }
 }
