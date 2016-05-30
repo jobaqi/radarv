@@ -24,7 +24,6 @@
 							<thead>
 								<tr>
 										<th class="custom-header">Naam</th>
-										<th class="custom-header">Uren op week basis</th>	
 										<th class="custom-header">Actie</th>
 							
 								</tr>
@@ -32,7 +31,6 @@
 							<tbody>
 								<?php foreach($taken as $taak): ?>
 								<tr>
-									<td class="custom-data"><?php echo e($taak->naam); ?></td>
 									<td class="custom-data"><?php echo e($taak->naam); ?></td>
 									<td class="custom-data">
 	                                    <a href='#edit' data-toggle="modal"><i class='icon-edit-sign'></i></a>

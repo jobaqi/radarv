@@ -13,6 +13,7 @@
  * @author Quinten
  */
 namespace App\Controllers;
+use App\Models\Medewerker;
 
 class StatistiekenController extends Controller{
 
@@ -20,6 +21,5 @@ class StatistiekenController extends Controller{
      * Show analysis page
      */
     public static function analysis(){
-        return self::renderWithLayout('analysis', ['title' => 'Analyse overzicht']);
     }
 }

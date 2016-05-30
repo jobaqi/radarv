@@ -20,7 +20,7 @@ class Taken extends \Illuminate\Database\Eloquent\Model {
      * The attributes that should be mass-asignable
      * @var array
      */
-    protected $fillable = ['naam'];
+    protected $fillable = ['naam', 'urenOpWeekbasis'];
 
     /**
      * This model's table
