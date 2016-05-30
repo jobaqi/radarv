@@ -21,5 +21,6 @@ class StatistiekenController extends Controller{
      * Show analysis page
      */
     public static function analysis(){
+        return self::renderWithLayout("statistiek", ['title' => 'Analyse overzicht','employees' => Medewerker::all()]);
     }
 }
