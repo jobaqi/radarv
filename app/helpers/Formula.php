@@ -74,5 +74,15 @@ class Formula {
     }
     return "\$minutes must be a number";
   }
+
+  /**
+   * Get remaining hours
+   * @param  int $wtf     
+   * @param  int $rulings 
+   * @return int
+   */
+  static function remainingHours($wtf, $rulings){
+    return 1659 * $wtf - $rulings;
+  }
   
 }

@@ -55,5 +55,6 @@ Flight::route('GET /vakken', ['\App\Controllers\SubjectController', 'subject']);
  */
 Flight::route('GET /login', ['\App\Controllers\AuthController', 'showLogin']);
 Flight::route('POST /login', ['\App\Controllers\AuthController', 'authenticate']);
-Flight::route('GET /register', ['\App\Controllers\AuthController', 'showRegister']);
 Flight::route('POST /register', ['\App\Controllers\AuthController', 'register']);
+
+Flight::route('GET /medewerker/@id/delete', ['\App\Controllers\AuthController', 'delete']);

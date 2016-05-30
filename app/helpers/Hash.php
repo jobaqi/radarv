@@ -15,7 +15,7 @@ namespace App\Helpers;
  */
 class Hash {
   
-  static function hash($string){
+  static function make($string){
     return password_hash($string, PASSWORD_BCRYPT, [
         'cost' => 12
     ]);

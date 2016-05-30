@@ -10,7 +10,7 @@
           <div class="control-group">
             <label class="control-label" for="inputName"><i class="icon-user"></i></label>
             <div class="controls">
-              <input type="text" id="inputName" placeholder="First name" name="firstName">
+              <input type="text" id="inputName" placeholder="Soft nummer" name="peopleSoftNummer">
             </div>
           </div>
           <div class="control-group">

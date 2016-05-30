@@ -27,4 +27,12 @@ class Regeling extends \Illuminate\Database\Eloquent\Model {
      * @var string
      */
     protected $table = 'regelingen';
+
+    /**
+     * Get this ruling's employees
+     * @return App\Models\Regeling
+     */
+    public function regelingen(){
+        return $this->belongsToMany('App\Models\Medewerker', 'medewerkerregelingen', 'regeling_id', 'medewerker_id');
+    }
 }

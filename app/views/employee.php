@@ -48,11 +48,17 @@
                         <td class="custom-data"><?php echo e(\App\Helpers\Formula::yearBasis($employee->contract->aanstellingsOmvangWTF)); ?></td>
                         <td class="custom-data"><?php echo e($employee->contract->wekenInzetbaar); ?></td>
                         <td class="custom-data"><?php echo e(\App\Helpers\Formula::hoursAvailable($employee->contract->aanstellingsOmvangWTF, $employee->contract->wekenInzetbaar)); ?></td>
-                        <td class="custom-data"></td>
-                        <td class="custom-data"></td>
+                        <?php
+                           $regeling_hours = 0;
+                           foreach($employee->regelingen as $regeling){
+                              $regeling_hours = $regeling_hours + $regeling->urenEenWTFEenJaar;
+                           }
+                        ?>
+                        <td class="custom-data"><?php echo e($regeling_hours); ?></td>
+                        <td class="custom-data"><?php echo e(\App\Helpers\Formula::remainingHours($employee->contract->aanstellingsOmvangWTF, $regeling_hours)); ?></td>
                         <td class="custom-data">
                            <a href='#edit' data-toggle="modal"><i class='icon-edit-sign'></i></a>
-                           <a href='#delete' data-toggle="modal"><i class='icon-remove'></i></a>
+                           <a href='<?php echo e(url("/medewerker/$employee->id/delete"))?>' data-toggle="modal"><i class='icon-remove'></i></a>
                         </td>
                      </tr>
                      <?php endforeach; ?>
@@ -196,12 +202,12 @@
             <div class="tab-pane" id="user-create">
                <!-- Create A: Tab -->  
                <!-- Create Account: Form -->
-               <form class="form-horizontal">
+               <form class="form-horizontal" action="<?php echo e(url('/register')) ?>" method="post">
                   <!-- Create Account: Form PeopleSoft -->
                   <div class="control-group">
                      <label class="control-label" for="inputPeopleSoft"><i class="icon-user"></i> PeopleSoft#</label>
                      <div class="controls">
-                        <input class="span3" type="text" id="inputPeopleSoft" placeholder="010....">
+                        <input class="span3" type="text" id="inputPeopleSoft" placeholder="010...." name="people_soft_nummer">
                      </div>
                   </div>
                   <!-- / Create Account: Form PeopleSoft -->
@@ -209,7 +215,7 @@
                   <div class="control-group">
                      <label class="control-label" for="inputVoornaam"><i class="icon-user"></i> Voornaam</label>
                      <div class="controls">
-                        <input class="span3" type="text" id="inputVoornaam" placeholder="">
+                        <input class="span3" type="text" id="inputVoornaam" placeholder="Voornaam" name="voornaam">
                      </div>
                   </div>
                   <!-- / Create Account: Form Voornaam -->
@@ -217,7 +223,7 @@
                   <div class="control-group">
                      <label class="control-label" for="inputAchternaam"><i class="icon-user"></i> Achternaam</label>
                      <div class="controls">
-                        <input class="span3" type="text" id="inputAchternaam" placeholder="">
+                        <input class="span3" type="text" id="inputAchternaam" placeholder="Achternaam" name="achternaam">
                      </div>
                   </div>
                   <!-- / Create Account: Form Achternaam -->
@@ -225,7 +231,7 @@
                   <div class="control-group">
                      <label class="control-label" for="inputDate"><i class="icon-calendar"></i> Geboorte datum</label>
                      <div class="controls">
-                        <select class="span3">
+                        <select class="span3" name="gd_dag">
                         <?php
                            for ($i = 31; $i > 0; $i--) {
                            
@@ -233,21 +239,21 @@
                            }
                            ?>
                         </select>
-                        <select class="span3">
-                           <option value="Januari">Januari
-                           <option value="Februari">Februari
-                           <option value="Maart">Maart
-                           <option value="April">April
-                           <option value="Mei">Mei
-                           <option value="Juni">Juni
-                           <option value="Juli">Juli
-                           <option value="Augustus">Augustus
-                           <option value="September">September
-                           <option value="Oktober">Oktober
-                           <option value="November">November
-                           <option value="December">December
+                        <select class="span3" name="gd_maand">
+                           <option value="01">Januari
+                           <option value="02">Februari
+                           <option value="03">Maart
+                           <option value="04">April
+                           <option value="05">Mei
+                           <option value="06">Juni
+                           <option value="07">Juli
+                           <option value="08">Augustus
+                           <option value="09">September
+                           <option value="10">Oktober
+                           <option value="11">November
+                           <option value="12">December
                         </select>
-                        <select class="span3">
+                        <select class="span3" name="gd_jaar">
                         <?php
                            for ($i = date('Y'); $i > 1950; $i--) {
                              echo '<option value="' . $i . '">' . $i . '';
@@ -261,7 +267,7 @@
                   <div class="control-group">
                      <label class="control-label" for="inputWeken inzetbaar "><i class="icon-user"></i> Weken inzetbaar</label>
                      <div class="controls">
-                        <select class="span3">
+                        <select class="span3" name="weken_inzetbaar">
                         <?php
                            for ($i = 40; $i > 0; $i--) {
                            
@@ -276,10 +282,10 @@
                   <div class="control-group">
                      <label class="control-label" for="inputFunctie"><i class="icon-user"></i> Functie</label>
                      <div class="controls">
-                        <select class="span5">
-                           <option value="Functie">Functie
-                           <option value="Senior Docent">Senior Docent
-                           <option value="Junior Docent">Junior Docent
+                        <select class="span5" name="functie">
+                           <?php foreach($functies as $func): ?>
+                              <option value="<?php echo e($func->id); ?>"><?php echo e($func->naam); ?></option>
+                           <?php endforeach; ?>
                         </select>
                      </div>
                   </div>
@@ -288,7 +294,7 @@
                   <div class="control-group">
                      <label class="control-label" for="inputAanstelling"><i class="icon-envelope"></i> Aanstelling</label>
                      <div class="controls">
-                        <input class="span3" type="text" id="inputAanstelling" placeholder="WTF">
+                        <input class="span3" type="text" id="inputAanstelling" placeholder="WTF" name="aanstelling_WTF">
                      </div>
                   </div>
                   <!-- / Create Account: Form Aanstelling -->
@@ -297,19 +303,10 @@
                      <label class="control-label" for="inputRegelingen"><i class="icon-user"></i> Regelingen</label>
                      <div class="controls">
                         <div class="span3">
-                           <select class="m-wrap block-level" multiple="multiple" data-placeholder="Regelingen">
-                              <option value="1">regeling 1
-                              <option value="2">regeling 2
-                              <option value="1">Regeling 1</option>
-                              <option value="2">Regeling 2</option>
-                              <option value="3">Regeling 3</option>
-                              <option value="4">Regeling 4</option>
-                              <option value="5">Regeling 5</option>
-                              <option value="6">Regeling 6</option>
-                              <option value="7">Regeling 7</option>
-                              <option value="8">Regeling 8</option>
-                              <option value="9">Regeling 9</option>
-                              <option value="10">Regeling 10</option>
+                           <select class="m-wrap block-level" multiple="multiple" data-placeholder="Regelingen" name="regelingen[]">
+                             <?php foreach($regelingen as $regeling): ?>
+                                 <option value="<?php echo e($regeling->id); ?>"><?php echo e($regeling->naam); ?></option>
+                              <?php endforeach; ?>
                            </select>
                         </div>
                      </div>

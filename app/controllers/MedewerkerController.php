@@ -4,13 +4,15 @@
  */
 namespace App\Controllers;
 use App\Models\Medewerker;
+use App\Models\Func;
+use App\Models\Regeling;
 
 class MedewerkerController extends Controller{
     /*
      * Show employee page
      */
     public static function index(){
-        return self::renderWithLayout("employee", ['title' => 'MedewerkersOverzicht', 'employees' => Medewerker::all()]);
+        return self::renderWithLayout("employee", ['title' => 'MedewerkersOverzicht', 'employees' => Medewerker::all(), 'functies' => Func::all(), 'regelingen' => Regeling::all()]);
         
 
     }

@@ -7,6 +7,13 @@
         <div class="well no-padding">
 
             <div class="control-group">
+                <label class="control-label" for="peopleSoftNummer"><i class="icon-user"></i>People soft#</label>
+                <div class="controls">
+                    <input type="text" id="peopleSoftNummer" placeholder="People soft#" name="peopleSoftNummer" class="input-block-level">
+                </div>
+            </div>
+
+            <div class="control-group">
                 <label class="control-label" for="firstName"><i class="icon-user"></i>Voornaam</label>
                 <div class="controls">
                     <input type="text" id="firstName" placeholder="Voornaam" name="firstName" class="input-block-level">

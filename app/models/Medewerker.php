@@ -14,16 +14,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\SoftDeletes;
 
 class medewerker extends \Illuminate\Database\Eloquent\Model {
-    use SoftDeletes; // So employees never actually get deleted, they just get disabled
-
-    /**
-     * The attributes that should be mutated to dates
-     * @var array
-     */
-    protected $dates = ['deleted_at'];
 
     /**
      * The attributes that should be mass-asignable
@@ -43,7 +35,7 @@ class medewerker extends \Illuminate\Database\Eloquent\Model {
      * Get this employee's ruling
      * @return App\Models\Regeling
      */
-    public function regeling(){
-        return $this->hasMany('App\Models\Regeling', 'medewerkerregelingen', 'id');
+    public function regelingen(){
+        return $this->belongsToMany('App\Models\Regeling', 'medewerkerregelingen', 'medewerker_id', 'regeling_id');
     }
 }
