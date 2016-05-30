@@ -47,7 +47,7 @@
                         <td class="custom-data"><?php echo e($employee->contract->aanstellingsOmvangWTF); ?></td>
                         <td class="custom-data"><?php echo e(\App\Helpers\Formula::yearBasis($employee->contract->aanstellingsOmvangWTF)); ?></td>
                         <td class="custom-data"><?php echo e($employee->contract->wekenInzetbaar); ?></td>
-                        <td class="custom-data"><?php echo e(\App\Helpers\Formula::hoursAvailable($employee->contract->aanstellingsOmvangWTF, $employee->contract->wekenInzetbaar)); ?></td>
+                        <td class="custom-data"><?php echo e(round(\App\Helpers\Formula::hoursAvailable($employee->contract->aanstellingsOmvangWTF, $employee->contract->wekenInzetbaar))); ?></td>
                         <td class="custom-data"></td>
                         <td class="custom-data"></td>
                         <td class="custom-data">

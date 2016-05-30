@@ -43,7 +43,7 @@ Flight::route('GET /regelingen', ['\App\Controllers\regelingenController', 'rege
 /*
  * TaskOverview route
  */
-Flight::route('GET /taken', ['\App\Controllers\TaskController', 'task']);
+Flight::route('GET /taken', ['\App\Controllers\TakenController', 'taken']);
 
 /*
  * SubjectOverview route

@@ -5,7 +5,7 @@ use App\Models\Regeling;
 
 class RegelingenController extends Controller{
 
-	public static function index(){
-		 return self::renderWithLayout("regelingen", ['title' => 'RegelingenOverView', 'regelingen' => Regeling::all()]);
+	public static function regelingen(){
+		 return self::renderWithLayout("regeling", ['title' => 'RegelingenOverView', 'regelingen' => Regeling::all()]);
 	}
 }

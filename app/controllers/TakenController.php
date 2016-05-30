@@ -13,14 +13,15 @@
  * @author Quinten
  */
 namespace App\Controllers;
+use App\Models\Taken;
 
-class TaskController extends Controller{
+class TakenController extends Controller{
 
      /**
-     * Show task overview page
+     * Show taken overview page
      */
-        public static function task(){
-        return self::renderWithLayout('task', ['title' => 'Taken overzicht']);
+        public static function taken(){
+        	return self::RenderWithLayOut("taken", ['title' => 'takenOverzicht', 'taken' => Taken::all()]);
     }
 
 }
