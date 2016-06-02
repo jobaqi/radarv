@@ -33,8 +33,8 @@
                                             <th>Resterend inzet
                                             <th>
                                             <th>Onderwijs</th>
-                                            <th>BPV/SLB</th>
-                                            <th>Examinering</th>
+                                            <!-- <th>BPV/SLB</th> -->
+                                            <!-- <th>Examinering</th> -->
                                             <th>Taken</th>
                                             <th>Ontwikkeling</th>
                                         </tr>
@@ -42,17 +42,23 @@
                                     <tbody>
                                         <?php foreach($employees as $employee): ?>
                                         <tr>
-                                            <th><a href="<?= url('/pvi') ?>"></a><?php echo e($employee->voornaam); ?></th>
-                                            <th><?php echo e($employee->contract->aanstellingsOmvangWTF); ?></th>
-                                            <th><?php echo e($employee->contract->func->schaal); ?></th>
-                                            <th></th>
-                                            <th></th>
-                                            <th>
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
-                                            <th></th>
+                                            <td><a href="<?= url('/pvi') ?>"></a><?php echo e($employee->voornaam); ?></td>
+                                            <td><?php echo e($employee->contract->aanstellingsOmvangWTF); ?></td>
+                                            <td><?php echo e($employee->contract->func->schaal); ?></td>
+                                            <?php
+                                                    $regeling_hours = 0;
+                                                    foreach($employee->regelingen as $regeling){
+                                                        $regeling_hours = $regeling_hours + $regeling->urenEenWTFEenJaar;
+                                                }
+                                            ?>
+                                            <td class="custom-data"><?php echo e($regeling_hours); ?></td>
+                                            <td><?php echo e(round(\App\Helpers\Formula::remainingHours($employee->contract->aanstellingsOmvangWTF, $regeling_hours))); ?></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
                                         </tr>
                                         <?php endforeach; ?>
                                     </tbody>

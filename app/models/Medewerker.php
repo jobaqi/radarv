@@ -38,4 +38,7 @@ class medewerker extends \Illuminate\Database\Eloquent\Model {
     public function regelingen(){
         return $this->belongsToMany('App\Models\Regeling', 'medewerkerregelingen', 'medewerker_id', 'regeling_id');
     }
+    public function Taken(){
+        return $this->belongsTo('App\Models\Taken', 'takenmedewerker', 'taken_id', 'medewerker_id');
+    }
 }
