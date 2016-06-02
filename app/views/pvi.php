@@ -19,9 +19,9 @@
                         <label class="control-label" for="inputNormal"><i class="icon-user"></i>Medewerker</label>
                         <div class="controls">
                             <select class="span12">
-                                <option value="number">Vinod Poenai
-                                <option value="01">Andesh Harnam
-                                <option value="02">Anjo Eijeriks
+                                <?php foreach($employees as $em): ?>
+                                    <option value="<?php echo $em->id; ?>"><?php echo $em->voornaam; ?></option>
+                                <?php endforeach; ?>
                             </select>
                         </div>
                     </div>

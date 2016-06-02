@@ -14,6 +14,7 @@ Flight::route('GET /', ['\App\Controllers\HomeController', 'index']);
  * PVI route
  */
 Flight::route('GET /pvi', ['\App\Controllers\MedewerkerController', 'pvi']);
+Flight::route('GET /pvi/@id', ['\App\Controllers\MedewerkerController', 'pvi']);
 
 /*
  * Create PVI route
