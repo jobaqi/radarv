@@ -46,4 +46,7 @@ class medewerker extends \Illuminate\Database\Eloquent\Model {
     public function onderwijsTaken(){
         return $this->hasMany('App\Models\OnderwijsTaak', 'medewerker_id');
     }
+    public function takenMedewerker(){
+        return $this->hasMany('App\Models\Takenmedewerker', 'medewerker_id');
+    }
 }

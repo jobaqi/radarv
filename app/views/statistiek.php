@@ -52,7 +52,16 @@
                                             ?>
                                             <td class="custom-data"><?php echo e($regeling_hours); ?></td>
                                             <td><?php echo e(round(\App\Helpers\Formula::remainingHours($employee->contract->aanstellingsOmvangWTF, $regeling_hours))); ?></td>
-                                            <td>Onderwijs komt hier</td>
+                                            <td>
+                                                <?php
+                                                $weken = 0;
+                                                foreach($employee->takenmedewerker as $taak) {
+                                                    $weken = $weken + $taak->aantalWeken;
+                                                }
+                                                echo $weken;
+
+                                                ?>
+                                            </td>
                                             <td><?php
                                                     $weken = 0;
                                                     foreach($employee->onderwijsTaken as $taak) {
