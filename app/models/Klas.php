@@ -21,7 +21,8 @@ class Klas extends \Illuminate\Database\Eloquent\Model {
      * @var array
      */
     protected $fillable = ['naam'];
-
+    protected $table = 'klassen';
+    
     public function opleiding(){
         return $this->belongsTo('App\Models\Opleiding');
     }

@@ -21,5 +21,5 @@ class opleiding extends \Illuminate\Database\Eloquent\Model {
      * @var array
      */
     protected $fillable = ['naam'];
-    protected $table ='opleiding';
+    protected $table ='opleidingen';
 }
