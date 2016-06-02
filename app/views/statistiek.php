@@ -30,8 +30,7 @@
                                             <th>Aanstelling</th>
                                             <th>Schaal</th>
                                             <th>Regeling</th>
-                                            <th>Resterend inzet
-                                            <th>
+                                            <th>Resterend inzet</th>
                                             <th>Onderwijs</th>
                                             <!-- <th>BPV/SLB</th> -->
                                             <!-- <th>Examinering</th> -->
@@ -53,12 +52,20 @@
                                             ?>
                                             <td class="custom-data"><?php echo e($regeling_hours); ?></td>
                                             <td><?php echo e(round(\App\Helpers\Formula::remainingHours($employee->contract->aanstellingsOmvangWTF, $regeling_hours))); ?></td>
+                                            <td>Onderwijs komt hier</td>
+                                            <td><?php
+                                                    $weken = 0;
+                                                    foreach($employee->onderwijsTaken as $taak) {
+                                                        $weken = $weken + $taak->aantalWeken;
+                                                    }
+                                                    echo $weken;
+                                                ?>
+                                                    
+                                            </td>
                                             <td></td>
                                             <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+<!--                                             <td></td>
+                                            <td></td> -->
                                         </tr>
                                         <?php endforeach; ?>
                                     </tbody>
