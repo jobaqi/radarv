@@ -7,7 +7,7 @@
  */
 
 /**
- * Description of OnderwijsTaak
+ * Description of TakenMedewerker
  *
  * @author Jordy
  */

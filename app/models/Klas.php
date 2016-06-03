@@ -20,7 +20,7 @@ class Klas extends \Illuminate\Database\Eloquent\Model {
      * The attributes that should be mass-asignable
      * @var array
      */
-    protected $fillable = ['naam'];
+    protected $fillable = ['naam', 'opleiding_id'];
     protected $table = 'klassen';
     
     public function opleiding(){

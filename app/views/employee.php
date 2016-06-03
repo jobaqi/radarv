@@ -76,7 +76,7 @@
                         <h3 id="close-modal"><i class="icon-edit-sign"></i> Edit</h3>
                      </div>
                      <div class="modal-body">
-                        <form class="form-horizontal">
+                        <form class="form-horizontal" method="post">
                            <div class="control-group">
                               <label class="control-label" for="Peoplesoft"><i class="icon-user"></i> PeopleSoft#</label>
                               <div class="controls">

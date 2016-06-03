@@ -14,6 +14,7 @@
  */
 namespace App\Controllers;
 use App\Models\Klas;
+use App\Models\Opleiding;
 
 
 class KlasController extends Controller{
@@ -22,6 +23,14 @@ class KlasController extends Controller{
      * Show class overview page
      */
         public static function classes(){
-        return self::renderWithLayout("Klas", ['title' => 'ClassesOverView', 'klassen' => Klas::all()]);
+        return self::renderWithLayout("Klas", ['title' => 'Klassen Overzicht', 'opleidingen' => Opleiding::all(), 'klassen'=> klas::all()]);
+    }
+    public function store(){
+    	$data = \Flight::request()->data;
+    	Klas::create([
+    			'naam'=>$data->naam,
+    			'opleiding_id'=>$data->opleiding
+    		]);
+    		return \Flight::redirect(url("/klassen"));
     }
 }

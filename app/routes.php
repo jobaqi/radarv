@@ -35,6 +35,7 @@ Flight::route('GET /medewerker', ['\App\Controllers\MedewerkerController', 'inde
  * ClassesOverview route
  */
 Flight::route('GET /klassen', ['\App\Controllers\KlasController', 'classes']);
+Flight::route('POST /klassen', ['\App\Controllers\KlasController', 'store']);	
 
 /*
  * ArrangementOverview route
