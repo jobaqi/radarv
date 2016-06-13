@@ -1,159 +1,62 @@
-<!-- Content Container -->
-<div class="container">
-
-    <div class="row-fluid">
-			<!-- Create classes: Box -->
-			<div class="span12">
-
-				<!-- Create Account: Top Bar -->
-				<div class="top-bar">
-					<ul class="tab-container">
-					  <li class="active"><a href="#classes-overview"><i class="icon-th-list"></i>klassen overzicht</a></li>
-					  <li><a href="#classes-create"><i class="icon-plus"></i>Toevoegen klas</a></li>
-					</ul>
-				</div>
-				<!-- / Create Account: Top Bar -->
-
-				<!-- Create Account: Content -->
-				<div class="well no-padding tab-content">
-					
-					<!-- Create Account: Content classes Overview  EERSTE TABBLAD-->
-					<div class="tab-pane active" id="classes-overview">
-					<!-- Create Account: Content classes Overview Table -->
-						<table class="data-table">
-							<thead>
-								<tr>
-									<th class="custom-header">Klas</th>
-									<th class="custom-header">Studie</th>
-									<th class="custom-header">Actie</th>							
-								</tr>
-							</thead>
-							<tbody>
-								<?php foreach($klassen as $klas): ?>
-								
-								<tr>
-									<td class="custom-data"><?php echo e($klas->naam); ?></td>
-									<td class="custom-data"><?php echo e($klas->Opleiding->naam); ?></td>
-									<td class="custom-data">
-	                                    <a href='#edit' data-toggle="modal"><i class='icon-edit-sign'></i></a>
-	                                    <a href='#delete' data-toggle="modal"><i class='icon-remove'></i></a>
-									</td>
-								</tr>
-                     			<?php endforeach; ?>
-
-							</tbody>
-
-						</table>
-						<!-- / Create Account: Content classes Overview Table -->
-					</div>
-					<!-- / Create Account: Content classes Overview -->
-
-	                <!-- Moldule: Edit Classes -->
-	                    <div id="edit" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="close-modal" aria-hidden="true">
-	                        <div class="modal-dialog">
-	                            <div class="modal-content">
-	                                <div class="modal-header">
-	                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-	                                    <h3 id="close-modal"><i class="icon-edit-sign"></i> Edit</h3>
-	                                </div>
-	                                <div class="modal-body">
-	                                    <form class="form-horizontal">
-	                                        <div class="control-group">
-	                                            <label class="control-label" for="inpunaam"><i class="icon-user"></i> Naam</label>
-	                                            <div class="controls">
-	                                                <input class="span6" type="text" id="inpunaam" placeholder="">
-	                                            </div>
-	                                        </div>
-	                                        <div class="control-group">
-	                                            <label class="control-label" for="inputklas"><i class="icon-user"></i> Klas</label>
-	                                            <div class="controls">
-
-	                                                <select class="span6">
-	                                                    <option value="Applicatie Ontwikkeling">Applicatie Ontwikkeling
-	                                                    <option value="Media Developer">Media Developer
-	                                                </select>
-	                                            </div>
-	                                        </div>
-	                                    </form>
-	                                </div>
-	                                <div class="modal-footer">
-	                                    <button class="btn btn-primary">Opslaan</button>
-	                                    <button class="btn" data-dismiss="modal" aria-hidden="true">Sluiten</button>
-	                                </div>
-	                            </div>
-	                        </div>
-	                    </div>
-	                <!-- / Module: Edit Classes -->
-
-	                 <!-- Module: Delete Classes -->
-	                <div class="modal hide fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-	                    <div class="modal-dialog">
-	                        <div class="modal-content">
-	                                <div class="modal-header">
-	                                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-	                                    <h3 id="close-modal"><i class="icon-remove"></i> Delete</h3>
-	                                </div>
-	                            <div class="modal-body">
-	                                <p>Weer u zeker dat u (Klas) wilt verwijderen?</p>
-	                            </div>
-	                                <div class="modal-footer">
-	                                    <button class="btn btn-danger">Delete</button>
-	                                    <button class="btn" data-dismiss="modal" aria-hidden="true">Sluiten</button>
-	                                </div>
-	                        </div>
-	                    </div>
-	                </div>             
-	                <!-- / Module: Delete Classes -->
-
-					<!-- / Create Account: Tab TWEEDE TABBLAD -->   
-					<div class="tab-pane" id="classes-create">
+<div class="mdl-grid">
+	<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect mdl-cell mdl-cell--12-col">
+		<div class="mdl-tabs__tab-bar">
+			<a href="#klassen-panel" class="mdl-tabs__tab is-active">Klassen</a>
+			<a href="#nieuwe-klas-panel" class="mdl-tabs__tab">Nieuwe klas toevoegen</a>
+		</div>
+		<div class="mdl-tabs__panel is-active mdl-cell mdl-cell--12-col" id="klassen-panel">
+			<div class="mdl-cell mdl-cell--12-col" style="overflow-x: auto">
+				<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+					<thead>
+						<tr>
+							<th class="custom-header">Klas</th>
+							<th class="custom-header">Studie</th>
+							<th class="custom-header">Actie</th>
+						</tr>
+					</thead>
+					<tbody>
+						<?php foreach($klassen as $klas): ?>
 						
-						<!-- Create A: Tab -->  
-						
-						<!-- Create Class: Form -->
-						<form class="form-horizontal" method="post">
-
-							<!-- Create Account: Form Naam -->
-							<div class="control-group">
-								<label class="control-label" for="inputNaam"><i class="icon-user"></i>Klas naam</label>
-								<div class="controls">
-									<input class="span3" type="text" id="inputKlas_naam" placeholder="Klas naam" name="naam">
-								</div>
-							</div>
-							<!-- / Create Class: Form Naam -->
-
-							<!-- Create Account: Form Klas -->
-							<div class="control-group">
-								<label class="control-label" for="inputKlas"><i class="icon-user"></i> Opleiding</label>
-								<div class="controls">
-									<select class="span5" name="opleiding">
-										<?php foreach($opleidingen as $opleiding): ?>
-										<option value="<?php echo e($opleiding->id); ?>"><?php echo e($opleiding->naam); ?></option>
-										<?php endforeach; ?>
-									</select>
-								</div>
-							</div>
-							<!-- / Create Account: Form Klas -->
-                        	<!-- Create Account: Form Actions -->
-                        	<div class="form-actions">
-                           		<button type="submit" class="btn btn-primary">Aanmaken</button>
-                        	</div>
-                        	<div class="row-fluid">
-								<div class="span5">
-
-								</div>
-							</div>
-                        	<!-- / Create Account: Form Actions -->								
-                        	</form>
-						<!-- / Create A: Tab SPAN 12 -->  
-
-					</div>
-				<!-- / Create Account: Tab -->   
-
-				</div>
-				<!-- / Create Account: Content -->
-
+						<tr>
+							<td class="custom-data"><?php echo e($klas->naam); ?></td>
+							<td class="custom-data"><?php echo e($klas->Opleiding->naam); ?></td>
+							<td class="custom-data">
+								<a href='#edit' data-toggle="modal"><i class='icon-edit-sign'></i></a>
+								<a href='#delete' data-toggle="modal"><i class='icon-remove'></i></a>
+							</td>
+						</tr>
+						<?php endforeach; ?>
+					</tbody>
+				</table>
 			</div>
-			<!-- / Create classes: Box -->
+			<!-- / Create Account: Content classes Overview Table -->
+		</div>
+		<div id="nieuwe-klas-panel" class="mdl-tabs__panel mdl-cell mdl-cell--12-col">
+			<div class="mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+				<div class="mdl-card__title">
+					<h2 class="mdl-card__title-text">Nieuwe klas toevoegen</h2>
+				</div>
+				<div class="mdl-card__supporting-text">
+					<form action="#">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100%;">
+							<input class="mdl-textfield__input" type="text" id="sample3">
+							<label class="mdl-textfield__label" for="sample3">Klas naam</label>
+						</div>
+						<div class="mdl-textfield" style="width: 100%">
+							<select class="mdl-textfield__select" id="professsion" name="professsion">
+								<option value="">Opleiding</option>
+								<?php foreach($opleidingen as $opleiding): ?>
+								<option value="<?php echo e($opleiding->id); ?>"><?php echo e($opleiding->naam); ?></option>
+								<?php endforeach; ?>
+							</select>
+						</div>
+						<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Toevoegen</button>
+					</form>
+					
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
+<script>
+</script>

@@ -21,5 +21,5 @@ class Vakken extends \Illuminate\Database\Eloquent\Model {
      * @var array
      */
     protected $fillable = ['naam', 'vakCode'];
-    protected $table = 'Vakken';
+    protected $table = 'vakken';
 }

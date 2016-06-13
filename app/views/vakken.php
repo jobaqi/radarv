@@ -1,24 +1,28 @@
 <div class="mdl-grid">
 	<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect mdl-cell mdl-cell--12-col">
 		<div class="mdl-tabs__tab-bar">
-			<a href="#taken-panel" class="mdl-tabs__tab is-active">Taken</a>
-			<a href="#nieuw-vak-panel" class="mdl-tabs__tab">Nieuwe taak toevoegen</a>
+			<a href="#vakken-panel" class="mdl-tabs__tab is-active">Vakken</a>
+			<a href="#nieuwe-vak-panel" class="mdl-tabs__tab">Nieuw vak toevoegen</a>
 		</div>
-		<div class="mdl-tabs__panel is-active mdl-cell mdl-cell--12-col" id="taken-panel">
+		<div class="mdl-tabs__panel is-active mdl-cell mdl-cell--12-col" id="vakken-panel">
 			<div class="mdl-cell mdl-cell--12-col" style="overflow-x: auto">
 				<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp mdl-cell mdl-cell--12-col">
 					<thead>
 						<tr>
-							<th>Naam</th>
-							<th>Actie</th>
+							<th class="custom-header">Naam</th>
+							<th class="custom-header">Vak Code</th>
+							<th class="custom-header">Actie</th>
+							
 						</tr>
 					</thead>
 					<tbody>
-						<?php foreach($taken as $taak): ?>
+						<?php foreach ($vakken as $vak): ?>
 						<tr>
-							<td><?php echo e($taak->naam); ?></td>
-							<td>
-								<a href="#">Edit</a><a href="#">Delete</a>
+							<td class="custom-data"><?php echo e($vak->naam); ?></td>
+							<td class="custom-data"><?php echo e($vak->vakCode); ?></td>
+							<td class="custom-data">
+								<a href='#edit' data-toggle="modal"><i class='icon-edit-sign'></i></a>
+								<a href='#delete' data-toggle="modal"><i class='icon-remove'></i></a>
 							</td>
 						</tr>
 						<?php endforeach; ?>
@@ -27,8 +31,7 @@
 			</div>
 			<!-- / Create Account: Content classes Overview Table -->
 		</div>
-		<div id="nieuw-vak-panel" class="mdl-tabs__panel mdl-cell mdl-cell--12-col">
-			
+		<div id="nieuwe-vak-panel" class="mdl-tabs__panel mdl-cell mdl-cell--12-col">
 			
 			<!-- Create A: Tab -->
 			
@@ -44,7 +47,7 @@
 				<!-- / Create Class: Form Naam -->
 				<!-- Create Account: Form Uren -->
 				<div class="control-group">
-					<label class="control-label" for="inputUren"><i class="icon-time"></i>Uren</label>
+					<label class="control-label" for="inputUren"><i class="icon-time"></i>vak Code</label>
 					<div class="controls">
 						<input type="text" class="typeahead" id="inputUren" placeholder="">
 					</div>
