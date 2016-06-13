@@ -26,6 +26,6 @@ class TakenMedewerker extends \Illuminate\Database\Eloquent\Model {
      * This model's table
      * @var string
      */
-    protected $table = 'TakenMedewerker';
+    protected $table = 'takenmedewerker';
 
 }

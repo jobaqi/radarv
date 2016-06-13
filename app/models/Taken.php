@@ -29,6 +29,6 @@ class Taken extends \Illuminate\Database\Eloquent\Model {
     protected $table = 'taken';
 
     public function taken(){
-        return $this->belongsTo('App\Models\Taken', 'takenmedewerker', 'taken_id', 'medewerker_id');
+        return $this->belongsTo('App\Models\Taken', 'takenMedewerker', 'taken_id', 'medewerker_id');
     }
 }

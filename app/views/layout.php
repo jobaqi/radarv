@@ -1,221 +1,95 @@
-﻿<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title><?= $title ?></title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <!-- Styles -->
-        <link href='\public\css\chosen.css' rel='stylesheet' type="text/css">
-        <link href="\public\css\bootstrap.css" rel="stylesheet" type="text/css">
-        <link href="\public\css\theme\avocado.css" rel="stylesheet" type="text/css" id="theme-style">
-        <link href="\public\css\prism.css" rel="stylesheet/less" type="text/css">
-        <link href='\public\css\fullcalendar.css' rel='stylesheet' type="text/css">
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,600,300' rel='stylesheet' type='text/css'>
-        <style type="text/css">
-            body { padding-top: 102px; }
-        </style>
-        <link href="\public\css\bootstrap-responsive.css" rel="stylesheet">
-        <link href='public\css\custom.css' rel='stylesheet' type="text/css">
-        <!-- JavaScript/jQuery, Pre-DOM -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
-        <script src="\public\js\charts\excanvas.js"></script>
-        <script src="\public\js\jquery.js"></script>
-        <script src="\public\js\jquery.jpanelmenu.js"></script>
-        <script src="\public\js\avocado-custom-predom.js"></script>
-        <!-- HTML5, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
-    </head>
-    <body>
-        <!-- Top Fixed Bar -->
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <!-- Top Fixed Bar: Navbar Inner -->
-            <div class="navbar-inner">
-                <!-- Top Fixed Bar: Container -->
-                <div class="container">
-                    <!-- Mobile Menu Button -->
-                    <a href="#">
-                        <button type="button" class="btn btn-navbar mobile-menu">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </a>
-                    <!-- / Mobile Menu Button -->
-                    <!-- / Logo / Brand Name -->
-                    <a class="brand" href="<?= url('/') ?>"><i class="icon-leaf"></i> PVI<b> App</b></a>
-                    <!-- / Logo / Brand Name -->
-                    <!-- User Navigation -->
-                    <ul class="nav pull-right">
-                        <!-- User Navigation: Messages -->
-                        <li class="dropdown">
-                            <!-- User Navigation: Messages Link -->
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class=" icon-align-justify"></i>
-                                <span class="hidden-phone">Overzichten</span>
-                            </a>
-                            <!-- / User Navigation: Messages Link -->
-                            <!-- / User Navigation: Messages Dropdown -->
-                            <ul class="dropdown-menu widget">
-                                <!-- User Navigation: Messages Message -->
-                                <li><a href="<?= url('/Medewerker') ?>"><i class="icon-th-list"></i> Medewerkers overzicht</a></li>
-                                <li><a href="<?= url('/Klassen') ?>"><i class="icon-th-list"></i> Klassen overzicht</a></li>
-                                <li><a href="<?= url('/Vakken') ?>"><i class="icon-th-list"></i> Vakken overzicht</a></li>
-                                <li><a href="<?= url('/Taken') ?>"><i class="icon-th-list"></i> Taken overzicht</a></li>
-                                <li><a href="<?= url('/Regelingen') ?>"><i class="icon-th-list"></i> Regelingen overzicht</a></li>
-                                <!-- User Navigation: Messages View All Messages -->
-                                <li>
-                                    <a href="<?= url('/nieuwepvi') ?>" class="text-center">
-                                        <i class="icon-check"></i> Een nieuwe PVI
-                                    </a>
-                                </li>
-                                <!-- / User Navigation: Messages View All Messages -->
-                            </ul>
-                            <!-- / User Navigation: Messages Dropdown -->
-                            <!-- / User Navigation: Messages -->
-                        </li>
-                        <!-- User Navigation: Messages -->
-                        <li class="dropdown">
-                            <!-- User Navigation: Messages Link -->
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="icon-signal"></i>
-                                <span class="hidden-phone"> Statistieken </span>
-                            </a>
-                            <!-- / User Navigation: Messages Link -->
-                            <!-- / User Navigation: Messages Dropdown -->
-                            <ul class="dropdown-menu widget">
-                                <!-- User Navigation: Messages Message -->
-                                <li>
-                                    <a href="<?= url('/Analyse') ?>" class="message">
-                                        <h3><i class=" icon-th-list"></i> Analyseblad </h3>
-                                    </a>
-                                </li>
-                                <!-- / User Navigation: Messagses Message -->
-                            </ul>
-                            <!-- / User Navigation: Messages Dropdown -->
-                        </li>
-                        <!-- / User Navigation: Messages -->
-                        <!-- User Navigation: User -->
-                        <li class="dropdown">
-                            <!-- User Navigation: User Link -->
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <i class="icon-user icon-white"></i> 
-                                <span class="hidden-phone">P. de Jager</span>
-                            </a>
-                            <!-- / User Navigation: User Link -->
-                            <!-- User Navigation: User Dropdown -->
-                            <ul class="dropdown-menu">
-                                <li><a href="#"><i class="icon-user"></i> Profiel</a></li>
-                                <li><a href="#settings" data-toggle="modal"><i class="icon-cog"></i> Instellingen</a></li>
-                                <li class="divider"></li>
-                                <li><a href="#"><i class="icon-off"></i> Uitloggen</a></li>
-                            </ul>
-                            <!-- / User Navigation: User Dropdown -->
-                        </li>
-                        <!-- / User Navigation: User -->
-                    </ul>
-                    <!-- / User Navigation -->
-                </div>
-                <!-- / Top Fixed Bar: Container -->
-            </div>
-            <!-- / Top Fixed Bar: Navbar Inner -->
-            <!-- Top Fixed Bar: Breadcrumb -->
-            <div class="breadcrumb clearfix">
-                <!-- Top Fixed Bar: Breadcrumb Container -->
-                <div class="container">
-                    <!-- Top Fixed Bar: Breadcrumb Location -->
-                    <ul class="pull-left">
-                        <li><a href="<?= url('/') ?>"><i class="icon-home"></i> Home</a> <span class="divider">/</span></li>
-                        <li class="active"><a href="<?= url('/pvi') ?>"><i class="icon-check"></i> PVI</a></li>
-                    </ul>
-                    <!-- / Top Fixed Bar: Breadcrumb Location -->
-                    <!-- Top Fixed Bar: Breadcrumb Right Navigation -->
-                    <ul class="pull-right">
-                        <li><a href="login.html"><i class="icon-off"></i> Uitloggen</a></li>
-                    </ul>
-                    <!-- / Top Fixed Bar: Breadcrumb Right Navigation -->
-                </div>
-                <!-- / Top Fixed Bar: Breadcrumb Container -->
-            </div>
-            <!-- / Top Fixed Bar: Breadcrumb -->
-        </div>
-        <!-- / Top Fixed Bar -->
-        <!-- Moldule: Settings -->
-        <div id="settings" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                <h3 id="myModalLabel"><i class="icon-cog"></i> Instellingen</h3>
-            </div>
-            <div class="modal-body">
-                <form class="form-horizontal">
-                    <div class="control-group">
-                        <label class="control-label" for="inputName"><i class="icon-user"></i> Naam</label>
-                        <div class="controls">
-                            <input type="text" id="inputName" placeholder="Name">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="inputUsername"><i class="icon-user"></i> Gebruikersnaam</label>
-                        <div class="controls">
-                            <input type="text" id="inputUsername" placeholder="Username">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="inputPassword"><i class="icon-key"></i> Password</label>
-                        <div class="controls">
-                            <input type="password" id="inputPassword" placeholder="Password">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="inputRepeat"><i class="icon-key"></i> Herhaal Password</label>
-                        <div class="controls">
-                            <input type="password" id="inputRepeat" placeholder="Password">
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="inputEmail"><i class="icon-envelope"></i> Email</label>
-                        <div class="controls">
-                            <input type="text" id="inputEmail" placeholder="Email">
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-primary">Opslaan</button>
-                <button class="btn" data-dismiss="modal" aria-hidden="true">Sluiten</button>
-            </div>
-        </div>
+﻿<!doctype html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
 
-        <!-- / Module: Settings -->
-        <?= $body ?>
-        <!-- Footer -->
-        <footer class="footer">
-            <!-- Footer Container -->
-            <div class="container">
-                <!-- Footer Container: Content -->
-                V.Poenai
-                <!-- / Footer Container: Content -->
-            </div>
-            <!-- / Footer Container -->
-        </footer>
-        <!-- / Footer -->
-    </body>
-    <!-- Javascript
-        ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src='public\js\calendar\fullcalendar.js'></script>
-    <script src="\public\js\jquery-ui-1.10.2.custom.js"></script>
-    <script src="\public\js\jquery.prism.js"></script>
-    <script src="\public\js\jquery.dataTables.js"></script>
-    <script src="\public\js\bootstrap\bootstrap.js"></script>
-    <script src="\public\js\bootstrap\bootstrap-wysiwyg.js"></script>
-    <script src="\public\js\bootstrap\bootstrap-typeahead.js"></script>
-    <script src="\public\js\jquery.easing.js"></script>
-    <script src="\public\js\jquery.chosen.js"></script>
-    <script src="\public\js\avocado-custom.js"></script>
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Material Design Lite</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="/public/img/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Material Design Lite">
+    <link rel="apple-touch-icon-precomposed" href="/public/img/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="/public/img/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="/public/img/favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.1.3/material.cyan-light_blue.min.css">
+    <link rel="stylesheet" href="/public/css/custom.css">
+  </head>
+  <body>
+    <div class="demo-layout mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+      <header class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title"><?php echo ($title === null ? "PVI" : $title) ?></span>
+        </div>
+      </header>
+      <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+        <header class="demo-drawer-header">
+          <img src="/public/img/user.jpg" class="demo-avatar">
+          <div class="demo-avatar-dropdown">
+            <span>hello@example.com</span>
+            <div class="mdl-layout-spacer"></div>
+            <button id="accbtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+              <i class="material-icons" role="presentation">arrow_drop_down</i>
+              <span class="visuallyhidden">Accounts</span>
+            </button>
+            <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="accbtn">
+              <li class="mdl-menu__item">hello@example.com</li>
+              <li class="mdl-menu__item">info@example.com</li>
+              <li class="mdl-menu__item"><i class="material-icons">add</i>Add another account...</li>
+            </ul>
+          </div>
+        </header>
+        <nav class="demo-navigation mdl-navigation mdl-color--blue-grey-800">
+          <a class="mdl-navigation__link" href="<?php echo url('/'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
+          <a class="mdl-navigation__link" href="<?php echo url('/login'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">face</i>Inloggen</a>
+          <a class="mdl-navigation__link" href="<?php echo url('/analyse'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">list</i>Analyse overzicht</a>
+          <a class="mdl-navigation__link" href="<?php echo url('/medewerker'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">list</i>Medewerker overzicht</a>
+          <a class="mdl-navigation__link" href="<?php echo url('/klassen'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">list</i>Klassen overzicht</a>
+          <a class="mdl-navigation__link" href="<?php echo url('/regelingen'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">list</i>Regelingen overzicht</a>
+          <a class="mdl-navigation__link" href="<?php echo url('/taken'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">list</i>Taken overzicht</a>
+          <a class="mdl-navigation__link" href="<?php echo url('/vakken'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">list</i>Vakken overzicht</a>
+          <a class="mdl-navigation__link" href="<?php echo url('/nieuwepvi'); ?>"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">note_add</i>Nieuwe PVI</a>
+        </nav>
+      </div>
+      <main class="mdl-layout__content mdl-color--grey-100">
+        <?php echo $body; ?>
+      </main>
+    </div>
+      
+    <script src="https://code.getmdl.io/1.1.3/material.min.js"></script>
+  </body>
 </html>
-</body>

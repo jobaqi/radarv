@@ -1,31 +1,20 @@
-
-     <div class="container">  
-
-        <form class="form-signin form-horizontal" action="<?= url('/login') ?>" method="post">
-        <div class="top-bar">
-          <h3><i class="icon-leaf"></i> PVI<b>Login</b></h3>
+<div class="mdl-grid">
+  <div class="demo-card-square mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+    <div class="mdl-card__title">
+      <h2 class="mdl-card__title-text">Inloggen</h2>
+    </div>
+    <div class="mdl-card__supporting-text">
+      <form action="#">
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100%;">
+          <input class="mdl-textfield__input" type="text" id="sample3">
+          <label class="mdl-textfield__label" for="sample3">Username</label>
         </div>
-        <div class="well no-padding">
-
-          <div class="control-group">
-            <label class="control-label" for="inputName"><i class="icon-user"></i></label>
-            <div class="controls">
-              <input type="text" id="inputName" placeholder="Soft nummer" name="peopleSoftNummer">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="inputUsername"><i class="icon-key"></i></label>
-            <div class="controls">
-              <input type="password" id="inputUsername" placeholder="Password" name="password">
-            </div>
-          </div>
-
-        <div class="padding">
-          <button class="btn btn-primary" type="submit">Inloggen</button>
-          <button class="btn" type="submit">Wachtwoord vergeten</button>
-          </div>
+        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" style="width:100%;">
+          <input class="mdl-textfield__input" type="password" id="sample4">
+          <label class="mdl-textfield__label" for="sample4">Password</label>
         </div>
+        <button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect">Inloggen</button>
       </form>
-
-    </div> 
-
+    </div>
+  </div>
+</div>

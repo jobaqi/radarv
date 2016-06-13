@@ -1,24 +1,10 @@
-<div class="container">
-    <div class="well">
-        <p>
-            <a href="<?= url('/pvi') ?>">PVI</a>
-            |
-            <a href="<?= url('/login') ?>">Login</a>
-            |
-            <a href="<?= url('/Analyse') ?>">Analyse overzicht</a>
-            |
-            <a href="<?= url('/Medewerker') ?>">Medewerkers overzicht</a>
-            |
-            <a href="<?= url('/Klassen') ?>">Klassen overzicht</a>
-            |
-            <a href="<?= url('/Regelingen') ?>">Regelingen overzicht</a>
-            |
-            <a href="<?= url('/Taken') ?>">Taken overzicht</a>
-            |
-            <a href="<?= url('/Vakken') ?>">Vakken overzicht</a>
-            |
-            <a href="<?= url('/nieuwepvi') ?>">Nieuwepvi</a>
-
-        </p>
+<div class="mdl-grid">
+    <div class="demo-card-square mdl-card mdl-shadow--2dp mdl-cell mdl-cell--12-col">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Links</h2>
+        </div>
+        <div class="mdl-card__supporting-text">
+           <p>Hallo daar! Click links op een link om te navigeren. </p>
+        </div>
     </div>
 </div>
