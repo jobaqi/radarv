@@ -13,11 +13,11 @@
         <link href="\public\css\prism.css" rel="stylesheet/less" type="text/css">
         <link href='\public\css\fullcalendar.css' rel='stylesheet' type="text/css">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,600,300' rel='stylesheet' type='text/css'>
-        <link href='public\css\custom.css' rel='stylesheet' type="text/css">
         <style type="text/css">
             body { padding-top: 102px; }
         </style>
         <link href="\public\css\bootstrap-responsive.css" rel="stylesheet">
+        <link href='public\css\custom.css' rel='stylesheet' type="text/css">
         <!-- JavaScript/jQuery, Pre-DOM -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>

@@ -226,30 +226,39 @@
                         <!-- / Forms: Content -->
                     </div>
                     <div class="tab-pane" id="tab-toevoegen-onderwijs">
-                        <div class="custom-inline">
-                            <label class="control-label custom-center" for="inputInline">Klas</label>
-                            <div class="controls">
-                                <select class="span4">
-                                    <option value="number">4VAOW1A</option>
-                                    <option value="01">4VAOW1B</option>
-                                    <option value="02">4VAOW2A</option>
-                                    <option value="03">4VAOW2B</option>
-                                    <option value="04">4VAOW3A</option>
-                                </select>
+                        <form class="form" action="#" method="post">
+                            <!-- Create Account: Form Aanstelling -->
+                            <div class="control-group span2">
+                                <label class="control-label" for="inputAanstelling">Klas</label>
+                                <div class="controls custom-margin">
+                                    <select class="span3" name="klas">
+                                        <option value="01">4VAOQ3A
+                                        <option value="02">4MDRX3A
+                                        <option value="03">4VAOW3A
+                                        <option value="04">4VAOW1B
+                                        <option value="05">4VAOW2B
+                                    </select>
+                                </div>
                             </div>
-                        </div>    
-                        <div class="custom-inline">
-                            <label class="control-label custom-center" for="inputInline">Vak</label>
-                            <div class="controls">
-                                <select class="span4">
-                                    <option value="number">Database</option>
-                                    <option value="01">UML</option>
-                                    <option value="02">Hardware</option>
-                                    <option value="03">C#</option>
-                                    <option value="04">Javascript</option>
-                                </select>
+                            <!-- / Create Account: Form Aanstelling -->  
+                            <!-- Create Account: Form Aanstelling -->
+                            <div class="control-group span2">
+                                <label class="control-label" for="inputAanstelling">Vak</label>
+                                <div class="controls custom-margin">
+                                    <select class="span3" name="Vak">
+                                        <option value="01">Javascript
+                                        <option value="02">C#
+                                        <option value="03">Database
+                                        <option value="04">UML
+                                        <option value="05">Laravel
+                                    </select>
+                                </div>    
                             </div>
-                        </div>                                                    
+                            <!-- / Create Account: Form Aanstelling -->
+                            <div class="form-actions" id="custom-padding">
+                                <button type="submit" class="btn btn-primary">Aanmaken</button>
+                            </div>
+                        </form>                                                        
                     </div>
                 </div>
             </div>
@@ -312,32 +321,67 @@
                         <!-- / Forms: Content -->
                     </div>
                     <div class="tab-pane " id="tab-toevoegen-taak">
-                        <div class="custom-inline">
-                            <label class="control-label custom-center" for="inputNaam">Naam</label>
-                            <div class="controls">
-                                <input type="text" class="typeahead" id="inputNaam" placeholder="">
+                        <!-- Create taak: Form -->
+                        <form class="form" action="#" method="post">
+                              <!-- Create taak: Form taak -->
+                              <div class="control-group span3">
+                                 <label class="custom-center control-label" for="inputAanstelling">Naam </label>
+                                 <div class="controls custom-margin">
+                                    <input class="span12" type="text" id="inputAanstelling" placeholder="WTF" name="aanstelling_WTF">
+                                 </div>
+                              </div>
+                              <!-- / Create taak: Form taak -->   
+                              <!-- Create taak: Form taak -->
+                                <div class="control-group span3">
+                                <label class="control-label custom-center" for="Start_Week">Start Week</label>
+                                    <div class="controls custom-margin">
+                                        <select name="Start_Week">
+                                        <?php
+                                           for ($i = 40; $i > 0; $i--) {
+                                           
+                                             echo '<option value="' . $i . '">' . $i . '';
+                                           }
+                                           ?>
+                                        </select>
+                                    </div>
+                                </div>
+                              <!-- / Create taak: Form taak -->
+                              <!-- Create taak: Form taak -->
+                                <div class="control-group span3">
+                                <label class="control-label custom-center" for="Eind_Week">Eind Week</label>
+                                    <div class="controls custom-margin">
+                                        <select name="Eind_Week">
+                                        <?php
+                                           for ($i = 40; $i > 0; $i--) {
+                                           
+                                             echo '<option value="' . $i . '">' . $i . '';
+                                           }
+                                           ?>
+                                        </select>
+                                    </div>
+                                </div>
+                              <!-- / Create taak: Form taak -->
+                              <!-- Create taak: Form taak -->
+                                <div class="control-group span3">
+                                <label class="control-label custom-center" for="Uren_Weekbasis">Uren Weekbasis</label>
+                                    <div class="controls custom-margin">
+                                        <select name="Uren_Weekbasis">
+                                        <?php
+                                           for ($i = 168; $i > 0; $i--) {
+                                           
+                                             echo '<option value="' . $i . '">' . $i . '';
+                                           }
+                                           ?>
+                                        </select>
+                                    </div>
+                                </div>
+                              <!-- / Create taak: Form taak -->
+                            <a class="custom-center custom-block span2" href="#">Nog een taak toevoegen</a>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Aanmaken</button>
                             </div>
-                        </div>    
-                        <div class="custom-inline">
-                            <label class="control-label custom-center" for="inputNaam">Start week</label>
-                            <div class="controls">
-                                <input type="text" class="typeahead" id="inputNaam" placeholder="">
-                            </div>
-                        </div>
-                        <div class="custom-inline">
-                            <label class="control-label custom-center" for="inputNaam">Aantal weken</label>
-                            <div class="controls">
-                                <input type="text" class="typeahead" id="inputNaam" placeholder="">
-                            </div>
-                        </div> 
-                        <div class="custom-inline">
-                            <label class="control-label custom-center" for="inputNaam">Uren weekbasis</label>
-                            <div class="controls">
-                                <input type="text" class="typeahead" id="inputNaam" placeholder="">
-                            </div>
-                        </div>
-                        <a class="custom-center custom-block span2" href="#">Nog een taak toevoegen</a>
-                        <button type="submit" class="btn btn-primary custom-block">Aanmaken</button>                        
+                        </form>
+                        <!-- / Create taak: Form -->
                     </div>
                 </div>
             </div>

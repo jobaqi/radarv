@@ -128,6 +128,11 @@
                         	<div class="form-actions">
                            		<button type="submit" class="btn btn-primary">Aanmaken</button>
                         	</div>
+							<div class="row-fluid">
+								<div class="span5">
+
+								</div>
+							</div>                        	
                         	<!-- / Create Account: Form Actions -->								
 
 						<!-- / Create A: Tab SPAN 12 -->  

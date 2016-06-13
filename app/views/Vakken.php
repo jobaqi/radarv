@@ -108,33 +108,32 @@
 						
 							<!-- Create Account: Form -->
 							<form class="form-horizontal">
+								<!-- Create Account: Form Naam -->
+								<div class="control-group">
+									<label class="control-label" for="inputNaam"><i class="icon-user"></i>Naam</label>
+									<div class="controls">
+										<input type="text" class="typeahead" id="inputNaam" placeholder="">
+									</div>
+								</div>
+								<!-- / Create Class: Form Naam -->
+								<!-- Create Account: Form Uren -->
+								<div class="control-group">
+									<label class="control-label" for="inputUren"><i class="icon-time"></i>vak Code</label>
+									<div class="controls">
+										<input type="text" class="typeahead" id="inputUren" placeholder="">
+									</div>
+								</div>
+								<!-- / Create Class: Form Naam -->
+	                        	<!-- Create Account: Form Actions -->
+	                        	<div class="form-actions">
+	                           		<button type="submit" class="btn btn-primary">Aanmaken</button>
+	                        	</div>
+	                        	<!-- / Create Account: Form Actions -->		
+								<div class="row-fluid">
+									<div class="span5">
 
-							<!-- Create Account: Form Naam -->
-							<div class="control-group">
-								<label class="control-label" for="inputNaam"><i class="icon-user"></i>Naam</label>
-								<div class="controls">
-									<input type="text" class="typeahead" id="inputNaam" placeholder="">
+									</div>
 								</div>
-							</div>
-							<!-- / Create Class: Form Naam -->
-							<!-- Create Account: Form Uren -->
-							<div class="control-group">
-								<label class="control-label" for="inputUren"><i class="icon-time"></i>vak Code</label>
-								<div class="controls">
-									<input type="text" class="typeahead" id="inputUren" placeholder="">
-								</div>
-							</div>
-							<!-- / Create Class: Form Naam -->
-                        	<!-- Create Account: Form Actions -->
-                        	<div class="form-actions">
-                           		<button type="submit" class="btn btn-primary">Aanmaken</button>
-                        	</div>
-                        	<!-- / Create Account: Form Actions -->		
-							<div class="row-fluid">
-								<div class="span5">
-
-								</div>
-							</div>
 							</form> 
 							<!-- / Create Account: Form -->   
 
