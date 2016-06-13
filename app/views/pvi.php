@@ -20,6 +20,11 @@
                         <div class="controls">
                             <select class="span12">
                                 <?php foreach($employees as $em): ?>
+					<?php if(!empty($active_employee) && $active_employee->id === $em->id): ?>
+						<option value="<?php echo $em->id; ?>" active><?php echo $em->voornaam; ?></option>
+					<?php else: ?>
+						<option value="<?php echo $em->id; ?>"><?php echo $em->voornaam; ?></option>			
+					<?php endif; ?>
                                     <option value="<?php echo $em->id; ?>"><?php echo $em->voornaam; ?></option>
                                 <?php endforeach; ?>
                             </select>
