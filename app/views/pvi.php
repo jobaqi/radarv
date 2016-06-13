@@ -165,7 +165,7 @@
             <div class="top-bar">
                 <ul class="tab-container">
                     <li class="active"><a href="#tab-onderwijs"><i class="icon-home"></i>Onderwijs</a></li>
-                    <li><a href="#tab-taken"><i class="icon-user"></i>Taken</a></li>
+                    <li><a href="#tab-toevoegen-onderwijs"><i class="icon-user"></i>Toevoegen Onderwijs</a></li>
                 </ul>
             </div>
             <!-- / Tabs: Top Bar -->
@@ -224,69 +224,169 @@
                                             <td>0,23</td>
                                         </tr>
                                     </tbody>
-                                </table>
-                                <!-- / Add News: WYSIWYG Editor -->
-                                <div class="accordion">
-                                    <div class="accordion-group">
-                                        <div class="accordion-heading">
-                                            <a class="accordion-toggle" data-toggle="collapse" href="#collapseOne">
-                                            <i class="icon-bug"></i> Toevoegen owt
-                                            </a>
-                                        </div>
-                                        <div id="collapseOne" class="accordion-body collapse">
-                                            <div class="accordion-inner">
-                                                <div class="control-group">
-                                                    <label class="control-label" for="inputInline"><i class="icon-circle"></i>Klas</label>
-                                                    <div class="controls">
-                                                        <select class="span4">
-                                                            <option value="number">4VAOW1A</option>
-                                                            <option value="01">4VAOW1B</option>
-                                                            <option value="02">4VAOW2A</option>
-                                                            <option value="03">4VAOW2B</option>
-                                                            <option value="04">4VAOW3A</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="control-group">
-                                                    <label class="control-label" for="inputInline"><i class="icon-edit"></i>Vak</label>
-                                                    <div class="controls">
-                                                        <input type="text" class="span4 m-wrap">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                </table><!-- / Add News: WYSIWYG Editor -->
                             </div>
                             <!-- / Add News: Box -->
                         </div>
                         <!-- / Forms: Content -->
                     </div>
-                    <div class="tab-pane" id="tab-taken">
-                        <p>Deze medewerker heeft geen taken toegewezen</p>
-                        <div class="accordion">
-                            <div class="accordion-group">
-                                <div class="accordion-heading">
-                                    <a class="accordion-toggle" data-toggle="collapse" href="#collapseTwo">
-                                    <i class="icon-bug"></i> Toevoegen taak
-                                    </a>
-                                </div>
-                                <div id="collapseTwo" class="accordion-body collapse">
-                                    <div class="accordion-inner">
-                                        <div class="control-group">
-                                            <label class="control-label" for="inputInline"><i class="icon-circle"></i>Taak</label>
-                                            <div class="controls">
-                                                <select class="span4">
-                                                    <option value="number">Natschool beheer
-                                                    <option value="01">Kerndocent
-                                                    <option value="02">Examinering
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
+                    <div class="tab-pane" id="tab-toevoegen-onderwijs">
+                        <form class="form" action="#" method="post">
+                            <!-- Create Account: Form Aanstelling -->
+                            <div class="control-group span2">
+                                <label class="control-label" for="inputAanstelling">Klas</label>
+                                <div class="controls custom-margin">
+                                    <select class="span3" name="klas">
+                                        <option value="01">4VAOQ3A
+                                        <option value="02">4MDRX3A
+                                        <option value="03">4VAOW3A
+                                        <option value="04">4VAOW1B
+                                        <option value="05">4VAOW2B
+                                    </select>
                                 </div>
                             </div>
+                            <!-- / Create Account: Form Aanstelling -->  
+                            <!-- Create Account: Form Aanstelling -->
+                            <div class="control-group span2">
+                                <label class="control-label" for="inputAanstelling">Vak</label>
+                                <div class="controls custom-margin">
+                                    <select class="span3" name="Vak">
+                                        <option value="01">Javascript
+                                        <option value="02">C#
+                                        <option value="03">Database
+                                        <option value="04">UML
+                                        <option value="05">Laravel
+                                    </select>
+                                </div>    
+                            </div>
+                            <!-- / Create Account: Form Aanstelling -->
+                            <div class="form-actions" id="custom-padding">
+                                <button type="submit" class="btn btn-primary">Aanmaken</button>
+                            </div>
+                        </form>                                                        
+                    </div>
+                </div>
+            </div>
+            <!-- / Tabs: Content -->
+        </div>
+        <!-- / Forms: Box -->
+    </div>
+    <!-- / Forms -->
+
+    <!-- Forms -->
+    <div class="row-fluid">
+        <!-- Forms: Box -->
+        <div class="span12">
+            <!-- Basic World Map: Top Bar -->
+            <div class="top-bar">
+                <ul class="tab-container">
+                    <li class="active"><a href="#tab-taken"><i class="icon-home"></i>Taken</a></li>
+                    <li><a href="#tab-toevoegen-taak"><i class="icon-user"></i>Toevoegen taak</a></li>
+                </ul>
+            </div>
+            <!-- / Tabs: Top Bar -->
+            <!-- Tabs: Content -->
+            <div class="well no-padding">
+                <div class="tab-content well">
+                    <div class="tab-pane active" id="tab-taken">
+                        <!-- Forms: Content -->
+                        <div class="well no-padding">
+                            <div class="span12">
+                                <!-- Add News: WYSIWYG Editor -->
+                                <table class="table well">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Naam</th>
+                                            <th>Startweek</th>
+                                            <th>Aantalweken</th>
+                                            <th>Uren Weekbasis</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>u</td>
+                                            <td>Natschool</td>
+                                            <td>1</td>
+                                            <td>20</td>
+                                            <td>2</td>                                            
+                                        </tr>
+                                        <tr>
+                                            <td>u</td>
+                                            <td>Stage gesprekken</td>
+                                            <td>31</td>
+                                            <td>10</td>
+                                            <td>8</td>
+                                        </tr>
+                                    </tbody>
+                                </table><!-- / Add News: WYSIWYG Editor -->
+                            </div>
+                            <!-- / Add News: Box -->
                         </div>
+                        <!-- / Forms: Content -->
+                    </div>
+                    <div class="tab-pane " id="tab-toevoegen-taak">
+                        <!-- Create taak: Form -->
+                        <form class="form" action="#" method="post">
+                              <!-- Create taak: Form taak -->
+                              <div class="control-group span3">
+                                 <label class="custom-center control-label" for="inputAanstelling">Naam </label>
+                                 <div class="controls custom-margin">
+                                    <input class="span12" type="text" id="inputAanstelling" placeholder="WTF" name="aanstelling_WTF">
+                                 </div>
+                              </div>
+                              <!-- / Create taak: Form taak -->   
+                              <!-- Create taak: Form taak -->
+                                <div class="control-group span3">
+                                <label class="control-label custom-center" for="Start_Week">Start Week</label>
+                                    <div class="controls custom-margin">
+                                        <select name="Start_Week">
+                                        <?php
+                                           for ($i = 40; $i > 0; $i--) {
+                                           
+                                             echo '<option value="' . $i . '">' . $i . '';
+                                           }
+                                           ?>
+                                        </select>
+                                    </div>
+                                </div>
+                              <!-- / Create taak: Form taak -->
+                              <!-- Create taak: Form taak -->
+                                <div class="control-group span3">
+                                <label class="control-label custom-center" for="Eind_Week">Eind Week</label>
+                                    <div class="controls custom-margin">
+                                        <select name="Eind_Week">
+                                        <?php
+                                           for ($i = 40; $i > 0; $i--) {
+                                           
+                                             echo '<option value="' . $i . '">' . $i . '';
+                                           }
+                                           ?>
+                                        </select>
+                                    </div>
+                                </div>
+                              <!-- / Create taak: Form taak -->
+                              <!-- Create taak: Form taak -->
+                                <div class="control-group span3">
+                                <label class="control-label custom-center" for="Uren_Weekbasis">Uren Weekbasis</label>
+                                    <div class="controls custom-margin">
+                                        <select name="Uren_Weekbasis">
+                                        <?php
+                                           for ($i = 168; $i > 0; $i--) {
+                                           
+                                             echo '<option value="' . $i . '">' . $i . '';
+                                           }
+                                           ?>
+                                        </select>
+                                    </div>
+                                </div>
+                              <!-- / Create taak: Form taak -->
+                            <a class="custom-center custom-block span2" href="#">Nog een taak toevoegen</a>
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary">Aanmaken</button>
+                            </div>
+                        </form>
+                        <!-- / Create taak: Form -->
                     </div>
                 </div>
             </div>

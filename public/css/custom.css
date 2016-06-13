@@ -27,8 +27,9 @@ td.custom-data{
 form.form-horizontal{
 	margin-bottom: 0px;
 }
-.well .control-group .controls{
-	margin-left:0px;
+
+.custom-margin{
+	margin-left: 0px !important;
 }
 
 div.accordion-inner{
@@ -43,3 +44,33 @@ label.label{
 	margin: 0 0 0 0px;
 }
 
+.custom-inline{
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.custom-block{
+	display: block;
+}
+
+.custom-center{
+	text-align: center;
+}
+
+div.tab-content{
+	margin-bottom: 0px;
+}
+
+.well .control-group {
+    padding: 12px 20px;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+#form-klas{
+	padding-bottom: 5px;
+}
+
+#custom-padding{
+	padding-top: 30px !important;
+}

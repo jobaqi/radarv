@@ -111,13 +111,13 @@
 						<!-- Create A: Tab -->  
 						
 						<!-- Create Class: Form -->
-						<form class="form-horizontal">
+						<form class="form-horizontal" method="post">
 
 							<!-- Create Account: Form Naam -->
 							<div class="control-group">
-								<label class="control-label" for="inputNaam"><i class="icon-user"></i>Naam</label>
+								<label class="control-label" for="inputNaam"><i class="icon-user"></i>Klas naam</label>
 								<div class="controls">
-									<input class="span3" type="text" id="inputNaam" placeholder="">
+									<input class="span3" type="text" id="inputKlas_naam" placeholder="Klas naam" name="naam">
 								</div>
 							</div>
 							<!-- / Create Class: Form Naam -->
@@ -126,10 +126,10 @@
 							<div class="control-group">
 								<label class="control-label" for="inputKlas"><i class="icon-user"></i> Opleiding</label>
 								<div class="controls">
-
-									<select class="span5">
-										<option value="Applicatie Ontwikkelaar">Applicatie Ontwikkelaar
-										<option value="Media Developer">Media Developer
+									<select class="span5" name="opleiding">
+										<?php foreach($opleidingen as $opleiding): ?>
+										<option value="<?php echo e($opleiding->id); ?>"><?php echo e($opleiding->naam); ?></option>
+										<?php endforeach; ?>
 									</select>
 								</div>
 							</div>
@@ -138,8 +138,13 @@
                         	<div class="form-actions">
                            		<button type="submit" class="btn btn-primary">Aanmaken</button>
                         	</div>
-                        	<!-- / Create Account: Form Actions -->								
+                        	<div class="row-fluid">
+								<div class="span5">
 
+								</div>
+							</div>
+                        	<!-- / Create Account: Form Actions -->								
+                        	</form>
 						<!-- / Create A: Tab SPAN 12 -->  
 
 					</div>
