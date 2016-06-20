@@ -325,9 +325,9 @@
                         <form class="form" action="#" method="post">
                               <!-- Create taak: Form taak -->
                               <div class="control-group span3">
-                                 <label class="custom-center control-label" for="inputAanstelling">Naam </label>
+                                 <label class="control-label custom-center" for="inputNaam">Naam </label>
                                  <div class="controls custom-margin">
-                                    <input class="span12" type="text" id="inputAanstelling" placeholder="WTF" name="aanstelling_WTF">
+                                    <input class="span11" type="text" id="inputNaam" placeholder="WTF" name="aanstelling_WTF">
                                  </div>
                               </div>
                               <!-- / Create taak: Form taak -->   
@@ -376,7 +376,6 @@
                                     </div>
                                 </div>
                               <!-- / Create taak: Form taak -->
-                            <a class="custom-center custom-block span2" href="#">Nog een taak toevoegen</a>
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-primary">Aanmaken</button>
                             </div>
